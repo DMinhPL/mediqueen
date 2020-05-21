@@ -1,2 +1,0 @@
-# mediqueen
-medical store

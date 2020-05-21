@@ -1,0 +1,10 @@
+.mobile-hide {
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+.mobile-show {
+    @include media-breakpoint-up(lg) {
+        display: none !important;
+    }
+}

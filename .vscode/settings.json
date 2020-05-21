@@ -1,10 +1,13 @@
 {
-    "prettier.tabWidth": 4,
-    "prettier.printWidth": 300,
-    "prettier.vueIndentScriptAndStyle": true,
-    "yaml.format.singleQuote": true,
-    "prettier.jsxSingleQuote": false,
-    "prettier.singleQuote": true,
     "javascript.preferences.quoteStyle": "single",
-    "typescript.preferences.quoteStyle": "single"
+    "prettier.jsxSingleQuote": false,
+    "prettier.printWidth": 120,
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.vueIndentScriptAndStyle": true,
+    "stylelint.autoFixOnSave": true,
+    "stylelint.enable": true,
+    "stylelint.useLocal": true,
+    "typescript.preferences.quoteStyle": "single",
+    "yaml.format.singleQuote": true
 }

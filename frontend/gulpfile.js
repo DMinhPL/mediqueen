@@ -114,7 +114,7 @@ const scripts_library = function() {
             SRC.root + SRC.js + '/library/jquery-3.3.1.min.js',
             SRC.root + SRC.js + '/library/imagesloaded.min.js',
             // SRC.root + SRC.js + "/library/moment.min.js",
-            // SRC.root + SRC.js + "/library/popper.min.js",
+            SRC.root + SRC.js + '/library/popper.min.js',
             SRC.root + SRC.js + '/library/*.main.min.js'
         ])
         // .pipe(babel({ presets: ['@babel/env'] }))
@@ -133,7 +133,7 @@ const scripts_library = function() {
             SRC.root + SRC.js + '/library/jquery-3.3.1.min.js',
             SRC.root + SRC.js + '/library/imagesloaded.min.js',
             // SRC.root + SRC.js + "/library/moment.min.js",
-            // SRC.root + SRC.js + "/library/popper.min.js",
+            SRC.root + SRC.js + '/library/popper.min.js',
             SRC.root + SRC.js + '/library/*.home.main.min.js'
         ])
         // .pipe(babel({ presets: ['@babel/env'] }))

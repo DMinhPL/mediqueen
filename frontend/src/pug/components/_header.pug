@@ -1,14 +1,48 @@
-header.navbar.navbar-expand.navbar-dark.flex-column.flex-md-row.bd-navbar.bg-dark
-        a.navbar-brand(href=url)
-            img(src=logo alt="" height="35")
-
-        button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
-            span.navbar-toggler-icon
-
-        div(class="collapse navbar-collapse" id="navbarNavDropdown")
-            +menuNav(mainActive,mainMenu, '', '', 'navbar-nav justify-content-end', '' ,'nav-item', 'nav-link')
-            
-        a.btn.btn-bd-download.d-none.d-lg-inline-block.mb-3.mb-md-0.ml-md-3(href='https://bitbucket.org/binhnguyenthien/3forcom-htmlstandard') Bitbucket
-// End Header
-|
-|
+header.header-page.header
+    .wrap-sticky-header
+        .bg-cover
+        .header__top
+            .container
+                .header__top__left
+                    a(href="#").btn-toggle-menu.mobile-show
+                        span
+                    ul.nav.mobile-hide
+                        li: a(href="#") 
+                            i.icon.ic-phone
+                            | HOTLINE  #[span.phonenumber 1900.0263]
+                .header__top__center
+                    p.m-0.slogan.mobile-hide “ Mang Đến Hạnh Phúc Trọn Vẹn ”
+                    .mobile-show.logo
+                        a(href=url).header__logo.bg-white
+                            img(src=logo, alt="")
+                .header__top__right
+                    .cartPanel
+                        a(href="#")
+                            .plainText.mobile-hide GIỎ HÀNG
+                            .cart
+                                i.icon.ic-cart
+                                .num 2
+        .header__main
+            .container
+                ul.nav.header__menu
+                    li.nav-link
+                        a(href="#" class=ishomepage ? 'active' : '').nav-item
+                            i.icon.ic-home
+                            span HOME
+                    li.nav-link: a(href="#").nav-item
+                        i.icon.ic-leaf
+                        span MEDIQUEEN TEA  
+                    li.nav-link: a(href="#").nav-item
+                        i.icon.ic-food
+                        span MEDIQUEEN COFFEE  
+                    li.nav-link.logo.mobile-hide: a(href=url).header__logo
+                        img(src=logo, alt="")
+                    li.nav-link: a(href="#").nav-item
+                        i.icon.ic-shop
+                        span ĐẠI LÝ  
+                    li.nav-link: a(href="#").nav-item
+                        i.icon.ic-news
+                        span TIN TỨC
+                    li: a(href="#").nav-item
+                        i.icon.ic-headset
+                        span LIÊN HỆ

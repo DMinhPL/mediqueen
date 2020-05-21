@@ -1,2 +1,48 @@
-@import "icons-ElegantIcons";
-@import "icons-FontAwesomeIcon";
+@import 'icons-ElegantIcons';
+@import 'icons-FontAwesomeIcon';
+i.icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    &.ic-phone {
+        width: 21px;
+        height: 21px;
+        background-image: url('../images/ic-phone.svg');
+    }
+    &.ic-cart {
+        width: 21px;
+        height: 21px;
+        background-image: url('../images/ic-cart.svg');
+    }
+    &.ic-home {
+        width: 20px;
+        height: 19px;
+        background-image: url('../images/ic-home.svg');
+    }
+    &.ic-leaf {
+        width: 21px;
+        height: 21px;
+        background-image: url('../images/ic-leaf.svg');
+    }
+    &.ic-food {
+        width: 21px;
+        height: 21px;
+        background-image: url('../images/ic-food.svg');
+    }
+    &.ic-shop {
+        width: 19px;
+        height: 19px;
+        background-image: url('../images/ic-shop.svg');
+    }
+    &.ic-news {
+        width: 18px;
+        height: 17px;
+        background-image: url('../images/ic-news.svg');
+    }
+    &.ic-headset {
+        width: 21px;
+        height: 21px;
+        background-image: url('../images/ic-headset.svg');
+    }
+}

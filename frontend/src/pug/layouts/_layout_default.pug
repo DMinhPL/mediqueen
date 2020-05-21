@@ -13,13 +13,13 @@ html(lang=language)
         block styles
     body(class=bodyClass)
         include ../components/_header
+        #page
+            main.wrapper
+                block content
+            // End Main Content
 
-        main.wrapper
-            block content
-        // End Main Content
-
-        include ../components/_footer
-        
+            include ../components/_footer
+            
         //- Add Custom Modal
         block modal
 

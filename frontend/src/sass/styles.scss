@@ -47,9 +47,11 @@
 @import 'components/datetime';
 @import 'components/notify';
 @import 'components/waypoint';
+@import 'components/panels';
 // End component -------------------------------------------------------
 // Start Modules -------------------------------------------------------
 @import 'modules/headings';
+@import 'modules/commons';
 // End Modules ---------------------------------------------------------
 // Start Tempmlate
 @import 'template/header';

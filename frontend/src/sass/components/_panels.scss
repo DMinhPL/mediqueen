@@ -1,0 +1,16 @@
+.block {
+    &__content {
+        &__text {
+            &--medium {
+                @include media-breakpoint-up(md) {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    &--flex {
+        @include media-breakpoint-up(md) {
+            display: flex;
+        }
+    }
+}

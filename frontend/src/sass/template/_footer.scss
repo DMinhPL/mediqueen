@@ -1,5 +1,68 @@
 // Sample code
 .footer {
-    padding: 30px 0;
-    background-color: #f1f1f1;
+    padding: 45px 0 40px;
+    background-color: #0045a2;
+    color: #fff;
+    font-family: $font-r;
+    &-page {
+        .f-title {
+            color: #fff;
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+            background: transparent url('../images/ic-good.svg') no-repeat 0/24px auto;
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: #fff;
+                z-index: 1;
+            }
+            &:after {
+                background-color: #f56060;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 35px;
+                height: 1px;
+                z-index: 2;
+            }
+        }
+        .f-link {
+            color: #fff;
+            transition: 0.4s ease;
+            &:hover {
+                color: #f4f73f;
+            }
+        }
+    }
+    &--flex {
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            @include media-breakpoint-up(lg) {
+                margin-right: 30px;
+            }
+        }
+    }
+    .list-dot {
+        @include media-breakpoint-down(md) {
+            padding-left: 30px;
+        }
+    }
+    .logoImg {
+        width: 90px;
+        margin: auto;
+        &:after {
+            padding-top: 125/90 * 100%;
+        }
+    }
 }

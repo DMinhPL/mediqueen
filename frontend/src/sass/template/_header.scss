@@ -101,7 +101,7 @@ header.header-page.header {
                     @include media-breakpoint-down(md) {
                         position: absolute;
                         top: -10px;
-                        left: 0;
+                        left: -26px;
                         right: 0;
                         width: 71px;
                     }
@@ -133,6 +133,9 @@ header.header-page.header {
                                 align-items: center;
                                 justify-content: center;
                                 font-size: 10px;
+                                @include media-breakpoint-down(sm) {
+                                    right: -14px;
+                                }
                             }
                         }
                     }
@@ -187,6 +190,9 @@ header.header-page.header {
                     align-items: center;
                     padding: 20px 15px;
                     position: relative;
+                    @include media-breakpoint-down(md) {
+                        color: #fff;
+                    }
                     &:hover {
                         @include media-breakpoint-up(lg) {
                             color: #0c4ca3;
@@ -235,6 +241,9 @@ header.header-page.header {
         display: block;
         top: -4px;
         left: -15px;
+        @include media-breakpoint-down(sm) {
+            left: 0;
+        }
         &.expand {
             span {
                 opacity: 0;

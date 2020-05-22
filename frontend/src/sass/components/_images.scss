@@ -22,6 +22,11 @@
 }
 .img-bg {
     @include img-bg();
+    &.postImg {
+        &:after {
+            padding-top: 122/342 * 100%;
+        }
+    }
 }
 
 //

@@ -4,3 +4,25 @@
     text-align: center;
     background-color: #fff;
 }
+section.s-contact {
+    padding: 32px 0 33px;
+    background: #e6e6e6;
+    .block {
+        &--flex {
+            align-items: center;
+            justify-content: space-between;
+            .block__content {
+                display: flex;
+                align-items: center;
+                @include media-breakpoint-down(sm) {
+                    margin-bottom: 15px;
+                    justify-content: center;
+                }
+                i.icon {
+                    margin-right: 24px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

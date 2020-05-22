@@ -99,10 +99,22 @@ fieldset:disabled a.btn {
 // Button Sizes
 //
 .btn-lg {
-    @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    @include button-size(
+        $btn-padding-y-lg,
+        $btn-padding-x-lg,
+        $font-size-lg,
+        $btn-line-height-lg,
+        $btn-border-radius-lg
+    );
 }
 .btn-sm {
-    @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    @include button-size(
+        $btn-padding-y-sm,
+        $btn-padding-x-sm,
+        $font-size-sm,
+        $btn-line-height-sm,
+        $btn-border-radius-sm
+    );
 }
 
 //
@@ -124,5 +136,28 @@ input[type='reset'],
 input[type='button'] {
     &.btn-block {
         width: 100%;
+    }
+}
+
+.btn-custom {
+    border: none;
+    border-radius: 0;
+    outline: 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.4s ease;
+    // padding: 0.8rem 3.75rem;
+    &.pink {
+        color: #fff;
+        background-color: #ff6363;
+    }
+}
+.btn {
+    &__sendMail {
+        font-size: 14px;
+        color: #fff;
+        padding: 8px 20px;
+        padding-right: 40px;
+        background: #ff6363 url('../images/ic-plane.svg') no-repeat 90%/24px auto;
     }
 }

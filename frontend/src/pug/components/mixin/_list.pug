@@ -115,3 +115,11 @@ mixin list-item(text,style,type,color)
 			a.list-group-item.list-group-item-action(class=style, href="button")
 				!= text
 				block
+
+mixin list_icon_item(data)
+	ul.listHasIcon
+		if data && data.length 
+			each dt in data
+				li
+					i.icon(class=dt.icon)
+					span #[=dt.text]

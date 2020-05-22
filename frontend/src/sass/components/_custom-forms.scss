@@ -310,3 +310,34 @@
         @include border-radius($custom-range-track-border-radius);
     }
 }
+
+.form-style {
+    .form-line {
+        &.hasButton {
+            display: flex;
+            input {
+                @include media-breakpoint-up(md) {
+                    width: 300px;
+                }
+            }
+        }
+    }
+    input {
+        &.form-input {
+            display: block;
+            width: 100%;
+            height: 46px;
+            padding: 13px 15px;
+            font-size: 0.88889em;
+            line-height: 1.5;
+            color: #333333;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: none;
+            border-bottom: 1px solid #b8c9dd;
+            outline: 0;
+            box-shadow: none;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+    }
+}

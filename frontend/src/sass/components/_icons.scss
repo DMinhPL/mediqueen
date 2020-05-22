@@ -45,4 +45,24 @@ i.icon {
         height: 21px;
         background-image: url('../images/ic-headset.svg');
     }
+    &.ic-mail {
+        width: 45px;
+        height: 34px;
+        background-image: url('../images/ic-mail.svg');
+    }
+    &.ic-marker {
+        width: 15px;
+        height: 21px;
+        background-image: url('../images/ic-marker.svg');
+    }
+    &.ic-globe {
+        width: 18px;
+        height: 18px;
+        background-image: url('../images/ic-globe.svg');
+    }
+    &.ic-fphone {
+        width: 18px;
+        height: 18px;
+        background-image: url('../images/ic-fphone.svg');
+    }
 }

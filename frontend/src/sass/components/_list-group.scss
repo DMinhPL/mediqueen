@@ -97,3 +97,32 @@
 @each $color, $value in $theme-colors {
     @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
 }
+
+.listHasIcon {
+    padding-left: 0;
+    list-style: none;
+    li {
+        display: flex;
+        margin-bottom: 14px;
+        i.icon {
+            margin-right: 15px;
+            width: 6%;
+        }
+        span {
+            font-size: 14px;
+            width: 100%;
+        }
+    }
+}
+.list-dot {
+    padding-left: 0;
+    li {
+        margin-bottom: 20px;
+        a {
+            text-decoration: none;
+            color: #fff;
+            transition: 0.4s ease;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,11 +1,39 @@
-footer.bd-footer.text-muted
-    .container-fluid.p-3.p-md-5
-        ul.bd-footer-links
-            li
-                a(href='https://bitbucket.org/binhnguyenthien/3forcom-htmlstandard', target='_blank') Bitbucket
-            li
-                a(href='https://www.3forcom.com/', target='_blank') 3Forcom Website
-        p © Copyright 2018 3Forcom - 854 Su Van Hanh Street, Ward 13, District 10, Ho Chi Minh City (Vietnam)
-        p
-            | Bootstrap Currently v4.1.1. 
-// End Footer
+section.s-contact.bg-main
+    .container
+        .block.block--flex  
+            .block__content
+                i.icon.ic-mail
+                .block__content__text--medium ĐĂNG KÝ NHẬN TIN
+            form(action="#")
+                .form-style
+                    .form-line.hasButton
+                        input(type="email" placeholder='Your Email' required).form-input.transparent
+                        button.btn-custom.btn__sendMail.text-uppercase SUBCRIBE
+footer.footer.footer-page
+    .container.container-max
+        .row
+            .col-lg-6
+                .footer__inner.footer--flex
+                    .logo
+                        +img-bg('/images/logo-white.png','','logoImg')
+                    .block
+                        .f-title.text-uppercase LIÊN HỆ
+                        -
+                            var lists =[
+                                {text:'Địa chỉ:31 đường 3136, Phạm Thế Hiển, Phường 7, Quận 8, Tp.HCM',icon:'ic-marker'},
+                                {text:'Điện thoại:1900.0263',icon:'ic-fphone'},
+                                {text:'Email:ctymediqueen@gmail.com Web:mediqueen.com.vn/',icon:'ic-globe'},
+                            ]
+                        +list_icon_item(lists)
+            .col-lg-3
+                .f-title.text-uppercase CHÍNH sách
+                ul.list-dot
+                    li: a.f-link(href="#")   Hướng dẫn mua hàng
+                    li: a.f-link(href="#")   Hướng dẫn thanh toán
+                    li: a.f-link(href="#")   Chính sách giao nhận
+                    li: a.f-link(href="#")   Chính sách đổi trả hoàn tiền
+                    li: a.f-link(href="#")   Chính sách bảo mật
+                    li: a.f-link(href="#")   Kiếm tiền cùng MediQueen
+            .col-lg-3
+                .f-title.text-uppercase kết nối
+                +img-bg('/images/fb-post.png','','postImg','#')

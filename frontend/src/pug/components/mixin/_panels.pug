@@ -1,0 +1,6 @@
+mixin banner_slider
+    .banner-home.container
+        .owl-carousel
+            each val in [1,2,3]
+                .imgPanel
+                    .img-bg(style=`background-image:url("images/banner${val}.png")`)

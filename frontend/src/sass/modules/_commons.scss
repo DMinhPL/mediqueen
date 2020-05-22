@@ -8,3 +8,12 @@
         display: none !important;
     }
 }
+.banner-home {
+    .imgPanel {
+        .img-bg {
+            &:after {
+                padding-top: 502/1170 * 100%;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
         &__text {
             &--title {
                 font-family: $font-utm;
+                font-size: 26px;
                 @include media-breakpoint-up(lg) {
                     font-size: 30px;
                 }
@@ -194,6 +195,9 @@
 .collapsePanel {
     border: 1px solid #cccccc;
     padding: 40px 80px;
+    @include media-breakpoint-down(sm) {
+        padding: 24px;
+    }
     a.collapsible {
         display: block;
         padding: 16px 0;
@@ -275,13 +279,17 @@
         }
     }
     .content {
-        @include media-breakpoint-up(lg) {
-            padding-left: 70px;
+        padding-left: 70px;
+        @include media-breakpoint-down(sm) {
+            padding-left: 40px;
         }
         .para {
             position: relative;
             color: #555555;
             font-family: $font-rb;
+            @include media-breakpoint-down(sm) {
+                font-size: 14px;
+            }
             &:before {
                 content: '';
                 position: absolute;
@@ -367,7 +375,7 @@
     &.isFlex {
         display: flex;
         &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .imgPanel {
             width: 325px;
@@ -429,6 +437,16 @@
             }
         }
     }
+    &:not(.isFlex) {
+        .textPanel {
+            .text__bigger {
+                margin-top: 8px;
+                @include media-breakpoint-up(md) {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
     .imgPanel {
         position: relative;
         overflow: hidden;
@@ -454,22 +472,23 @@
                 color: #212529;
             }
             &__bigger {
-                font-family: $font-rm;
-                margin-bottom: 15px;
+                font-family: $font-rb;
                 line-height: 1.5;
+                font-size: 18px;
+                color: #333333;
                 transition: 0.4s ease;
+                display: inline-block;
                 @include media-breakpoint-down(md) {
                     margin-bottom: 4px;
                 }
             }
             &__smaller {
-                color: #5b5b5b;
-                opacity: 0.8;
-                font-size: 18px;
-                @include media-breakpoint-down(md) {
-                    font-size: 14px;
-                }
+                color: #696969;
+                font-size: 14px;
             }
+        }
+        .readMore {
+            margin-top: 10px;
         }
     }
 }

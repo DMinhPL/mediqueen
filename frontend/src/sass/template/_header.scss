@@ -108,6 +108,9 @@ header.header-page.header {
                 }
             }
             &__right {
+                @include media-breakpoint-up(md) {
+                    width: 185px;
+                }
                 .cartPanel {
                     a {
                         display: flex;

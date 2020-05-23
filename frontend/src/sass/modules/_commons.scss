@@ -1,5 +1,8 @@
 main.wrapper {
     overflow: hidden;
+    @include media-breakpoint-down(md) {
+        padding-top: 60px;
+    }
 }
 .mobile-hide {
     @include media-breakpoint-down(md) {
@@ -12,6 +15,9 @@ main.wrapper {
     }
 }
 .banner-home {
+    @include media-breakpoint-up(md) {
+        margin-top: 30px;
+    }
     .imgPanel {
         .img-bg {
             &:after {
@@ -23,4 +29,60 @@ main.wrapper {
 .list-style-none {
     padding-left: 0;
     list-style: none;
+}
+.readMore {
+    color: #0045a2;
+    font-size: 14px;
+    font-family: $font-r;
+    display: inline-block;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        right: -11px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 6px solid #0045a2;
+    }
+}
+.tagDate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0045a2;
+    font-family: $font-r;
+    span {
+        color: #fff;
+        font-size: 14px;
+        &:first-child {
+            margin-bottom: 5px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: -3px;
+                left: 0px;
+                right: 0px;
+                height: 1px;
+                border: 1px dashed #fff;
+            }
+        }
+    }
+}
+
+.tagCalendar {
+    font-size: 14px;
+    font-family: 'Roboto Italic', Arial;
+    color: #948e90;
+    background: transparent url(../images/ic-calendar.svg) no-repeat 0/14px auto;
+    padding-left: 18px;
 }

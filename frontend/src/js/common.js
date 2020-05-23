@@ -53,8 +53,23 @@ console.log('Common All Page');
             }
         });
     }
+    function ui_dotdotdot() {
+        $('.big-dotdotdot').dotdotdot({
+            height: 90,
+            fallbackToLetter: true,
+            watch: true,
+            truncate: 'word',
+        });
+        $('.dotdotdot').dotdotdot({
+            height: 60,
+            fallbackToLetter: true,
+            watch: true,
+            truncate: 'word',
+        });
+    }
     $(function(){
         ui_scroll_fixNav();
         ui_toggle_sidebarMenu();
+        ui_dotdotdot();
     });
 })(jQuery);

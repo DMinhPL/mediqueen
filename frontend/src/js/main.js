@@ -113,17 +113,44 @@
         if (1 == 2) ui();
     }
     function slider_banner(){
-        $('.banner-home .owl-carousel').owlCarousel({
-            // stagePadding: 50,
-            loop:true,
-            margin:80,
-            dots:true,
-            lazyLoad: true,
-            mouseDrag:false,
-            touchDrag:false,
-            autoplay:true,
-            items:1
-        });
+        // $('.banner-home .owl-carousel').owlCarousel({
+        //     // stagePadding: 50,
+        //     loop:true,
+        //     margin:80,
+        //     dots:true,
+        //     lazyLoad: true,
+        //     mouseDrag:false,
+        //     touchDrag:false,
+        //     autoplay:true,
+        //     items:1
+        // });
+        const swiper = new Swiper('.banner-home .swiper-container', {
+            // Disable preloading of all images
+            preloadImages: false,
+            // Enable lazy loading
+            lazy: true,
+            effect: 'coverflow',
+            grabCursor: false,
+            simulateTouch:false,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            autoplay: {
+                delay: 5000,
+            },
+            spaceBetween:80,
+            coverflow: {
+              rotate: 0,
+              stretch: 0,
+              depth: 0,
+              modifier: 1,
+              slideShadows : true
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            loop: true
+          });
     }
     function slider_content(){
         const _social = ()=>{

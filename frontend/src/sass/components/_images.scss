@@ -27,6 +27,26 @@
             padding-top: 122/342 * 100%;
         }
     }
+    &.productThumb {
+        &:after {
+            padding-top: 530/875 * 100%;
+        }
+    }
+    &.whyImg {
+        &:after {
+            padding-top: 605/989 * 100%;
+        }
+    }
+    &.phoneImg {
+        &:after {
+            padding-top: 541/269 * 100%;
+        }
+    }
+    &.avaImg {
+        width: 81.74px;
+        margin: auto;
+        display: inline-block;
+    }
 }
 
 //

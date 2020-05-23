@@ -1,0 +1,33 @@
+.block
+    +title_section_home('KHÁCH HÀNG NÓI VỀ MEDIQUEEN')
+.block__content
+    .sgrid
+        .sgrid__left#sSocials
+            .block__content
+                .block__content__text.text-center
+                    h2.block__content__text--medium.block__content__text--underLine.text-uppercase 
+                        | MẠNG XÃ HỘI
+                .swiper-container
+                    .swiper-wrapper
+                        each val in [1,2,3]
+                            .swiper-slide
+                                +img-bg('/images/phone.png','','phoneImg')
+                    .swiper-button-prev
+                    .swiper-button-next
+        .sgrid__right#sComments
+            .block__content.slider-changeContent
+                .wrap-slider
+                    .content-changing
+                        .block__content__text.text-center
+                            h2.block__content__text--medium.block__content__text--underLine.text-uppercase 
+                                | Ý kiến khách hàng
+                        .block__content__text.line-border
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                | nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                    .sliderChange
+                        .block__content__text(style='padding-top:0')
+                            .name Shirley Meyer  /  #[span Photographer]
+                            .avaGroup
+                                .owl-carousel
+                                    each val in [1,2,2,1]
+                                        +img-bg(`images/ava${val}.png`,'','avaImg','#')

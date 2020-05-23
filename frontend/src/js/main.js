@@ -1,4 +1,4 @@
-/* global SimpleBar */
+/* global SimpleBar, Swiper */
 (function($){
     function ui() {
         // Select UI
@@ -125,6 +125,31 @@
             items:1
         });
     }
+    function slider_content(){
+        const _social = ()=>{
+            new Swiper('#sSocials .swiper-container', {
+                speed: 400,
+                spaceBetween: 0,
+                slidesPerView:1,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
+            });
+        };
+        _social();
+        const _sliderChangeText = () =>{
+            $('.slider-changeContent .owl-carousel').owlCarousel({
+                // stagePadding: 50,
+                loop:true,
+                margin:40,
+                dots:true,
+                lazyLoad: true,
+                items:4,
+            });
+        };
+        _sliderChangeText();
+    };
     $(function(){
         $('body').imagesLoaded(function() {
             init();
@@ -132,5 +157,6 @@
             $('.pageLoad').fadeOut();
         });
         slider_banner();
+        slider_content();
     });
 })(jQuery);

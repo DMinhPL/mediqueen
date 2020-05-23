@@ -7,3 +7,53 @@ mixin banner_slider
 mixin title_section_home(title)
     .block__content__text.text-center
         h2.block__content__text--title.block__content__text--underLine.text-uppercase #[=title]
+mixin products_intro_panel(name,urlImg,dataBenefit, isReverse)
+    if !isReverse
+        .productCard
+            .imgPanel
+                +img-bg('images/product1.png','','productThumb')
+            .infoPanel
+                .inner-info
+                    .info
+                        .nameInfo.roboto-bold #[=name]
+                        .priceInfo.roboto-bold 500.000đ
+                        p Trà thảo dược tăng cân MEDIQUEEN TEA hay còn gọi tắt là trà Mediqueen là một sản phẩm được phát triển từ trà tăng cân Mộc Chi một sản phẩm cực hot trên thị trường do MINQ NATURAL - Việt Nam sản xuất và sau này được đổi tên thành MEDIQUEEN
+                    .info
+                        p.label.roboto-bold Công dụng
+                        ul.nav.list-style-none
+                            if dataBenefit && dataBenefit.length 
+                                each dt in dataBenefit
+                                    li
+                                        i.icon(class=dt.icon)
+                                        span #[=dt.text]
+                    .info
+                        .btn-action
+                            a(href="#").bag-btn
+                            a(href="#").btn-custom.orange.text-uppercase CHI TIẾT
+                            a(href="#").btn-custom.transparent.text-uppercase mua ngay
+                            a(href="#").link-btn
+    else
+        .productCard.isReverse
+            .infoPanel
+                .inner-info
+                    .info
+                        .nameInfo.roboto-bold #[=name]
+                        .priceInfo.roboto-bold 500.000đ
+                        p Trà thảo dược tăng cân MEDIQUEEN TEA hay còn gọi tắt là trà Mediqueen là một sản phẩm được phát triển từ trà tăng cân Mộc Chi một sản phẩm cực hot trên thị trường do MINQ NATURAL - Việt Nam sản xuất và sau này được đổi tên thành MEDIQUEEN
+                    .info
+                        p.label.roboto-bold Công dụng
+                        ul.nav.list-style-none
+                            if dataBenefit && dataBenefit.length 
+                                each dt in dataBenefit
+                                    li
+                                        i.icon(class=dt.icon)
+                                        span #[=dt.text]
+                    .info
+                        .btn-action
+                            a(href="#").bag-btn
+                            a(href="#").btn-custom.orange.text-uppercase CHI TIẾT
+                            a(href="#").btn-custom.transparent.text-uppercase mua ngay
+                            a(href="#").link-btn
+            .imgPanel
+                    +img-bg(urlImg,'','productThumb')
+

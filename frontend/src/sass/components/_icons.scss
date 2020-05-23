@@ -65,4 +65,64 @@ i.icon {
         height: 18px;
         background-image: url('../images/ic-fphone.svg');
     }
+    &.ic-stomach {
+        width: 28px;
+        height: 28px;
+        background-image: url('../images/ic-stomach.svg');
+    }
+    &.ic-spoon {
+        width: 26px;
+        height: 26px;
+        background-image: url('../images/ic-spoon.svg');
+    }
+    &.ic-fitness {
+        width: 25px;
+        height: 26px;
+        background-image: url('../images/ic-fitness.svg');
+    }
+    &.ic-virus {
+        width: 28px;
+        height: 28px;
+        background-image: url('../images/ic-virus.svg');
+    }
+    &.ic-sleeping {
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/ic-sleeping.svg');
+    }
+    &.ic-weight {
+        width: 26px;
+        height: 26px;
+        background-image: url('../images/ic-weight.svg');
+    }
+    &.ic-waist {
+        width: 26px;
+        height: 26px;
+        background-image: url('../images/ic-waist.svg');
+    }
+    &.ic-water {
+        width: 27px;
+        height: 31px;
+        background-image: url('../images/ic-water.svg');
+    }
+    &.ic-shield {
+        width: 27px;
+        height: 31px;
+        background-image: url('../images/ic-shield.svg');
+    }
+    &.ic-calo {
+        width: 21px;
+        height: 28px;
+        background-image: url('../images/ic-calo.svg');
+    }
+    &.ic-contact {
+        width: 59px;
+        height: 69px;
+        background-image: url('../images/ic-contact.svg');
+    }
+    &.ic-store {
+        width: 63px;
+        height: 63px;
+        background-image: url('../images/shop.svg');
+    }
 }

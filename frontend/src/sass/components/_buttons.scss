@@ -148,17 +148,25 @@ input[type='button'] {
     transition: 0.4s ease;
     padding: 8px 25px;
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &.pink {
         color: #fff;
         background-color: #ff6363;
     }
+    &.orange {
+        color: #fff;
+        border-radius: 20px;
+        background-color: #5ba000;
+    }
     &.transparent {
         color: #5ba000;
         background: transparent;
-        border: 1px solid #0c4ca3;
+        border: 1px solid #5ba000;
         border-radius: 20px;
         &:hover {
-            background: #6ba3f0;
+            background: #5ba000;
             color: #fff;
         }
     }

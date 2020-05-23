@@ -1,0 +1,23 @@
+.block
+    +title_section_home('sản phẩm')
+.block__content
+    - 
+        var product1 = [
+            {text:'Cải thiện hấp thụ', icon:'ic-stomach'},
+            {text:'Giúp ăn ngon miệng', icon:'ic-spoon'},
+            {text:'Tăng cường sức khỏe', icon:'ic-fitness'},
+            {text:'Đào thải độc tố', icon:'ic-virus'},
+            {text:'Ngủ ngon giấc', icon:'ic-sleeping'},
+            {text:'Hỗ trợ tăng cân tối đa', icon:'ic-weight'},
+        ]
+    - 
+        var product2 = [
+            {text:'Giảm mỡ thừa', icon:'ic-waist'},
+            {text:'Giảm cholesterol ', icon:'ic-water'},
+            {text:'Chống lão hóa', icon:'ic-shield'},
+            {text:'Đào thải độc tố', icon:'ic-virus'},
+            {text:'Đốt cháy calo', icon:'ic-calo'},
+            {text:'Giảm cân an toàn', icon:'ic-weight'},
+        ]
+    +products_intro_panel('Trà tăng cân MediQueen','images/product1.png',product1,false)
+    +products_intro_panel('Cà phê giảm cân MediQueen','images/product2.png',product2,true)

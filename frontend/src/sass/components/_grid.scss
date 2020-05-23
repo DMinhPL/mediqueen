@@ -45,3 +45,19 @@
 @if $enable-grid-classes {
     @include make-grid-columns();
 }
+
+.sgrid {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    &__left,
+    &__right {
+        position: relative;
+        min-height: 1px;
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+}

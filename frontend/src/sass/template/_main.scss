@@ -29,12 +29,17 @@ section.s-contact {
 section {
     &.s__home {
         &--introduction {
-            margin: 70px 0 150px;
             position: relative;
+            @include media-breakpoint-up(lg) {
+                padding-bottom: 50px;
+            }
             .box-border {
                 max-width: 570px;
                 margin: auto;
                 margin-top: 100px;
+                @include media-breakpoint-down(md) {
+                    margin-top: 72px;
+                }
             }
             .block__content {
                 .floatImg {
@@ -135,6 +140,175 @@ section {
                         }
                         &:after {
                             padding-top: 363/612 * 100%;
+                        }
+                    }
+                }
+            }
+        }
+        &--products {
+            position: relative;
+
+            .productCard {
+                margin-top: 70px;
+                @include media-breakpoint-down(lg) {
+                    max-width: 930px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @include media-breakpoint-down(md) {
+                    margin-top: 30px;
+                }
+            }
+        }
+        &--why {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            @include media-breakpoint-up(lg) {
+                padding: 90px 0 30px;
+            }
+        }
+        &--customers {
+            font-family: $font-r;
+            .sgrid {
+                margin-top: 86px;
+                &__left {
+                    background-color: #cee3ff;
+                    .block__content__text--underLine:after {
+                        background-color: #cee3ff;
+                    }
+                    .swiper-container {
+                        max-width: 70%;
+                        @include break-min(1919px) {
+                            max-width: 50%;
+                        }
+                    }
+                }
+                &__right {
+                    background-color: #ffefe3;
+                    .block__content__text--underLine:after {
+                        background-color: #ffefe3;
+                    }
+                    .block {
+                        &__content {
+                            &__text {
+                                max-width: 475px;
+                                margin: auto;
+                                position: relative;
+                                &.line-border {
+                                    padding: 40px 24px;
+                                    @include media-breakpoint-down(sm) {
+                                        padding: 16px;
+                                    }
+                                    &:before {
+                                        content: '';
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        border: 1px dashed #ff6363;
+                                        border-radius: 12px;
+                                        @include media-breakpoint-up(xl) {
+                                            top: -2px;
+                                            left: -2px;
+                                            bottom: -24px;
+                                            right: -46px;
+                                            background-image: url('../images/textbox.svg');
+                                            background-repeat: no-repeat;
+                                            border: none;
+                                        }
+                                    }
+                                }
+                                .name {
+                                    font-family: $font-rb;
+                                    font-size: 22px;
+                                    color: #333333;
+                                    span {
+                                        font-family: $font-r;
+                                        font-size: 15px;
+                                        color: #999999;
+                                    }
+                                }
+                                .avaGroup {
+                                    margin-top: 16px;
+                                    .img-bg {
+                                        img {
+                                            display: none !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .img-bg {
+                    &.phoneImg {
+                        max-width: 269px;
+                        margin: auto;
+                    }
+                }
+                .block__content {
+                    padding: 40px 30px;
+                    &__text {
+                        &--medium {
+                            margin-bottom: 55px;
+                        }
+                    }
+                }
+            }
+        }
+        &--contact {
+            background-color: #0045a2;
+            padding: 28px 0 30px;
+            .block {
+                &__content {
+                    &__text {
+                        font-family: $font-r;
+                        color: #fff;
+                        .text {
+                            font-size: 24px;
+                            @include media-breakpoint-down(sm) {
+                                font-size: 18px;
+                            }
+                        }
+                        .line {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            span {
+                                font-size: 24px;
+                                color: #80b6ff;
+                                @include media-breakpoint-down(sm) {
+                                    font-size: 18px;
+                                }
+                                &.num {
+                                    color: #fff;
+                                    font-size: 40px;
+                                    @include media-breakpoint-down(sm) {
+                                        font-size: 24px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .inner-flex {
+                        display: flex;
+                        align-items: center;
+                        i.icon {
+                            margin-right: 13px;
+                        }
+                        .btn-custom {
+                            font-family: $font-r;
+                            margin-left: 70px;
+                            border-radius: 12px;
+                            padding: 20px 30px;
+                            font-size: 20px;
+                            @include media-breakpoint-down(sm) {
+                                margin-left: 12px;
+                                font-size: 12px;
+                                padding: 10px 20px;
+                            }
                         }
                     }
                 }

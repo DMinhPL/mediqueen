@@ -314,5 +314,15 @@ section {
                 }
             }
         }
+        &--ask {
+            .collapsePanel {
+                margin-top: 50px;
+            }
+        }
+        &--news {
+            .sgridContent {
+                margin-top: 50px;
+            }
+        }
     }
 }

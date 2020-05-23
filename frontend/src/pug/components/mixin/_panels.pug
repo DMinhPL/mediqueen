@@ -56,4 +56,29 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse)
                             a(href="#").link-btn
             .imgPanel
                     +img-bg(urlImg,'','productThumb')
-
+mixin thumb_item(title,urlImg,isFlex,_class)
+    unless _class 
+        - var _class = ''
+    .itemProduct(class=isFlex ? `isFlex ${_class}` : _class)
+        .imgPanel
+            if !isFlex
+                +img-bg(urlImg,'','bigThumbImg','#')
+            else
+                +img-bg(urlImg,'','thumbImg','#')
+        .textPanel
+            .category-tag
+                span.tag Kiến thức chung 
+                span.time  - 12/12/2020
+            a(href="#").text.text__bigger #[=title]
+            if !isFlex
+                .text__smaller Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    | At vero eos et.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
+            else
+                .text__smaller.big-dotdotdot Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
+mixin grid_gallery_content(data)
+    .sgridContent
+        .sgridContent__left
+            +thumb_item('Mollitia et ut adipisci quos nisi','/images/news/thumbnews.png',false,'no-effect isGuide')
+        .sgridContent__right
+            each val in data
+                +thumb_item('Mollitia et ut adipisci quos nisi',`/images/news/news${val}.png`,true,'no-effect isGuide')

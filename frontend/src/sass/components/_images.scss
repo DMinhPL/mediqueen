@@ -47,6 +47,16 @@
         margin: auto;
         display: inline-block;
     }
+    &.bigThumbImg {
+        &:after {
+            padding-top: 370/570 * 100%;
+        }
+    }
+    &.thumbImg {
+        &:after {
+            padding-top: 145/200 * 100%;
+        }
+    }
 }
 
 //

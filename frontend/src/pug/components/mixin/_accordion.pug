@@ -26,3 +26,17 @@ mixin collapse(_id,show,parent)
 	.collapse(id=_id class=show aria-labelledby=`head-${_id}`, data-parent=`#${parent}`)
 		.card.card-body
 			block
+
+mixin collapsible(idHref,dataParent,context)
+	a.collapsible.roboto-bold(href=`#${idHref}` data-toggle='collapse' aria-expanded='false')
+		.plus: span
+		span.symbol Q
+		span.text  #[=context]
+	.collapse(id=idHref data-parent=`#${dataParent}`)
+		.content
+			.para All in-stock, non-preorders will be filled within 7-10 business days of being placed (not including weekends or holidays).
+				| Orders are packed and shipped in Conyers, GA. Shipments are made via trackable service. You will receive an email with tracking information as soon as your order is headed your way. 
+				| Please allow 1 day for tracking information to update on your order. If you are unable to track your order, please let us know and we'll be happy to assist. 
+mixin parentCollapse(dataParent,_class)
+	div(class=_class, id=dataParent)
+		block

@@ -1,9 +1,44 @@
 .block {
     &__content {
+        position: relative;
         &__text {
+            &--title {
+                font-family: $font-utm;
+                @include media-breakpoint-up(lg) {
+                    font-size: 30px;
+                }
+            }
             &--medium {
                 @include media-breakpoint-up(md) {
                     font-size: 18px;
+                }
+            }
+            &--underLine {
+                position: relative;
+                display: inline-block;
+                // @include media-breakpoint-up(md) {
+                //     margin-bottom: 100px;
+                // }
+                &:before {
+                    content: '';
+                    position: absolute;
+                    bottom: -24px;
+                    left: -30px;
+                    right: -30px;
+                    display: inline-block;
+                    height: 1px;
+                    border: 1px dotted #1646a8;
+                    z-index: 1;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -40px;
+                    left: calc(50% - 20px);
+                    background: #fff url(../images/ic-leaf-blue.svg) no-repeat center/27px auto;
+                    width: 40px;
+                    height: 40px;
+                    z-index: 2;
                 }
             }
         }
@@ -11,6 +46,24 @@
     &--flex {
         @include media-breakpoint-up(md) {
             display: flex;
+        }
+    }
+}
+
+.box-border {
+    padding: 23px 25px;
+    &.b-shadow {
+        box-shadow: -5px -4px 30px 18px rgba(12, 76, 163, 0.1);
+    }
+    .inner {
+        padding: 10px 25px 70px;
+        border: 1px solid #0c4ca3;
+        .content {
+            .text {
+                &--smaller {
+                    font-size: 14px;
+                }
+            }
         }
     }
 }

@@ -144,12 +144,23 @@ input[type='button'] {
     border-radius: 0;
     outline: 0;
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none !important;
     transition: 0.4s ease;
-    // padding: 0.8rem 3.75rem;
+    padding: 8px 25px;
+    font-size: 12px;
     &.pink {
         color: #fff;
         background-color: #ff6363;
+    }
+    &.transparent {
+        color: #5ba000;
+        background: transparent;
+        border: 1px solid #0c4ca3;
+        border-radius: 20px;
+        &:hover {
+            background: #6ba3f0;
+            color: #fff;
+        }
     }
 }
 .btn {
@@ -159,5 +170,12 @@ input[type='button'] {
         padding: 8px 20px;
         padding-right: 40px;
         background: #ff6363 url('../images/ic-plane.svg') no-repeat 90%/24px auto;
+    }
+}
+.group-btn {
+    &.center {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
     }
 }

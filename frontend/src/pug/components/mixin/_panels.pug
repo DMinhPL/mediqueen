@@ -4,3 +4,6 @@ mixin banner_slider
             each val in [1,2,3]
                 .imgPanel
                     .img-bg(style=`background-image:url("images/banner${val}.png")`)
+mixin title_section_home(title)
+    .block__content__text.text-center
+        h2.block__content__text--title.block__content__text--underLine.text-uppercase #[=title]

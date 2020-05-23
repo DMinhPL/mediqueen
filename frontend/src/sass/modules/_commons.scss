@@ -1,3 +1,6 @@
+main.wrapper {
+    overflow: hidden;
+}
 .mobile-hide {
     @include media-breakpoint-down(md) {
         display: none !important;

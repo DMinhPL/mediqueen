@@ -26,3 +26,119 @@ section.s-contact {
         }
     }
 }
+section {
+    &.s__home {
+        &--introduction {
+            margin: 70px 0 150px;
+            position: relative;
+            .box-border {
+                max-width: 570px;
+                margin: auto;
+                margin-top: 100px;
+            }
+            .block__content {
+                .floatImg {
+                    &-top {
+                        position: absolute;
+                        z-index: -1;
+                        top: -90px;
+                        right: 0;
+                        .img-bg {
+                            width: 329px;
+                            &:after {
+                                padding-top: 370/329 * 100%;
+                            }
+                        }
+                        @include media-breakpoint-down(md) {
+                            display: none;
+                        }
+                    }
+                    &-bottom {
+                        position: absolute;
+                        z-index: -1;
+                        bottom: -90px;
+                        left: 0;
+                        .img-bg {
+                            width: 370px;
+                            &:after {
+                                padding-top: 268/370 * 100%;
+                            }
+                        }
+                        @include media-breakpoint-down(md) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .imgFloat {
+                position: absolute;
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+                &.r1 {
+                    right: -17%;
+                    top: 15%;
+                    @include break-min(1919px) {
+                        right: -37%;
+                    }
+                    .img-bg {
+                        width: 200px;
+                        @include break-min(1919px) {
+                            width: 290px;
+                        }
+                        &:after {
+                            padding-top: 210/335 * 100%;
+                        }
+                    }
+                }
+                &.r2 {
+                    right: -22%;
+                    top: 50%;
+                    @include break-min(1919px) {
+                        right: -50%;
+                    }
+                    .img-bg {
+                        width: 310px;
+                        &:after {
+                            padding-top: 501/635 * 100%;
+                        }
+                    }
+                }
+                &.l1 {
+                    left: -13%;
+                    top: 50%;
+                    @include break-min(1919px) {
+                        left: -37%;
+                        top: 37%;
+                    }
+                    .img-bg {
+                        width: 130px;
+                        @include break-min(1919px) {
+                            width: 200px;
+                        }
+                        &:after {
+                            padding-top: 135/216 * 100%;
+                        }
+                    }
+                }
+                &.l2 {
+                    left: -22%;
+                    top: 108%;
+                    @include break-min(1919px) {
+                        left: -65%;
+                        top: 80%;
+                    }
+                    .img-bg {
+                        width: 300px;
+                        @include break-min(1919px) {
+                            width: 590px;
+                        }
+                        &:after {
+                            padding-top: 363/612 * 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

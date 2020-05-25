@@ -108,7 +108,7 @@ header.header-page.header {
                 }
             }
             &__right {
-                @include media-breakpoint-up(md) {
+                @include media-breakpoint-up(lg) {
                     width: 185px;
                 }
                 .cartPanel {
@@ -183,6 +183,13 @@ header.header-page.header {
             }
             li {
                 padding: 0 !important;
+                &.nav-left {
+                    a.nav-item {
+                        @include media-breakpoint-up(lg) {
+                            padding-right: 20px !important;
+                        }
+                    }
+                }
                 a.nav-item {
                     text-decoration: none;
                     font-size: 14px;

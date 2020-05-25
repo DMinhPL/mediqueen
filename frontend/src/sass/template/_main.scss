@@ -268,8 +268,8 @@ section {
                         color: #fff;
                         .text {
                             font-size: 24px;
-                            @include media-breakpoint-down(sm) {
-                                font-size: 18px;
+                            @include media-breakpoint-down(md) {
+                                font-size: 16px;
                             }
                         }
                         .line {
@@ -279,14 +279,14 @@ section {
                             span {
                                 font-size: 24px;
                                 color: #80b6ff;
-                                @include media-breakpoint-down(sm) {
-                                    font-size: 18px;
+                                @include media-breakpoint-down(md) {
+                                    font-size: 16px;
                                 }
                                 &.num {
                                     color: #fff;
                                     font-size: 40px;
-                                    @include media-breakpoint-down(sm) {
-                                        font-size: 24px;
+                                    @include media-breakpoint-down(md) {
+                                        font-size: 20px;
                                     }
                                 }
                             }

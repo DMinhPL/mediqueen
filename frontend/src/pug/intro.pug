@@ -1,0 +1,102 @@
+extends layouts/_layout_default
+
+
+block setting
+    - title = "MediQueen"
+    - isIntro = true
+    - 
+        var data_breadcrumb = [
+            {'title': 'GIỚI THIỆU', 'link':'intro.html'},
+        ]
+block content 
+    .breadcrumb-page
+        .container
+            +breadcrumb(data_breadcrumb, "HOME")
+    section.s__intro.mg-section
+        .container
+            .block
+                +title_section_home('GIỚI THIỆU')
+                .block__content
+                    .row
+                        .col-xl-6.offset-xl-6
+                            .imgPanel
+                                +img-bg('/images/intro.png','','introImg')
+                            .textPanel
+                                .textPanel__item
+                                    .iconFloat.interface
+                                    .block__content__text--medium.font-weight-bold TẦM NHÌN
+                                    ul.list-style-none Trong 5 năm tới, MEDIQUEEN đặt mục tiêu:
+                                        li - Xây dựng và phát triển vùng nguyên liệu đạt chuẩn hữu cơ.
+                                        li - Nghiên cứu và phát triển thêm các sản phẩm từ thảo mộc thiên nhiên hỗ trợ sức khỏe cho người tiêu dùng.
+                                        li - Mở rộng hệ thống kinh doanh trên toàn quốc và xúc tiến việc xuất khẩu ra nước ngoài.
+                                        li - Thực hiện dự án nhân ái “Mediquee lan tỏa yêu thương” từ quỹ nhân ái của công ty 
+                                .textPanel__item
+                                    .iconFloat.three
+                                    .block__content__text--medium.font-weight-bold SỨ MỆNH MEDIQUEEN
+                                    p.m-0 MEDIQUEEN ra đời với sứ mệnh “Mang lại hạnh phúc trọn vẹn”. Bằng việc tạo ra và trao cho mọi người những sản phẩm làm đẹp và chăm sóc sức khỏe, MEDIQUEEN muốn nâng tầm giá trị của mọi người .
+                                .textPanel__item 
+                                    .iconFloat.people
+                                    .block__content__text--medium.font-weight-bold GIÁ TRỊ CỐT LÕI MEDIQUEEN
+                                    ul.list-style-none MEDIQUEEN tồn tại vì những giá trị:
+                                        li - Xây dựng v
+                                        li - Sức khỏe và sắc đẹp của khách hàng
+                                        li - Thành công của đối tác 
+                                        li - Sự nghiệp của nhân viên 
+
+                            .box-border.b-shadow.bg-white
+                                .inner
+                                    .row
+                                        .col-lg-3
+                                            .logo.text-center
+                                                img(src='/images/logo-intro.png', alt="")
+                                        .col-lg-9
+                                            .content.text-justify
+                                                p.m-0.text--smaller Cty TNHH, SX, TM DV MEDIQUEEN  được thành lập từ năm 2016, là doanh nghiệp chuyên sản xuất các sản phẩm về làm đẹp , bảo vệ sức khỏe ….
+                                                p.text--smaller Với trang thiết bị hiện đại , cùng với đội ngũ y bác sỹ có bề dày nhiều năm kinh nghiệm trong lĩnh vực dinh dưỡng , bảo vệ sức khỏe con người , làm đẹp . Cùng đội ngũ công nhân viên lành nghề , nhiệt tình , trẻ tuổi và năng động .
+                                    .content.text-justify
+                                        p.text--smaller Công ty  MEDIQUEEN  chúng tôi tự hào mang lại những sản  phẩm chất lượng cao, tiến độ giao hàng đảm bảo , giá thành hợp lý đáp ứng yêu cầu và nhu cầu  khác nhau từng khách hàng. Những sản phẩm của công ty chúng tôi khi được sản xuất đều trải qua quá trình đánh giá cẩn thận, và được pháp luật cũng như nhiều cơ sở chuyên về y tế sức khỏe thẩm định.
+                                            | Tiêu chí của công ty nằm ngay tại thương hiệu của mình : MediQueen luôn hướng đến những điều tốt nhất mang đến hiệu quả cao nhất cho khách hàng.Thế mạnh làm nên thương hiệu khác biệt của  MEDIQUEEN chính là sự chuyên môn hóa trong từng bộ phận, tính trách nhiệm cao cùng những giám sát kỹ thuật làm việc nghiêm túc, cẩn thận nhằm tạo nên những sản phẩm hoàn thiện đến từng chi tiết nhỏ nhất, ngoài ra các bộ phận thường xuyên trao đổi kinh nghiệm, công việc, chia sẻ những khó khăn, sáng kiến, xây dựng nên một tập thể MEDIQUEEN năng động , sáng tạo , chuyên nghiệp hơn trong từng chiến dịch kinh doanh mà chúng tôi hướng tới .
+                                        p.quote “ MANG ĐẾN HẠNH PHÚC TRỌN VẸN ”
+                                        p.text--smaller Hạnh phúc khi là khách hàng sử dụng sản phẩm , dịch vụ của  công ty chúng tôi : vì chúng tôi luôn hướng đến những giá trị nhân văn , thỏa mãn những trải nghiệm của khách hàng về những sản phẩm , những dịch vụ mà chúng tôi cung cấp .
+                                    .content.text-justify
+                                        p.quote “ HẠNH PHÚC KHI LÀ CỘNG SỰ, ĐỐI TÁC CỦA CHÚNG TÔI  ”
+                                        p.text--smaller Công ty  MEDIQUEEN  chúng tôi tự hào mang lại những sản  phẩm chất lượng cao, tiến độ giao hàng đảm bảo , giá thành hợp lý đáp ứng yêu cầu và nhu cầu  khác nhau từng khách hàng. Những sản phẩm của công ty chúng tôi khi được sản xuất đều trải qua quá trình đánh giá cẩn thận, và được pháp luật cũng như nhiều cơ sở chuyên về y tế sức khỏe thẩm định.
+                                            | Tiêu chí của công ty nằm ngay tại thương hiệu của mình : MediQueen luôn hướng đến những điều tốt nhất mang đến hiệu quả cao nhất cho khách hàng.Thế mạnh làm nên thương hiệu khác biệt của  MEDIQUEEN chính là sự chuyên môn hóa trong từng bộ phận, tính trách nhiệm cao cùng những giám sát kỹ thuật làm việc nghiêm túc, cẩn thận nhằm tạo nên những sản phẩm hoàn thiện đến từng chi tiết nhỏ nhất, ngoài ra các bộ phận thường xuyên trao đổi kinh nghiệm, công việc, chia sẻ những khó khăn, sáng kiến, xây dựng nên một tập thể MEDIQUEEN năng động , sáng tạo , chuyên nghiệp hơn trong từng chiến dịch kinh doanh mà chúng tôi hướng tới .
+    section.s__home--contact.mg-section
+        include ./home/_s-contact
+    section.s__intro--products.mg-section
+        .container
+            .block
+                +title_section_home('SẢN PHẨM CỦA MEDIQUEEN')
+        .sgrid
+            .sgrid__left
+                .imgPanel
+                    +img-bg('/images/tea.png')
+            .sgrid__left
+                .imgPanel
+                    +img-bg('/images/cafe.png')
+    section.s__intro--why.mg-section
+        .container
+            .block
+                +title_section_home('VÌ SAO CHỌN MEDIQUEEN')
+            .block__content
+                .block__content__image
+                    .logo
+                        +img-bg('/images/logo-intro.png')
+                    .floatingPanel
+                        .floating.left.top  
+                            i.icon.ic-why1
+                            p.m-0 - Nguồn nguyên liệu hữu cơ, 100% tự nhiên, không hóa chất.
+                        .floating.left.bottom  
+                            i.icon.ic-why2
+                            p.m-0 - - Công nghệ sản xuất hiện đại, đảm bảo an toàn – vệ sinh – chất lượng.
+                        .floating.right.top  
+                            i.icon.ic-why2
+                            p.m-0 - Sản phẩm được đánh giá và thẩm định bởi các cơ quan luật pháp và y tế uy tín.
+                        .floating.right.bottom  
+                            i.icon.ic-why2
+                            p.m-0 - Quản lý chặt chẽ toàn bộ quy trình sản 
+                                | xuất từ đầu vào nguyên liệu tới đầu ra 
+                                | sản phẩm. 
+            .thumbFloating
+                +img-bg('/images/why.png')

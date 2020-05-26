@@ -1,0 +1,60 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "Contact - MediQueen"
+    - isContact = true
+    - 
+        var data_breadcrumb = [
+            {'title': 'LIÊN HỆ', 'link':'contact.html'},
+        ]
+block content 
+    .breadcrumb-page
+        .container
+            +breadcrumb(data_breadcrumb, "HOME")
+    section.s__contact.mg-section
+        .container
+            .block
+                +title_section_home('LIÊN HỆ')
+                .block__content
+                    -
+                        var contact =[
+                            {label:"Phone", text:'1900.0263'},
+                            {label:"Địa chỉ", text:'31 đường 3136, Phạm Thế Hiển, Phường 7, Quận 8, Tp.HCM'},
+                            {label:"Thời gian làm việc", text:'8:00 am to 21:00 pm'},
+                            {label:"Email", text:'ctymediqueen@gmail.com'},
+                        ]
+                    .contactPanel
+                        each val in contact
+                            .contact__item.text-center
+                                i.icon.ic-phone-green
+                                .label.font-weight-bold #[=val.label]
+                                .text.font-weight-bold #[=val.text]
+    section.s__contact--map.mg-section
+        iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.3889843742704!2d106.61840381458788!3d10.70445056344569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175320708b8a15b%3A0x8c4b5029822a8da7!2zMzEgxJAuIDMxMzYgUGjhuqFtIFRo4bq_IEhp4buDbiwgUGjGsOG7nW5nIDcsIFF14bqtbiA4LCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1590500351364!5m2!1svi!2s' width='100%' height='502' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0')
+    section.s__contact--formContact.mg-section
+        .container
+            form(action="#")#frmContact.form-validate
+                .form-style
+                    .row
+                        .col-lg-6
+                            .form-line
+                                .has-input
+                                    input(type="text" name='name' placeholder='Họ & Tên' data-msg='Họ và tên là bắt buộc' required).form-border
+                        .col-lg-6
+                            .form-line
+                                .has-input
+                                    input(type="email" name='email' data-msg='Email là bắt buộc' placeholder='Email Address' required).form-border
+                    .row
+                        .col-lg-6
+                            .form-line
+                                .has-input
+                                    input(type="text" name='phone' pattern="[-+]?[0-9]*[.,]?[0-9]+" data-msg="Số điện thoại là bắt buộc và phải là số"  placeholder='Phone Number' required).form-border
+                        .col-lg-6
+                            .form-line
+                                .has-input
+                                    input(type="text" name='title' placeholder='Tiêu đề').form-border
+                    .form-line
+                        .has-input
+                            textarea#comment.form-border(name="comment", rows="7", placeholder='Nội dung' data-msg='Nội dung là bắt buộc' required)
+                .group-btn.center
+                    button.btn-custom.pink.text-uppercase GỬI YÊU CẦU

@@ -211,6 +211,12 @@ header.header-page.header {
                             }
                         }
                     }
+                    &.active {
+                        color: #0c4ca3;
+                        &:before {
+                            transform: scale(1);
+                        }
+                    }
                     &:before {
                         content: '';
                         position: absolute;

@@ -26,7 +26,7 @@ header.header-page.header
             .container
                 ul.nav.header__menu
                     li.nav-link.nav-left
-                        a(href="#" class=ishomepage ? 'active' : '').nav-item
+                        a(href='/' class=ishomepage ? 'active' : '').nav-item
                             i.icon.ic-home
                             span HOME
                     li.nav-link.nav-left: a(href="#").nav-item
@@ -40,9 +40,9 @@ header.header-page.header
                     li.nav-link: a(href="#").nav-item
                         i.icon.ic-food
                         span MEDIQUEEN COFFEE 
-                    li.nav-link: a(href="#").nav-item
+                    li.nav-link: a(href="#" class=isNews ? 'active' : '').nav-item
                         i.icon.ic-news
                         span TIN TỨC
-                    li: a(href="#").nav-item
+                    li: a(href="contact.html" class=isContact ? 'active' : '').nav-item
                         i.icon.ic-headset
                         span LIÊN HỆ

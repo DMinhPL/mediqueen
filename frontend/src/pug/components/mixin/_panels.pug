@@ -6,6 +6,8 @@ mixin banner_slider
                     .imgPanel.swiper-slide(style='max-width:1170px')
                         .img-bg(style=`background-image:url("images/banner${val}.png")`)
             .swiper-pagination
+            .swiper-button-prev
+            .swiper-button-next
         //- .owl-carousel
         //-     each val in [1,2,3]
         //-         .imgPanel
@@ -13,9 +15,9 @@ mixin banner_slider
 mixin title_section_home(title)
     .block__content__text.text-center
         h2.block__content__text--title.block__content__text--underLine.text-uppercase #[=title]
-mixin products_intro_panel(name,urlImg,dataBenefit, isReverse)
+mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
     if !isReverse
-        .productCard
+        .productCard(class=_class)
             .imgPanel
                 +img-bg('images/product1.png','','productThumb')
             .infoPanel
@@ -39,7 +41,7 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse)
                             a(href="#").btn-custom.transparent.text-uppercase mua ngay
                             a(href="#").link-btn
     else
-        .productCard.isReverse
+        .productCard.isReverse(class=_class)
             .infoPanel
                 .inner-info
                     .info

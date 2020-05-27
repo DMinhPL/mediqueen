@@ -129,21 +129,37 @@ i.icon {
         width: 79.62px;
         height: 79.64px;
         background-image: url('../images/why1.svg');
+        @include media-breakpoint-down(sm) {
+            width: 62px;
+            height: 62px;
+        }
     }
     &.ic-why2 {
         width: 79.62px;
         height: 79.64px;
         background-image: url('../images/why2.svg');
+        @include media-breakpoint-down(sm) {
+            width: 62px;
+            height: 62px;
+        }
     }
     &.ic-why3 {
         width: 79.62px;
         height: 79.64px;
         background-image: url('../images/why3.svg');
+        @include media-breakpoint-down(sm) {
+            width: 62px;
+            height: 62px;
+        }
     }
     &.ic-why4 {
         width: 79.62px;
         height: 79.64px;
         background-image: url('../images/why4.svg');
+        @include media-breakpoint-down(sm) {
+            width: 62px;
+            height: 62px;
+        }
     }
     &.ic-phone-green {
         width: 36px;

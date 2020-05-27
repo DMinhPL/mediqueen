@@ -46,6 +46,7 @@
         width: 81.74px;
         margin: auto;
         display: inline-block;
+        border-right: 100%;
     }
     &.bigThumbImg {
         &:after {
@@ -60,6 +61,11 @@
     &.introImg {
         &:after {
             padding-top: 370/552 * 100%;
+        }
+    }
+    &.messImg {
+        &:after {
+            padding-top: 526/258 * 100%;
         }
     }
 }

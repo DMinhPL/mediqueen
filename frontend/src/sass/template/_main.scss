@@ -164,12 +164,96 @@ section {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            // background-color: #e6f1ff;
+            position: relative;
+            padding: 40px 0;
+            @include media-breakpoint-up(xl) {
+                height: 602px;
+            }
             @include media-breakpoint-up(lg) {
                 padding: 90px 0 30px;
+            }
+            &.mg-section {
+                @include media-breakpoint-up(lg) {
+                    margin-bottom: 250px;
+                }
+            }
+            .container {
+                .thumbFloating {
+                    @include media-breakpoint-up(xl) {
+                        position: absolute;
+                        bottom: -37%;
+                        left: calc(50% - 390px);
+                    }
+                    .img-bg {
+                        @include media-breakpoint-up(xl) {
+                            width: 780px;
+                        }
+                        &:after {
+                            padding-top: 605/989 * 100%;
+                        }
+                    }
+                }
+            }
+            .block {
+                &__content {
+                    &__image {
+                        position: relative;
+                        @include media-breakpoint-up(xl) {
+                            height: 300px;
+                        }
+                        .floatingPanel {
+                            @include media-breakpoint-down(lg) {
+                                display: flex;
+                                justify-content: space-around;
+                            }
+                        }
+                        .floating {
+                            text-align: center;
+                            @include media-breakpoint-up(xl) {
+                                position: absolute;
+                            }
+                            &.left-top {
+                                left: 34%;
+                                top: 34px;
+                            }
+                            &.left-bottom {
+                                bottom: 50px;
+                                left: 20%;
+                            }
+                            &.right-top {
+                                right: 34%;
+                                top: 34px;
+                            }
+                            &.right-bottom {
+                                bottom: 50px;
+                                right: 20%;
+                            }
+                            p {
+                                max-width: 287px;
+                                font-family: $font-r;
+                            }
+                        }
+                    }
+                }
+                .block__content__text {
+                    h2 {
+                        margin-bottom: 70px;
+                        @include media-breakpoint-down(sm) {
+                            margin-bottom: 50px;
+                        }
+                    }
+                }
+                .block__content__text--underLine:after {
+                    background-color: #e6f1ff !important;
+                }
             }
         }
         &--customers {
             font-family: $font-r;
+            .block__content {
+                max-height: 600px;
+            }
             .sgrid {
                 margin-top: 86px;
                 &__left {
@@ -232,7 +316,19 @@ section {
                                 }
                                 .avaGroup {
                                     margin-top: 16px;
+                                    .owl-stage {
+                                        display: flex;
+                                        align-items: center;
+                                    }
                                     .img-bg {
+                                        border-radius: 100%;
+                                        border: 5px solid #cee3ff;
+                                        transition: 0.4s ease;
+                                        &.active {
+                                            width: 99px;
+                                            border: 5px solid #fff;
+                                            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+                                        }
                                         img {
                                             display: none !important;
                                         }
@@ -259,7 +355,10 @@ section {
             }
         }
         &--contact {
-            background-color: #0045a2;
+            background-image: url('/images/bg-contact.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
             padding: 28px 0 30px;
             .block {
                 &__content {
@@ -288,6 +387,22 @@ section {
                                     @include media-breakpoint-down(md) {
                                         font-size: 20px;
                                     }
+                                }
+                            }
+                        }
+                    }
+                    .col-lg-5 {
+                        .inner-flex {
+                            position: relative;
+                            @include media-breakpoint-up(lg) {
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    right: -3px;
+                                    width: 2px;
+                                    background: #3879e4;
                                 }
                             }
                         }

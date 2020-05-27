@@ -1,19 +1,35 @@
 .block
     +title_section_home('KHÁCH HÀNG NÓI VỀ MEDIQUEEN')
-.block__content
+.block__content.main
     .sgrid
         .sgrid__left#sSocials
             .block__content
-                .block__content__text.text-center
-                    h2.block__content__text--medium.block__content__text--underLine.text-uppercase 
-                        | MẠNG XÃ HỘI
-                .swiper-container
-                    .swiper-wrapper
-                        each val in [1,2,3]
-                            .swiper-slide
-                                +img-bg('/images/phone.png','','phoneImg')
-                    .swiper-button-prev
-                    .swiper-button-next
+                //- .block__content__text.text-center
+                //-     h2.block__content__text--medium.block__content__text--underLine.text-uppercase 
+                //-         | MẠNG XÃ HỘI
+                //- .swiper-container
+                //-     .swiper-wrapper
+                //-         each val in [1,2,3]
+                //-             .swiper-slide
+                //-                 +img-bg('/images/phone.png','','phoneImg')
+                //-     .swiper-button-prev
+                //-     .swiper-button-next
+                .dm-width
+                    .dm-device
+                        .device
+                            .screen
+                                .owl-carousel
+                                    .slider__item.slider__item--1
+                                        +img-bg('/images/mess.png','','messImg')
+                                    .slider__item.slider__item--2
+                                        +img-bg('/images/mess.png','','messImg')
+                                    .slider__item.slider__item--3
+                                        +img-bg('/images/mess.png','','messImg')
+                                    .slider__item.slider__item--4
+                                        +img-bg('/images/mess.png','','messImg')
+                        .handleSlide
+                            a(href="#").customNextBtn
+                            a(href="#").customPrevBtn
         .sgrid__right#sComments
             .block__content.slider-changeContent
                 .wrap-slider

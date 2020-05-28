@@ -110,7 +110,7 @@ section {
                     }
                 }
                 &.l1 {
-                    left: -13%;
+                    left: -15%;
                     top: 50%;
                     @include break-min(1919px) {
                         left: -37%;
@@ -252,10 +252,15 @@ section {
         &--customers {
             font-family: $font-r;
             .block__content {
-                max-height: 600px;
+                @include media-breakpoint-up(lg) {
+                    max-height: 600px;
+                }
             }
             .sgrid {
                 margin-top: 86px;
+                @include media-breakpoint-down(sm) {
+                    margin-top: 40px;
+                }
                 &__left {
                     background-color: #cee3ff;
                     .block__content__text--underLine:after {
@@ -270,6 +275,11 @@ section {
                 }
                 &__right {
                     background-color: #ffefe3;
+                    @include media-breakpoint-down(sm) {
+                        .block__content.slider-changeContent {
+                            margin-top: 20px;
+                        }
+                    }
                     .block__content__text--underLine:after {
                         background-color: #ffefe3;
                     }
@@ -316,15 +326,27 @@ section {
                                 }
                                 .avaGroup {
                                     margin-top: 16px;
-                                    .owl-stage {
-                                        display: flex;
-                                        align-items: center;
+                                    height: 107px;
+                                    .owl-carousel {
+                                        height: 100%;
+                                        .owl-stage-outer {
+                                            height: 100%;
+                                        }
+                                        .owl-stage {
+                                            display: flex;
+                                            align-items: center;
+                                            height: 100%;
+                                            .owl-item {
+                                                height: 100%;
+                                            }
+                                        }
                                     }
+
                                     .img-bg {
                                         border-radius: 100%;
                                         border: 5px solid #cee3ff;
                                         transition: 0.4s ease;
-                                        &.active {
+                                        &.choosing {
                                             width: 99px;
                                             border: 5px solid #fff;
                                             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
@@ -346,6 +368,9 @@ section {
                 }
                 .block__content {
                     padding: 40px 30px;
+                    @include media-breakpoint-down(sm) {
+                        padding: 0 15px 20px;
+                    }
                     &__text {
                         &--medium {
                             margin-bottom: 55px;

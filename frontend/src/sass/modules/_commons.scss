@@ -56,7 +56,7 @@ main.wrapper {
                 right: 16%;
             }
             @include break-max(1500px) {
-                right: 10%;
+                right: 6%;
             }
         }
         .swiper-button-prev {
@@ -67,7 +67,7 @@ main.wrapper {
                 left: 16% !important;
             }
             @include break-max(1500px) {
-                left: 10%;
+                left: 6%;
             }
         }
     }

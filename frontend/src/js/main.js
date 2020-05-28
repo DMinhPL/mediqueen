@@ -132,6 +132,8 @@
             effect: 'coverflow',
             grabCursor: false,
             simulateTouch:false,
+            mouseDrag:false,
+            touchDrag:false,
             centeredSlides: true,
             slidesPerView: 'auto',
             autoplay: {
@@ -196,6 +198,15 @@
                 dots:true,
                 lazyLoad: true,
                 items:4,
+            });
+            const item = '.slider-changeContent .avaGroup .img-bg';
+            $(document.body).on('click',item,function(e){
+                e.preventDefault();
+                const $it = $(e.currentTarget);
+                if(!$it.hasClass('choosing')){
+                    $(item).removeClass('choosing');
+                    $it.addClass('choosing');
+                }else $it.removeClass('choosing');
             });
         };
         _sliderChangeText();

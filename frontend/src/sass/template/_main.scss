@@ -294,6 +294,7 @@ section {
                                     padding: 40px 24px;
                                     @include media-breakpoint-down(sm) {
                                         padding: 16px;
+                                        padding-top: 40px;
                                     }
                                     &:before {
                                         content: '';
@@ -313,6 +314,15 @@ section {
                                             background-repeat: no-repeat;
                                             border: none;
                                         }
+                                    }
+                                    &:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: 12px;
+                                        left: 18px;
+                                        width: 25px;
+                                        height: 25px;
+                                        background: transparent url(../images/ic-quote.png) no-repeat center/25px auto;
                                     }
                                 }
                                 .name {
@@ -476,4 +486,9 @@ section {
     top: 8%;
     left: 0;
     right: 0;
+    .img-bg {
+        &:after {
+            padding-top: 1676/1920 * 100%;
+        }
+    }
 }

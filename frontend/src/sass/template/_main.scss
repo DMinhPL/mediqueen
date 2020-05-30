@@ -33,6 +33,7 @@ section {
             @include media-breakpoint-up(lg) {
                 padding-bottom: 50px;
             }
+
             .box-border {
                 max-width: 570px;
                 margin: auto;
@@ -465,4 +466,14 @@ section {
             }
         }
     }
+}
+.bg-section {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -3;
+    top: 8%;
+    left: 0;
+    right: 0;
 }

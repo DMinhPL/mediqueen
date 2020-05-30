@@ -1,5 +1,6 @@
 main.wrapper {
     overflow: hidden;
+    position: relative;
     @include media-breakpoint-down(md) {
         padding-top: 60px;
     }

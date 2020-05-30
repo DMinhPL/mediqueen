@@ -92,3 +92,14 @@ mixin grid_gallery_content(data)
         .sgridContent__right
             each val in data
                 +thumb_item('Mollitia et ut adipisci quos nisi',`/images/news/news${val}.png`,true,'no-effect isGuide')
+mixin interact_panel
+    .interactPanel
+        .inter-item
+            +img-bg('/images/logo-intro.png','','logoImg')
+        .inter-item
+            a(href="#"): i.icon.ic-messenger
+        .inter-item
+            a(href="mailto:email @example.com"): i.icon.ic-mail-white
+            .dropBoxChat
+        .inter-item
+            a(href="tel:+12345678990"): i.icon.ic-phone-white

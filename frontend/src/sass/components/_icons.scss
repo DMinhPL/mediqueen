@@ -166,4 +166,39 @@ i.icon {
         height: 36px;
         background-image: url('../images/ic-phone-green.svg');
     }
+    &.ic-messenger {
+        width: 22px;
+        height: 22px;
+        background-image: url('../images/ic-mess.svg');
+    }
+    &.ic-mail-white {
+        width: 22px;
+        height: 22px;
+        background-image: url('../images/ic-mail-white.svg');
+    }
+    &.ic-phone-white {
+        width: 22px;
+        height: 22px;
+        background-image: url('../images/phone-copy.svg');
+    }
+    &.ic-facebook {
+        width: 18px;
+        height: 18px;
+        background-image: url('../images/ic-facebook.svg');
+    }
+    &.ic-youtube {
+        width: 18px;
+        height: 18px;
+        background-image: url('../images/ic-youtube.svg');
+    }
+    &.ic-twitter {
+        width: 18px;
+        height: 18px;
+        background-image: url('../images/ic-twitter.svg');
+    }
+    &.ic-instagram {
+        width: 18px;
+        height: 18px;
+        background-image: url('../images/ic-instagram.svg');
+    }
 }

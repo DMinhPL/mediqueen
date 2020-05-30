@@ -66,3 +66,35 @@
         }
     }
 }
+.copyright-bar {
+    padding: 14px 0 18px;
+    background: #0045a2;
+    border-top: 1px solid #548edd;
+    .d-flex {
+        justify-content: space-between;
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+        .text {
+            font-size: 14px;
+            font-family: $font-r;
+            color: #fff;
+            span {
+                color: #ff6363;
+            }
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 15px;
+            }
+        }
+        .socials-link {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-right: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -43,6 +43,31 @@ section {
                 }
             }
             .block__content {
+                .float-product {
+                    position: absolute;
+                    bottom: -46px;
+                    right: 46px;
+                    z-index: 2;
+                    @include media-breakpoint-down(md) {
+                        display: none;
+                    }
+                    &:not(.deep) {
+                        @include media-breakpoint-only(lg) {
+                            right: -20px;
+                        }
+                    }
+                    &.deep {
+                        top: 32px;
+                        left: 40px;
+                        z-index: -1;
+                    }
+                    .img-bg {
+                        width: 264px;
+                        &:after {
+                            padding-top: 362/264 * 100%;
+                        }
+                    }
+                }
                 .floatImg {
                     &-top {
                         position: absolute;
@@ -168,27 +193,36 @@ section {
             // background-color: #e6f1ff;
             position: relative;
             padding: 40px 0;
+            @include break-min(1919px) {
+                height: 720px !important;
+            }
             @include media-breakpoint-up(xl) {
-                height: 602px;
+                height: 580px;
             }
             @include media-breakpoint-up(lg) {
                 padding: 90px 0 30px;
             }
             &.mg-section {
                 @include media-breakpoint-up(lg) {
-                    margin-bottom: 250px;
+                    margin-bottom: 150px;
                 }
             }
             .container {
                 .thumbFloating {
                     @include media-breakpoint-up(xl) {
                         position: absolute;
-                        bottom: -37%;
-                        left: calc(50% - 390px);
+                        bottom: -20%;
+                        left: calc(50% - 325px);
+                    }
+                    @include break-min(1919px) {
+                        left: calc(50% - 390px) !important;
                     }
                     .img-bg {
+                        @include break-min(1919px) {
+                            width: 780px !important;
+                        }
                         @include media-breakpoint-up(xl) {
-                            width: 780px;
+                            width: 650px;
                         }
                         &:after {
                             padding-top: 605/989 * 100%;
@@ -239,7 +273,12 @@ section {
                 }
                 .block__content__text {
                     h2 {
-                        margin-bottom: 70px;
+                        @include break-min(1919px) {
+                            margin-bottom: 70px !important;
+                        }
+                        @include media-breakpoint-up(lg) {
+                            margin-bottom: 25px;
+                        }
                         @include media-breakpoint-down(sm) {
                             margin-bottom: 50px;
                         }
@@ -252,6 +291,9 @@ section {
         }
         &--customers {
             font-family: $font-r;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 150px;
+            }
             .block__content {
                 @include media-breakpoint-up(lg) {
                     max-height: 600px;
@@ -336,8 +378,7 @@ section {
                                     }
                                 }
                                 .avaGroup {
-                                    margin-top: 16px;
-                                    height: 107px;
+                                    height: 109px;
                                     .owl-carousel {
                                         height: 100%;
                                         .owl-stage-outer {
@@ -368,6 +409,21 @@ section {
                                     }
                                 }
                             }
+                            &.slider-changeContent {
+                                .sliderChange {
+                                    .swiper-container {
+                                        padding-bottom: 10px;
+                                    }
+                                    .swiper-pagination {
+                                        margin-top: 20px;
+                                        left: 0;
+                                        width: 100%;
+                                        .swiper-pagination-bullet {
+                                            margin: 0 5px;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -385,6 +441,11 @@ section {
                     &__text {
                         &--medium {
                             margin-bottom: 55px;
+                        }
+                        &--underLine {
+                            &:before {
+                                border: 1px solid #1646a8;
+                            }
                         }
                     }
                 }

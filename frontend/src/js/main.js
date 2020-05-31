@@ -148,7 +148,7 @@
               slideShadows : true
             },
             pagination: {
-                el: '.swiper-pagination',
+                el: '.banner-home .swiper-pagination',
                 type: 'bullets',
             },
             navigation: {
@@ -191,22 +191,37 @@
         };
         _social();
         const _sliderChangeText = () =>{
-            $('.slider-changeContent .owl-carousel').owlCarousel({
-                // stagePadding: 50,
-                loop:true,
-                margin:40,
-                dots:true,
-                lazyLoad: true,
-                items:4,
+            let $item = null;
+            new Swiper('.slider-changeContent .swiper-container', {
+                slidesPerView:'auto',
+                pagination: {
+                    el: '.slider-changeContent .swiper-pagination',
+                    type: 'bullets',
+                },
+                on: {
+                    init: function () {
+                        $item = $('.slider-changeContent .avaGroup .img-bg');
+                        $item.activeItemIndex = $('.slider-changeContent .avaGroup .img-bg.choosing');
+                    },
+                  },
             });
+            // $('.slider-changeContent .owl-carousel').owlCarousel({
+            //     // stagePadding: 50,
+            //     loop:true,
+            //     margin:40,
+            //     dots:true,
+            //     nav:false,
+            //     lazyLoad: true,
+            //     items:4,
+            // });
             const item = '.slider-changeContent .avaGroup .img-bg';
             $(document.body).on('click',item,function(e){
                 e.preventDefault();
-                const $it = $(e.currentTarget);
-                if(!$it.hasClass('choosing')){
-                    $(item).removeClass('choosing');
-                    $it.addClass('choosing');
-                }else $it.removeClass('choosing');
+                const $this = $(this);
+                if($this.index()=== $item.activeItemIndex) return;
+                $item.removeClass('choosing');
+                $this.addClass('choosing');
+                $item.activeItemIndex = $this.index();
             });
         };
         _sliderChangeText();

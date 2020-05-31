@@ -94,8 +94,8 @@ header.header-page.header {
                 position: relative;
                 p.slogan {
                     color: #fff;
-                    font-family: $font-utmb;
                     font-size: 16px;
+                    font-style: italic;
                 }
                 .logo {
                     @include media-breakpoint-down(md) {

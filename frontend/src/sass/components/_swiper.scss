@@ -223,7 +223,7 @@
 /* Common Styles */
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-container-horizontal .swiper-pagination-bullets {
     bottom: 10px;
     left: 0;
     width: 100%;
@@ -290,7 +290,7 @@ button.swiper-pagination-bullet {
         background: #ff6363;
     }
 }
-.swiper-container-vertical > .swiper-pagination-bullets {
+.swiper-container-vertical .swiper-pagination-bullets {
     top: 50%;
     right: 10px;
     transform: translate3d(0, -50%, 0);
@@ -309,7 +309,7 @@ button.swiper-pagination-bullet {
     }
 }
 .swiper-container-horizontal {
-    > .swiper-pagination-bullets {
+    .swiper-pagination-bullets {
         .swiper-pagination-bullet {
             margin: 0 4px;
         }
@@ -322,7 +322,7 @@ button.swiper-pagination-bullet {
             }
         }
     }
-    &.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+    &.swiper-container-rtl .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
         transition: 200ms transform, 200ms right;
     }
 }
@@ -344,13 +344,13 @@ button.swiper-pagination-bullet {
 .swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     transform-origin: right top;
 }
-.swiper-container-horizontal > .swiper-pagination-progressbar {
+.swiper-container-horizontal .swiper-pagination-progressbar {
     top: 0;
     left: 0;
     width: 100%;
     height: 4px;
 }
-.swiper-container-vertical > .swiper-pagination-progressbar {
+.swiper-container-vertical .swiper-pagination-progressbar {
     &.swiper-pagination-progressbar-opposite {
         top: 0;
         left: 0;
@@ -362,7 +362,7 @@ button.swiper-pagination-bullet {
     width: 4px;
     height: 100%;
 }
-.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.swiper-container-horizontal .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
     top: 0;
     left: 0;
     width: 4px;

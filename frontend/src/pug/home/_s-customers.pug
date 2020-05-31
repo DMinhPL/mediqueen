@@ -4,9 +4,9 @@
     .sgrid
         .sgrid__left#sSocials
             .block__content
-                //- .block__content__text.text-center
-                //-     h2.block__content__text--medium.block__content__text--underLine.text-uppercase 
-                //-         | MẠNG XÃ HỘI
+                .block__content__text.text-center
+                    h2.m-0.block__content__text--medium.block__content__text--underLine.text-uppercase 
+                        | MẠNG XÃ HỘI
                 //- .swiper-container
                 //-     .swiper-wrapper
                 //-         each val in [1,2,3]
@@ -44,6 +44,8 @@
                         .block__content__text(style='padding-top:0')
                             .name Shirley Meyer  /  #[span Photographer]
                             .avaGroup
-                                .owl-carousel
-                                    each val in [1,2,2,1]
-                                        +img-bg(`images/ava${val}.png`,'','avaImg','#')
+                                .swiper-container   
+                                    .swiper-wrapper
+                                        each val in [1,2,2,1,2,1,2]
+                                            +img-bg(`images/ava${val}.png`,'','avaImg swiper-slide','#')
+                                .swiper-pagination

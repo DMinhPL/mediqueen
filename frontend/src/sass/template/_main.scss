@@ -306,6 +306,9 @@ section {
                 }
                 &__left {
                     background-color: #cee3ff;
+                    @include media-breakpoint-down(sm) {
+                        padding-top: 25px;
+                    }
                     .block__content__text--underLine:after {
                         background-color: #cee3ff;
                     }
@@ -378,7 +381,9 @@ section {
                                     }
                                 }
                                 .avaGroup {
-                                    height: 109px;
+                                    @include media-breakpoint-up(md) {
+                                        height: 109px;
+                                    }
                                     .owl-carousel {
                                         height: 100%;
                                         .owl-stage-outer {
@@ -415,9 +420,14 @@ section {
                                         padding-bottom: 10px;
                                     }
                                     .swiper-pagination {
-                                        margin-top: 20px;
                                         left: 0;
                                         width: 100%;
+                                        @include media-breakpoint-up(md) {
+                                            margin-top: 20px;
+                                        }
+                                        @include media-breakpoint-down(sm) {
+                                            position: static;
+                                        }
                                         .swiper-pagination-bullet {
                                             margin: 0 5px;
                                         }
@@ -466,6 +476,9 @@ section {
                             font-size: 24px;
                             @include media-breakpoint-down(md) {
                                 font-size: 16px;
+                            }
+                            @include media-breakpoint-down(sm) {
+                                font-size: 12px;
                             }
                         }
                         .line {

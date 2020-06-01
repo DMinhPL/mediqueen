@@ -328,6 +328,17 @@
                 font-size: 12px;
             }
         }
+        .inputIcon {
+            position: relative;
+            input {
+                padding-right: 30px;
+            }
+            i.icon {
+                position: absolute;
+                top: calc(50% - 10px);
+                right: 10px;
+            }
+        }
     }
     input {
         &.form-input {

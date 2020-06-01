@@ -1,0 +1,52 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "NEWS - MediQueen"
+    - isNews = true
+    - 
+        var data_breadcrumb = [
+            {'title': 'TIN TỨC', 'link':'news.html'},
+        ]
+block content 
+    .breadcrumb-page
+        .container
+            +breadcrumb(data_breadcrumb, "HOME")
+    section.s__news.mg-section
+        .container
+            .block
+                +title_section_home('TIN TỨC')
+                .form-style.m-show
+                    form(action="#")
+                        .form-line
+                            .inputIcon
+                                input(type="text" placeholder='Search').form-border
+                                i.icon.ic-search
+                .block__content
+                    .row.isReverse
+                        .col-xl-3
+                            .form-style.m-hide
+                                form(action="#")
+                                    .form-line
+                                        .inputIcon
+                                            input(type="text" placeholder='Search').form-border
+                                            i.icon.ic-search
+                            .thumbSide
+                                +img-bg('/images/news/contact.png','','imgThumbsideNews','tel:+12345678990')
+                            .thumbSide
+                                +productCard_side('Trà tăng cân MediQueen','images/news/prod1.png','isTea')
+                                +productCard_side('Cà phê giảm cân MediQueen','images/news/prod2.png','isCoffee')
+                            .thumbSide
+                                p Tags
+                                .tagPanel
+                                    .tag Apple
+                                    .tag Beaty
+                                    .tag Cherry
+                        .col-xl-9
+                            +thumb_item('Mollitia et ut adipisci quos nisi','/images/news/thumbnews.png',false,'no-effect isGuide')
+                            +grid_news
+                            +pagination([
+                                {text:'1',url:'#'},
+                                {text:'2',url:'#'},
+                                {text:'3',url:'#'},
+                                {text:'Next',url:'#'}
+                            ])

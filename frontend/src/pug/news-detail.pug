@@ -1,0 +1,110 @@
+extends layouts/_layout_default
+
+block setting
+    - title = "NEWS Detail - MediQueen"
+    - isNews = true
+    - 
+        var data_breadcrumb = [
+            {'title': 'TIN TỨC', 'link':'news.html'},
+            {'title': 'TIN TỨC CHI TIẾT', 'link':'news-detail.html'},
+        ]
+block content 
+    .breadcrumb-page
+        .container
+            +breadcrumb(data_breadcrumb, "HOME")
+    section.s__news.s__news--detail.mg-section
+        .container
+            .block
+                .form-style.m-show
+                    form(action="#")
+                        .form-line
+                            .inputIcon
+                                input(type="text" placeholder='Search').form-border
+                                i.icon.ic-search
+                .block__content
+                    .row.isReverse
+                        .col-xl-3
+                            .form-style.m-hide
+                                form(action="#")
+                                    .form-line
+                                        .inputIcon
+                                            input(type="text" placeholder='Search').form-border
+                                            i.icon.ic-search
+                            .thumbSide
+                                +img-bg('/images/news/contact.png','','imgThumbsideNews','tel:+12345678990')
+                            .thumbSide
+                                +productCard_side('Trà tăng cân MediQueen','images/news/prod1.png','isTea')
+                                +productCard_side('Cà phê giảm cân MediQueen','images/news/prod2.png','isCoffee')
+                            .thumbSide
+                                p Tags
+                                .tagPanel
+                                    .tag Apple
+                                    .tag Beaty
+                                    .tag Cherry
+                        .col-xl-9
+                            .block__content__text.top
+                                h2 GIẢN CÂN BẰNG HẠT CHIA
+                                .tagCalendar 05-05-2020
+                            p.textpress.font-weight-bold When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, #[a(href="#").text-link remaining] essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.
+                            .textPanel
+                                p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, literature, discovered the undoubtable source. #[span.emphasis LOREM IPSUM COMES FROM SECTIONS] 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+                                .row.row-10
+                                    each val in [1,2]
+                                        .col-lg-6.col-md-6
+                                            +img-bg(`/images/news/detail${val}.png`,'','imgNewsDetail')
+                            .textPanel
+                                h2 Cosmetic ingredients
+                                p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at #[span.emphasis Hampden-Sydney College in Virginia], looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the #[span.emphasis RENAISSANCE]. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                ul.list-link
+                                    li: a(href="#") Contrary to popular belief, 
+                                    li: a(href="#") Richard McClintock, a Latin professor
+                                    li: a(href="#") There are many variations of passages
+                            .textPanel
+                                h2 More for image 
+                                p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in #[span.emphasis Virginia], looked up one of the more obscure Latin words,
+                                .row
+                                    .col-12
+                                        +img-bg(`/images/news/detail3.png`,'','imgNewsDetail_rectangle')
+                                        .desc-img White-salt-in-bowl-with-cosmetics-products-and-hairbrush-on-white-background
+                            .textPanel
+                                p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at #[span.emphasis Hampden-Sydney College in Virginia], looked up one of the more obscure Latin words. Lorem Ipsum is simply dummy text of the.
+                            .textPanel
+                                .row
+                                    .col-lg-6
+                                        .imgPanel
+                                            +img-bg('/images/news/detail3.png','','imgNewsDetail_stand')
+                                            .desc-img White-salt-in-bowl-with-cosmetics-products
+                                    .col-lg-6
+                                        p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney #[span.emphasis College in Virginia], looked up one of the more obscure Latin words.
+                                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, #[a(href="#").text-link when an unknown] printer took a galley of type and scrambled it to make
+                                        p a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing. It is a long established fact that a reader will be distracted. It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.
+
+                            .textPanel
+                                p by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. #[span.emphasis MANY DESKTOP PUBLISHING PACKAGES] and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. orem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a .
+                            .tagPanel
+                                .tag Apple
+                                .tag Beaty
+                                .tag Cherry
+                            .form-style
+                                .textPanel
+                                    h2 BÌNH LUẬN
+                                form(action="#")#frmContact.form-validate
+                                    .row
+                                        .col-lg-6
+                                            .form-line
+                                                .has-input
+                                                    input(type="text" name='name' placeholder='Họ & Tên' data-msg='Họ và tên là bắt buộc' required).form-border
+                                        .col-lg-6
+                                            .form-line
+                                                .has-input
+                                                    input(type="email" name='email' data-msg='Email là bắt buộc' placeholder='Email Address' required).form-border
+                                    .form-line
+                                        .has-input
+                                            textarea#comment.form-border(name="comment", rows="7", placeholder='Bình luận' data-msg='Nội dung là bắt buộc' required)
+                                    .group-btn
+                                        button(type='submit').btn-custom.pink.text-uppercase GỬI 
+                                            i.fa.fa-paper-plane
+                            .block__content__text.bottom
+                                h2 BÀI VIẾT LIÊN QUAN
+                                +grid_news
+                                

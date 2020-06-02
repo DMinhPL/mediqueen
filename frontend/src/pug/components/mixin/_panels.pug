@@ -112,27 +112,27 @@ mixin thumb_item_flex(title,urlImg)
                 .swiper-wrapper
                     each val in [1,2,3]
                         .swiper-slide
-                            a(href="#").m-0.text.text__bigger #[=title]
+                            a(href="news-detail.html").m-0.text.text__bigger #[=title]
                             .text__smaller Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                                 | At vero eos et.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
-                            a(href="#").readMore Read more
+                            a(href="news-detail.html").readMore Read more
             .swiper-pagination
         .imgPanel
             .tagDate
                 span.d-block 28
                 span.d-block Nov
-            +img-bg(urlImg,'','bigThumbImg','#')
+            +img-bg(urlImg,'','bigThumbImg','news-detail.html')
 mixin thumb_news(title,urlImg,isFlex,_class)
     unless _class 
         - var _class = ''
     .itemProduct(class=isFlex ? `isFlex ${_class}` : _class)
         .imgPanel
-            +img-bg(urlImg,'','thumbImg','#')
+            +img-bg(urlImg,'','thumbImg','news-detail.html')
         .textPanel
-            a(href="#").text.text__bigger #[=title]
+            a(href="news-detail.html").text.text__bigger #[=title]
             .tagCalendar 05-05-2020
             .text__smaller.big-dotdotdot Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
-            a(href="#").readMore Read more
+            a(href="news-detail.html").readMore Read more
 mixin grid_gallery_content(data)
     .sgridContent
         .sgridContent__left
@@ -152,5 +152,5 @@ mixin interact_panel
         .inter-item
             a(href="tel:+12345678990"): i.icon.ic-phone-white
 mixin grid_news
-    each val in [4,4,4,4]
+    each val in [4,4,4]
         +thumb_news('Mollitia et ut adipisci quos nisi',`/images/news/news${val}.png`,true,'no-effect isGuide')

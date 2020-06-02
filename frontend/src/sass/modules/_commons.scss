@@ -216,3 +216,12 @@ main.wrapper {
         }
     }
 }
+.desc-img {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #948e90;
+    @include media-breakpoint-down(md) {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+}

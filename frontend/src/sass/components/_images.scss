@@ -73,6 +73,18 @@
             padding-top: 299/270 * 100%;
         }
     }
+    &.imgNewsDetail {
+        &_rectangle {
+            &:after {
+                padding-top: 430/870 * 100%;
+            }
+        }
+        &__stand {
+            &:after {
+                padding-top: 489/370 * 100%;
+            }
+        }
+    }
 }
 
 //

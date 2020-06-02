@@ -1,4 +1,100 @@
 .s__news {
+    &--detail {
+        .block {
+            &__content {
+                &__text {
+                    &.top {
+                        .tagCalendar {
+                            font-size: 18px;
+                        }
+                    }
+                    &.bottom {
+                        @include media-breakpoint-up(lg) {
+                            margin-top: 30px;
+                        }
+                        h2 {
+                            position: relative;
+                            margin-bottom: 30px;
+                            display: inline-block;
+                            &::before {
+                                content: '';
+                                position: absolute;
+                                bottom: -14px;
+                                left: 0;
+                                right: 0;
+                                height: 1px;
+                                background-color: #ff6363;
+                            }
+                        }
+                    }
+                    h2 {
+                        font-size: 24px;
+                        color: #363636;
+                        font-weight: bold;
+                        margin-bottom: 14px;
+                    }
+                }
+                .textPanel {
+                    padding: 20px 0;
+                    h2 {
+                        font-size: 24px;
+                        color: #363636;
+                        font-weight: bold;
+                    }
+                    .textpress {
+                        font-size: 18px;
+                        margin: 20px 0;
+                    }
+                    p {
+                        color: #948e90;
+                    }
+                    span.emphasis {
+                        color: #333333;
+                    }
+                }
+                .text-link {
+                    color: #0c4ca3;
+                    text-decoration: underline;
+                }
+                .form-style {
+                    padding: 30px 0;
+                    .group-btn {
+                        i.fa {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .itemProduct.isFlex .textPanel .text__bigger {
+                    margin-bottom: 0;
+                }
+            }
+            .list-link {
+                padding-left: 20px;
+                margin-bottom: 0;
+                li {
+                    padding: 10px 0;
+                    a {
+                        color: #948e90;
+                        text-decoration: none;
+                        transition: 0.4s ease;
+                        &:hover {
+                            color: #0c4ca3;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .row-10 {
+                margin-right: -5px;
+                margin-left: -5px;
+                .col-lg-6,
+                .col-md-6 {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
     &.mg-section {
         margin: 40px 0 100px;
     }

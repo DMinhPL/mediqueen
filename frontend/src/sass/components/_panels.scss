@@ -464,6 +464,84 @@
             }
         }
     }
+    &.reverseFlex {
+        display: flex;
+        margin-bottom: 30px;
+        background-color: #f5f8f5;
+        @include media-breakpoint-down(lg) {
+            flex-direction: column-reverse;
+        }
+        .imgPanel {
+            width: 100%;
+            @include media-breakpoint-up(xl) {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .img-bg.bigThumbImg:after {
+                padding-top: 370/468 * 100%;
+            }
+        }
+        .category-tag {
+            padding: 0;
+            padding-bottom: 16px;
+            @include media-breakpoint-only(lg) {
+                font-size: 12px;
+                span.time {
+                    font-size: 10px;
+                }
+            }
+            @include media-breakpoint-down(sm) {
+                padding-bottom: 0;
+            }
+        }
+        .textPanel {
+            width: 100%;
+            padding: 15px;
+            position: relative;
+            @include media-breakpoint-up(xl) {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 24px;
+                padding-right: 30px;
+            }
+            .text {
+                &__bigger {
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                    @include media-breakpoint-only(lg) {
+                        font-size: 14px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: 18px;
+                    }
+                    @include media-breakpoint-down(sm) {
+                        font-size: 16px;
+                        margin-bottom: 8px;
+                        line-height: 1.25;
+                    }
+                }
+                &__smaller {
+                    font-size: 16px;
+                    @include media-breakpoint-only(lg) {
+                        font-size: 12px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: 14px;
+                    }
+                    @include media-breakpoint-down(md) {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .swiper-pagination {
+                bottom: 20px;
+                width: 100%;
+                .swiper-pagination-bullet {
+                    margin: 0 7px;
+                }
+            }
+        }
+    }
     &.isFlex {
         display: flex;
         &:not(:last-child) {
@@ -500,7 +578,7 @@
             }
             .text {
                 &__bigger {
-                    font-size: 20px;
+                    // font-size: 20px;
                     margin-bottom: 10px;
                     @include media-breakpoint-only(lg) {
                         font-size: 14px;

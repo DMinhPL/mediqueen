@@ -7,6 +7,12 @@
                         .tagCalendar {
                             font-size: 18px;
                         }
+                        h2 {
+                            font-size: 24px;
+                            color: #363636;
+                            font-weight: bold;
+                            margin-bottom: 14px !important;
+                        }
                     }
                     &.bottom {
                         @include media-breakpoint-up(lg) {
@@ -26,12 +32,6 @@
                                 background-color: #ff6363;
                             }
                         }
-                    }
-                    h2 {
-                        font-size: 24px;
-                        color: #363636;
-                        font-weight: bold;
-                        margin-bottom: 14px;
                     }
                 }
                 .textPanel {

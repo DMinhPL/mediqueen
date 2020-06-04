@@ -85,6 +85,16 @@
             }
         }
     }
+    &.thumbProd {
+        &:after {
+            padding-top: 357/340 * 100%;
+        }
+    }
+    &.thumbDetailItem {
+        &:after {
+            padding-top: 72/74 * 100%;
+        }
+    }
 }
 
 //

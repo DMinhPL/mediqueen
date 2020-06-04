@@ -152,8 +152,8 @@
                 type: 'bullets',
             },
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.banner-home .swiper-button-next',
+                prevEl: '.banner-home .swiper-button-prev',
               },
             loop: true
           });

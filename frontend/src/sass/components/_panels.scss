@@ -14,6 +14,12 @@
                     font-size: 18px;
                 }
             }
+            &--smaller {
+                font-size: 12px;
+                @include media-breakpoint-up(md) {
+                    font-size: 14px;
+                }
+            }
             &--underLine {
                 position: relative;
                 display: inline-block;
@@ -111,7 +117,7 @@
                         padding-left: 24px;
                     }
                 }
-                .btn-action {
+                .btn-action-cart {
                     margin-top: 15px;
                     max-width: 170px;
                     .btn-custom {
@@ -240,46 +246,46 @@
                     }
                 }
             }
-            .btn-action {
-                display: flex;
-                justify-content: space-between;
-                max-width: 380px;
-                @include break-max(1919px) {
-                    margin-top: 15px;
-                }
-                .bag-btn {
-                    display: block;
-                    width: 43px;
-                    height: 45px;
-                    border: 1px solid #5ba000;
-                    border-radius: 12px;
-                    background: transparent url('../images/ic-bag-tea.png') no-repeat center/17px auto;
-                    &.brown {
-                        border: 1px solid #652825;
-                        background: transparent url('../images/ic-bag.svg') no-repeat center/17px auto;
-                    }
-                }
-                .btn-custom {
-                    min-width: 120px;
-                    @include media-breakpoint-down(sm) {
-                        padding: 0px 11px;
-                        font-size: 10px;
-                        min-width: 90px;
-                    }
-                }
-                .link-btn {
-                    display: block;
-                    width: 43px;
-                    height: 45px;
-                    border: 1px solid #5ba000;
-                    border-radius: 12px;
-                    background: transparent url('../images/ic-link.svg') no-repeat center/17px auto;
-                    &.brown {
-                        border: 1px solid #652825;
-                        background: transparent url('../images/ic-link-brown.svg') no-repeat center/17px auto;
-                    }
-                }
-            }
+        }
+    }
+}
+.btn-action-cart {
+    display: flex;
+    justify-content: space-between;
+    max-width: 380px;
+    @include break-max(1919px) {
+        margin-top: 15px;
+    }
+    .bag-btn {
+        display: block;
+        width: 43px;
+        height: 45px;
+        border: 1px solid #5ba000;
+        border-radius: 12px;
+        background: transparent url('../images/ic-bag-tea.png') no-repeat center/17px auto;
+        &.brown {
+            border: 1px solid #652825;
+            background: transparent url('../images/ic-bag.svg') no-repeat center/17px auto;
+        }
+    }
+    .btn-custom {
+        min-width: 120px;
+        @include media-breakpoint-down(sm) {
+            padding: 0px 11px;
+            font-size: 10px;
+            min-width: 90px;
+        }
+    }
+    .link-btn {
+        display: block;
+        width: 43px;
+        height: 45px;
+        border: 1px solid #5ba000;
+        border-radius: 12px;
+        background: transparent url('../images/ic-link.svg') no-repeat center/17px auto;
+        &.brown {
+            border: 1px solid #652825;
+            background: transparent url('../images/ic-link-brown.svg') no-repeat center/17px auto;
         }
     }
 }

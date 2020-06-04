@@ -605,32 +605,32 @@ button.swiper-pagination-bullet {
     width: 31px;
     height: 31px;
 }
-.swiper-button-prev {
-    &:hover {
-        &:after {
-            background: #0045a2 url('../images/ic-arrow-white.svg') no-repeat center/10px auto;
-            transform: rotate(-360deg);
-        }
-    }
-    &:after {
-        content: '';
-        background: #fff url('../images/ic-arrow-blue.svg') no-repeat center/10px auto;
-        transform: rotate(180deg);
-        border-radius: 100%;
-        border: 1px solid #cccccc;
-    }
-}
-.swiper-button-next {
-    &:hover {
-        &:after {
-            background: #0045a2 url('../images/ic-arrow-white.svg') no-repeat center/10px auto;
-            transform: rotate(180deg);
-        }
-    }
-    &:after {
-        content: '';
-        border-radius: 100%;
-        border: 1px solid #cccccc;
-        background: #fff url('../images/ic-arrow-blue.svg') no-repeat center/10px auto;
-    }
-}
+// .swiper-button-prev {
+//     &:hover {
+//         &:after {
+//             background: #0045a2 url('../images/ic-arrow-white.svg') no-repeat center/10px auto;
+//             transform: rotate(-360deg);
+//         }
+//     }
+//     &:after {
+//         content: '';
+//         background: #fff url('../images/ic-arrow-blue.svg') no-repeat center/10px auto;
+//         transform: rotate(180deg);
+//         border-radius: 100%;
+//         border: 1px solid #cccccc;
+//     }
+// }
+// .swiper-button-next {
+//     &:hover {
+//         &:after {
+//             background: #0045a2 url('../images/ic-arrow-white.svg') no-repeat center/10px auto;
+//             transform: rotate(180deg);
+//         }
+//     }
+//     &:after {
+//         content: '';
+//         border-radius: 100%;
+//         border: 1px solid #cccccc;
+//         background: #fff url('../images/ic-arrow-blue.svg') no-repeat center/10px auto;
+//     }
+// }

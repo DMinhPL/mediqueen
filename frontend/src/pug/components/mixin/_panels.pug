@@ -35,7 +35,7 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
                                         i.icon(class=dt.icon)
                                         span #[=dt.text]
                     .info
-                        .btn-action
+                        .btn-action-cart
                             a(href="#").bag-btn
                             a(href="#").btn-custom.orange.text-uppercase CHI TIẾT
                             a(href="#").btn-custom.transparent.text-uppercase mua ngay
@@ -57,7 +57,7 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
                                         i.icon(class=dt.icon)
                                         span #[=dt.text]
                     .info
-                        .btn-action
+                        .btn-action-cart
                             a(href="#").bag-btn.brown
                             a(href="#").btn-custom.brown.text-uppercase CHI TIẾT
                             a(href="#").btn-custom.transparent-brown.text-uppercase mua ngay
@@ -154,3 +154,6 @@ mixin interact_panel
 mixin grid_news
     each val in [4,4,4]
         +thumb_news('Mollitia et ut adipisci quos nisi',`/images/news/news${val}.png`,true,'no-effect isGuide')
+mixin product_thumb_item(order,target,_class)
+    .prodThumb_item(class=_class data-target=target)
+        +img-bg(`/images/products/prod${order}.png`,'','thumbDetailItem')

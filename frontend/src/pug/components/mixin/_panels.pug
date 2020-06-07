@@ -157,3 +157,51 @@ mixin grid_news
 mixin product_thumb_item(order,target,_class)
     .prodThumb_item(class=_class data-target=target)
         +img-bg(`/images/products/prod${order}.png`,'','thumbDetailItem')
+mixin estimate_star
+    .estimate-star
+        .rating
+            .empty-stars
+            .full-stars
+mixin products_intro_panel2(name,urlImg,dataBenefit, isReverse,_class)
+    .productCard.isReverse(class=_class)
+        .infoPanel
+            .inner-info
+                .info
+                    .nameInfo.roboto-bold #[=name]
+                    .priceInfo.roboto-bold 500.000đ
+                    p Trà thảo dược tăng cân MEDIQUEEN TEA hay còn gọi tắt là trà Mediqueen là một sản phẩm được phát triển từ trà tăng cân Mộc Chi một sản phẩm cực hot trên thị trường do MINQ NATURAL - Việt Nam sản xuất và sau này được đổi tên thành MEDIQUEEN
+                .info
+                    p.label.roboto-bold.m-0 Công dụng
+                    ul.nav.list-style-none
+                        if dataBenefit && dataBenefit.length 
+                            each dt in dataBenefit
+                                li
+                                    i.icon(class=dt.icon)
+                                    span #[=dt.text]
+                .info
+                    .btn-action-cart
+                        a(href="#").bag-btn.brown
+                        a(href="#").btn-custom.brown.text-uppercase CHI TIẾT
+                        a(href="#").btn-custom.transparent-brown.text-uppercase mua ngay
+                        a(href="#").link-btn.brown
+        .imgPanel
+                +img-bg(urlImg,'','productThumb')
+
+mixin estimate(percent)
+    .estimate-star
+        .rating
+            .full-stars(style=`width:${percent}`)
+            .empty-stars
+mixin comment_content
+    .comment
+        .row
+            .col-lg-1
+                .img-panel
+                    +img-bg('/images/ava1.png','','avaImg')
+                    +estimate('90%')
+            .col-lg-11
+                .context
+                    .date 04 Mar 2018
+                    .name.font-weight-bold Nguyễn Văn A
+                    p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.
+

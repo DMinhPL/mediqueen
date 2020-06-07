@@ -225,3 +225,32 @@ main.wrapper {
         margin-bottom: 20px;
     }
 }
+.estimate-star {
+    min-height: 20px;
+    .rating {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        color: #fff;
+        vertical-align: middle;
+        .full-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            color: #a0ce4e;
+            white-space: nowrap;
+        }
+        .empty-stars::before,
+        .full-stars::before {
+            font-size: 14pt;
+            content: '\2605\2605\2605\2605\2605';
+        }
+        .empty-stars::before {
+            -webkit-text-stroke: 1px #a0ce4e;
+        }
+        .full-stars::before {
+            -webkit-text-stroke: 1px #a0ce4e;
+        }
+    }
+}

@@ -42,8 +42,55 @@
         });
 
     }
+    function droplist_selectbox_handle() {
+        const $select = $('.nl-dropbox .nl-select');
+        const $item = $('.nl-dropbox .nl-droplist .item-value');
+        let result = null;
+
+        $select.on('click', function () {
+            const $this = $(this);
+            if (!$this.hasClass('focusing')) {
+                $select.removeClass('focusing');
+                $this.addClass('focusing');
+            } else $this.removeClass('focusing');
+        });
+
+        let isMouseOutside = false;
+        $select
+            .on('mouseenter', function () {
+                isMouseOutside = false;
+            })
+            .on('mouseleave', function () {
+                isMouseOutside = true;
+            });
+
+        $(window).on('click', function () {
+            if (isMouseOutside) $select.removeClass('focusing');
+        });
+
+        $item.on('click', function (e) {
+            result = null;
+            const it = e.currentTarget;
+            const itVal = $(it).attr('data-value');
+            const color = $(it).data('color');
+            $item.removeClass('choosing');
+            $(it).addClass('choosing');
+
+            result = itVal;
+            $(it)
+                .closest('.nl-dropbox')
+                .find('.nl-select span')
+                .text(result);
+            $(it)
+                .closest('.nl-dropbox')
+                .find('.nl-select .typeColor')
+                .css({'background-color':color});
+            // console.log(itVal);
+        });
+    }
     $(function(){
         form_validation();
         slider();
+        droplist_selectbox_handle();
     });
 })(jQuery);

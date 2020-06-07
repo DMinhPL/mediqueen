@@ -153,3 +153,105 @@
     padding: $dropdown-item-padding-y $dropdown-item-padding-x;
     color: $dropdown-link-color;
 }
+
+.nl-dropbox {
+    position: relative;
+    width: 100%;
+    .nl-select {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        padding: 10px;
+        padding-right: 20px;
+        overflow: hidden;
+        font-weight: normal;
+        font-size: 12px;
+        color: #007033;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-left: 40px;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 8px solid #d9d9d9;
+            right: 8px;
+            top: 14px;
+        }
+        &.bordering {
+            border: 1px dashed #652825;
+            border-radius: 12px;
+        }
+        &.focusing {
+            + .nl-droplist {
+                pointer-events: all;
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+        .typeColor {
+            position: absolute;
+            top: 5px;
+            left: 8px;
+            width: 27px;
+            height: 24px;
+        }
+    }
+    .nl-droplist {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        z-index: 90;
+        width: 100%;
+        padding: 0;
+        font-size: 14px;
+        pointer-events: none;
+        visibility: hidden;
+        background: white;
+        border: 1px solid #dbdbdb;
+        opacity: 0;
+        transition: 0.4s ease;
+        .droplist-container {
+            ::-webkit-scrollbar {
+                -webkit-appearance: none;
+                width: 7px;
+                height: 7px;
+                -webkit-overflow-scrolling: auto;
+            }
+            ::-webkit-scrollbar-thumb {
+                border-radius: 4px;
+                background-color: rgba(0, 0, 0, 0.5);
+                -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+            }
+            .droplist-content {
+                max-height: 200px;
+                overflow: auto;
+                overflow-x: hidden;
+                .item-value {
+                    padding: 0.3rem 0.75rem;
+                    font-weight: normal;
+                    font-size: 12px;
+                    color: #007033;
+                    cursor: pointer;
+                    padding-left: 37px;
+                    position: relative;
+                    &:hover,
+                    &.choosing {
+                        color: #a0ce4e;
+                        background-color: #e9ecef;
+                    }
+                    .itemColor {
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: 2px;
+                        left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

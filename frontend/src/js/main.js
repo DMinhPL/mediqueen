@@ -1,57 +1,5 @@
 /* global SimpleBar, Swiper */
 (function($){
-    function ui() {
-        // Select UI
-        $.fn.select2.defaults.set('width', '100%');
-        $('.select-ui').each(function() {
-            const el = $(this);
-            const selectUI = el.select2({
-                placeholder: el.data('placeholder')
-            });
-    
-            // Update UI Scroll - Open dropdown
-            selectUI.on('select2:open', function() {
-                const id = $('.select2-results  > .select2-results__options').attr('id');
-                $('.select2-results')
-                    .attr({ id: id + '-group' })
-                    .queue(function(next) {
-                        new SimpleBar($('#' + id + '-group')[0]);
-                        next();
-                    });
-            });
-        });
-    
-        // Range UI
-        $('.range-ui').each(function(key) {
-            const el = $(this);
-            el.attr({ id: 'range-ui-' + key }).queue(function(next) {
-                $('#range-ui-' + key).ionRangeSlider();
-                next();
-            });
-        });
-    
-        // Scroll
-        $('.scroll-ui').each(function(key) {
-            const el = $(this);
-            el.attr({ id: 'scroll-ui-' + key }).queue(function(next) {
-                new SimpleBar($('#' + el.attr('id'))[0]);
-                next();
-            });
-        });
-    
-        // File Browse UI
-        $('.file-ui .file-ui-input').change(function(e) {
-            if (typeof e.target.files[0] !== 'undefined') {
-                const fileName = e.target.files[0].name;
-                $(this)
-                    .siblings('.file-ui-label')
-                    .text(fileName);
-            }
-        });
-    
-        // Parallax
-        $('[data-paroller-factor]').paroller();
-    }
     // Image svg
     function imgSVG() {
         $('img.svg').each(function() {

@@ -164,3 +164,17 @@ mixin dropright(caption,items,style,size,split)
 mixin dropsplit(caption,items,style,size,type)
 	+dropdown(caption,items,style,size,type,true)
 		block
+
+mixin dropSelect(type, itemlist)
+	.nl-dropbox
+		.nl-select.bordering 
+			.typeColor(style='background-color:#652825')
+			span #[=type]
+		.nl-droplist
+			.droplist-container
+				.droplist-content
+					if itemlist && itemlist.length
+						each dt, index in itemlist
+							.item-value(data-value=`${dt.name}` data-color=dt.color) 
+								.itemColor(style=`background-color:${dt.color}`)
+								span #[=dt.name]

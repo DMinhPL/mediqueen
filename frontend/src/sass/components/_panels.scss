@@ -558,8 +558,8 @@
             padding-right: 10px;
             width: 100%;
             @include media-breakpoint-up(lg) {
-                flex: 0 0 50%;
-                max-width: 50%;
+                flex: 0 0 37%;
+                max-width: 37%;
             }
         }
         .category-tag {
@@ -579,13 +579,12 @@
             width: 100%;
             @include media-breakpoint-up(lg) {
                 padding-left: 10px;
-                flex: 0 0 50%;
-                max-width: 50%;
+                flex: 0 0 63%;
+                max-width: 63%;
             }
             .text {
                 &__bigger {
                     // font-size: 20px;
-                    margin-bottom: 10px;
                     @include media-breakpoint-only(lg) {
                         font-size: 14px;
                     }

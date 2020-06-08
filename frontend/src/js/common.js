@@ -117,6 +117,12 @@
             watch: true,
             truncate: 'word',
         });
+        $('.thumb-dotdotdot').dotdotdot({
+            height: 70,
+            fallbackToLetter: true,
+            watch: true,
+            truncate: 'word',
+        });
     }
     $(function(){
         ui();

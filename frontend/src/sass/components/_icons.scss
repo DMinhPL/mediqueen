@@ -120,8 +120,8 @@ i.icon {
         height: 69px;
         background-image: url('../images/ic-contact.svg');
         @include media-breakpoint-down(sm) {
-            width: 39px;
-            height: 49px;
+            width: 30px;
+            height: 35px;
         }
     }
     &.ic-store {
@@ -129,8 +129,8 @@ i.icon {
         height: 63px;
         background-image: url('../images/shop.svg');
         @include media-breakpoint-down(sm) {
-            width: 43px;
-            height: 43px;
+            width: 30px;
+            height: 35px;
         }
     }
     &.ic-why1 {

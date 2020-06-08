@@ -25,6 +25,7 @@
             pagination: {
                 el: '.s__products .thumbDetail .swiper-pagination',
                 type: 'bullets',
+                clickable:true
             },
             navigation: {
                 nextEl: '.s__products .thumbDetail .swiper-button-next',

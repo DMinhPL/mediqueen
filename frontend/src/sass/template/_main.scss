@@ -456,6 +456,12 @@ section {
                             &:before {
                                 border: 1px solid #1646a8;
                             }
+                            &:after,
+                            &:before {
+                                @include media-breakpoint-down(md) {
+                                    display: none;
+                                }
+                            }
                         }
                     }
                 }
@@ -478,7 +484,7 @@ section {
                                 font-size: 16px;
                             }
                             @include media-breakpoint-down(sm) {
-                                font-size: 12px;
+                                font-size: 10px;
                             }
                         }
                         .line {
@@ -491,11 +497,17 @@ section {
                                 @include media-breakpoint-down(md) {
                                     font-size: 16px;
                                 }
+                                @include media-breakpoint-down(sm) {
+                                    font-size: 14px;
+                                }
                                 &.num {
                                     color: #fff;
                                     font-size: 40px;
                                     @include media-breakpoint-down(md) {
                                         font-size: 20px;
+                                    }
+                                    @include media-breakpoint-down(sm) {
+                                        font-size: 16px;
                                     }
                                 }
                             }

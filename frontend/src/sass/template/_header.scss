@@ -60,7 +60,7 @@ header.header-page.header {
                 left: 0;
                 right: 0;
                 z-index: 80;
-                padding: 17px 0;
+                padding: 5px 0;
             }
             & > .container {
                 display: flex;
@@ -99,11 +99,10 @@ header.header-page.header {
                 }
                 .logo {
                     @include media-breakpoint-down(md) {
-                        position: absolute;
-                        top: -10px;
-                        left: -26px;
-                        right: 0;
-                        width: 71px;
+                        img {
+                            width: 45px;
+                            height: 50px;
+                        }
                     }
                 }
             }
@@ -112,6 +111,11 @@ header.header-page.header {
                     width: 185px;
                 }
                 .cartPanel {
+                    @include media-breakpoint-down(md) {
+                        position: absolute;
+                        top: 16px;
+                        right: 21px;
+                    }
                     a {
                         display: flex;
                         align-items: center;
@@ -255,7 +259,7 @@ header.header-page.header {
         width: 40px;
         height: 30px;
         display: block;
-        top: -4px;
+        top: 7px;
         left: -15px;
         @include media-breakpoint-down(sm) {
             left: 0;

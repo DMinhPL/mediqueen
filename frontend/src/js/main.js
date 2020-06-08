@@ -142,9 +142,11 @@
             let $item = null;
             new Swiper('.slider-changeContent .swiper-container', {
                 slidesPerView:'auto',
+                spaceBetween:40,
                 pagination: {
                     el: '.slider-changeContent .swiper-pagination',
                     type: 'bullets',
+                    clickable: true,
                 },
                 on: {
                     init: function () {

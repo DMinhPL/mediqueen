@@ -1,0 +1,38 @@
+extends layouts/_layout_default
+
+
+block setting
+    - title = "Giỏ hàng - MediQueen"
+
+block content 
+    section.s__cart.mg-section
+        .container
+            .block
+                +title_section('Giỏ hàng')
+                .block__content#cartProducts
+                    .step-app
+                        ul.step-steps
+                            li
+                                a.text-uppercase(href='#step1') GIỎ hàng
+                                    span.number 01
+                            li
+                                a.text-uppercase(href='#step2') thanh toán
+                                    span.number 02
+                            li
+                                a.text-uppercase(href='#step3') hoàn thành
+                                    span.number 03
+                        .step-content
+                            #step1.step-tab-panel
+                                include ./payment/_step1
+                            #step2.step-tab-panel
+                                | 2
+                            #step3.step-tab-panel
+                                | 3
+                        .step-footer
+                            button(data-direction='prev') Previous
+                            button(data-direction='next') Next
+                            button(data-direction='finish') Finish
+
+
+
+

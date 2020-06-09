@@ -4985,7 +4985,14 @@ jarallax@^1.12.0:
     lite-ready "^1.0.4"
     video-worker "^1.1.8"
 
-jquery@^3.5.1:
+jquery.steps@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/jquery.steps/-/jquery.steps-1.0.2.tgz#7b750fb050ebae1e484f882937c477f0d168276a"
+  integrity sha512-crF1fWV0i/GdDNAVOwQ48pU9jB5spEikwU3PIaMd485lyDcz2RDIgPbNAxKBqqZuaOTRSZVhqyIy/5mw3JJlYw==
+  dependencies:
+    jquery "^3.4.1"
+
+jquery@^3.4.1, jquery@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==

@@ -155,10 +155,18 @@ input[type='button'] {
         color: #fff;
         background-color: #ff6363;
     }
+    &.radiusBtn {
+        border-radius: 20px;
+    }
     &.orange {
         color: #fff;
         border-radius: 20px;
         background-color: #5ba000;
+    }
+    &.blue {
+        color: #fff;
+        border-radius: 20px;
+        background-color: #0c4ca3;
     }
     &.brown {
         color: #fff;
@@ -174,6 +182,9 @@ input[type='button'] {
             background: #5ba000;
             color: #fff;
         }
+    }
+    &.bigger {
+        padding: 15px 25px;
     }
     &.transparent-brown {
         color: #652825;

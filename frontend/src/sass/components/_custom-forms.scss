@@ -391,3 +391,84 @@
         }
     }
 }
+.has-radio {
+    cursor: pointer;
+    &.round {
+        input {
+            &[type='radio'] + span {
+                padding-left: 30px;
+                &::before {
+                    top: 0;
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #989a9d;
+                    border-radius: 100%;
+                }
+            }
+            &[type='radio']:checked + span {
+                &::before {
+                    background-color: transparent;
+                }
+                &::after {
+                    top: 5px;
+                    left: 6px;
+                    width: 10px;
+                    height: 10px;
+                    background: #c44860;
+                    border-radius: 100%;
+                    opacity: 1;
+                    transform: rotate(0);
+                }
+            }
+        }
+    }
+    span {
+        font-size: 14px;
+    }
+    .label {
+        display: block;
+    }
+    label {
+        cursor: pointer;
+    }
+    label:not(.label):not(.error) {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 15px;
+    }
+    input {
+        &[type='radio'] {
+            display: none;
+        }
+        &[type='radio'] + span {
+            position: relative;
+            padding-top: 1px;
+            padding-left: 22px;
+            &::before {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 18px;
+                height: 18px;
+                content: '';
+                background: transparent;
+                border: 1px solid #e3e3e3;
+                border-radius: 5px;
+            }
+        }
+        &[type='radio']:checked + span {
+            &::after {
+                position: absolute;
+                top: 5px;
+                left: 6px;
+                width: 5px;
+                height: 10px;
+                content: '';
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                opacity: 1;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}

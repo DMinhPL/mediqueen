@@ -362,3 +362,12 @@ mixin radioui-box(text,name,_id,value,checked,disabled,_class)
 //- Radio box - Inline style
 mixin radioui-inline(text,name,_id,value,checked,disabled)
     +radioui(text,name,_id,value,checked,disabled,'ctr-ui-inline')
+
+mixin f_radiobox(name,type,classEdit,dataType)
+    unless classEdit
+        - var classEdit =''
+    unless dataType
+        - var dataType =''
+    label.has-radio(class=classEdit)
+        input(type="radio", name=type, data-type=dataType)
+        span #[=name]

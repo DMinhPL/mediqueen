@@ -214,4 +214,14 @@ i.icon {
         height: 20px;
         background-image: url('../images/ic-search.svg');
     }
+    &.ic-trash {
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/ic-trash.svg');
+    }
+    &.ic-cart2 {
+        width: 36px;
+        height: 36px;
+        background-image: url('../images/ic-cart2.svg');
+    }
 }

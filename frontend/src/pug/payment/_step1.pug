@@ -1,0 +1,45 @@
+form(action="#")
+    .row
+        .col-lg-8
+        .col-lg-4
+            .card.card__payment
+                .cardTitle.text-center.text-uppercase THÀNH TIỀN
+                .card__payment__content.form-style
+                    .card__payment__content--line
+                        .form-line
+                            label(for="promoCode").text-uppercase XIN NHẬP MÃ GIẢM GIÁ
+                            input(type="text").form-border.inputCode.disabled
+                        .form-line.m-0
+                            a(href="#").btn-custom.bigger.pink.text-uppercase.radiusBtn.activePromo NHẬP MÃ
+                    .card__payment__content--line
+                        .form-line.m-0
+                            label(for="promoCode").m-0.text-uppercase PHÍ VẬN CHUYỂN
+                            .subLabel Phí vận chuyển tùy theo khu vực số lượng hàng 
+                                | mà có thể thay đổi\
+                            .d-block
+                                +f_radiobox('Free Ship','delivery','d-inline round disabled')
+                            .d-block
+                                label.has-radio.d-inline.round
+                                    input(type="radio", name='delivery')
+                                    span Giao nhanh: &nbsp;
+                                span.fee 30.000 đ
+                    .card__payment__content--line
+                        .card__payment--calculation
+                            .cal
+                                .labelCal Thành tiền
+                                    .vat ( Bao gồm 10% VAT)
+                                .price.currentPrice 1.500.000 đ  
+                            .cal
+                                .labelCal Giảm giá:
+                                .price.fee 20.000 đ  
+                            .cal
+                                .labelCal Shipping:
+                                .price.fee 30.000 đ
+                            .calSum
+                                .labelCal Tổng cộng #[span (3sản phẩm):]
+                                .price.sumPrice 1.510.000 đ  
+                                
+
+                                
+
+                                

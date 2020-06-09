@@ -32,9 +32,6 @@ main.wrapper {
             height: 70px;
             width: 50px;
             // background: #fff;
-            @include break-max(1919px) {
-                background: #fff;
-            }
             @include media-breakpoint-down(lg) {
                 display: none;
             }

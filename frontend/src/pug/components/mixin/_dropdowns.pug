@@ -168,13 +168,13 @@ mixin dropsplit(caption,items,style,size,type)
 mixin dropSelect(type, itemlist)
 	.nl-dropbox
 		.nl-select.bordering 
-			.typeColor(style='background-color:#652825')
+			.typeColor
 			span #[=type]
 		.nl-droplist
 			.droplist-container
 				.droplist-content
 					if itemlist && itemlist.length
 						each dt, index in itemlist
-							.item-value(data-value=`${dt.name}` data-color=dt.color) 
-								.itemColor(style=`background-color:${dt.color}`)
+							.item-value(data-value=`${dt.name}`) 
+								.itemColor
 								span #[=dt.name]

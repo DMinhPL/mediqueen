@@ -73,7 +73,6 @@
             result = null;
             const it = e.currentTarget;
             const itVal = $(it).attr('data-value');
-            const color = $(it).data('color');
             $item.removeClass('choosing');
             $(it).addClass('choosing');
 
@@ -82,16 +81,23 @@
                 .closest('.nl-dropbox')
                 .find('.nl-select span')
                 .text(result);
-            $(it)
-                .closest('.nl-dropbox')
-                .find('.nl-select .typeColor')
-                .css({'background-color':color});
-            // console.log(itVal);
+        });
+    }
+    function scrollToDetail(){
+        const $more = $('.s__products .moreDetail');
+        const $detail = $('.s__products .detailPanel.top');
+        $more.on('click',function(e){
+            e.preventDefault();
+            $('html,body').animate({
+                scrollTop: $detail.offset().top - 80
+            },800);
+            
         });
     }
     $(function(){
         form_validation();
         slider();
         droplist_selectbox_handle();
+        scrollToDetail();
     });
 })(jQuery);

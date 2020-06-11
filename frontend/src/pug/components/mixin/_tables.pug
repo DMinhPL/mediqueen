@@ -142,3 +142,74 @@ mixin table-thead-light(header,data,type,typerow,typecol,itemrow,itemcol,respons
 //- Table Responsive
 mixin table-responsive(_responsive, header,data,type,typehead,typerow,typecol,itemrow,itemcol)
 	+table(header, data, type,typehead, typerow, typecol, itemrow, itemcol, _responsive)
+
+mixin table_ordering(classCustom)
+	table.table.tableOrdering(class=classCustom)
+		thead
+			tr
+				th.text-uppercase Sản phẩm
+					span.num 3
+				th.text-uppercase Giá
+				th.text-uppercase Số lượng
+				th.text-uppercase Tạm tính
+				th.text-uppercase XÓA
+		tbody
+			tr
+				td
+					.block
+						.block__content
+							.imgPanel
+								+img-bg('images/cart.png')
+							.block__content__text
+								.block__content__text--smaller.roboto-bold TRÀ TĂNG CÂN MEDIQUEEN
+								+estimate('100%')
+								ul
+									li
+										p.font-weight-bold Tình trạng: 
+										span Còn hàng
+									li
+										p.font-weight-bold Yêu cầu mua: 
+										span ít nhất 1 sản phẩm
+								a(href="#").viewDetail Chi tiết
+				td.tPrice
+					.discount 
+						span.price 520.000 đ &nbsp;
+						span | -10%
+					.tCurrent 500.000 đ
+				td
+					.customNum
+						.decrease.value-button( value='Decrease Value') -
+						input.number(type='number' value='0')
+						.increase.value-button(  value='Increase Value') +
+
+				td.tPrice
+					.discount 
+						span.price 520.000 đ
+					.tCurrent 500.000 đ
+				td
+					a(href="#").deleteRow
+						i.icon.ic-trash
+			tr
+				td(colspan="5")
+					a(href="#").btn-custom.pink.bigger.radiusBtn.goBuy TIẾP TỤC MUA HÀNG
+mixin table_ordering_responsive(classCustom)
+	table.table.tableOrdering(class=classCustom)
+		tbody
+			tr
+				td
+					.imgPanel
+						+img-bg('images/cart.png','','thumbProd')
+				td
+					.block
+						.block__content__text
+							.block__content__text--smaller.roboto-bold TRÀ TĂNG CÂN MEDIQUEEN
+							+estimate('100%')
+						.tPrice
+							.tCurrent 500.000 đ
+							.discount 
+								span.price 520.000 đ
+					.customNum
+						.customNum
+							.decrease.value-button( value='Decrease Value') -
+							input.numberInput(type='number' value='0')
+							.increase.value-button( value='Increase Value') +

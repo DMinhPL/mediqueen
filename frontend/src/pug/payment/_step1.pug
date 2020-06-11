@@ -1,6 +1,18 @@
 form(action="#")
     .row
         .col-lg-8
+            .card
+                .card__order
+                    .card__order__content
+                        +table_ordering('mobile-hide')
+                        +table_ordering_responsive('mobile-show')
+                        //- .block__content.mobile-show
+                        //-     .imgPanel
+                        //-         +img-bg('images/cart.png')
+                        //-     .block__content__text
+                        //-         .block__content__text--smaller.roboto-bold TRÀ TĂNG CÂN MEDIQUEEN
+                        //-         +estimate('100%')
+
         .col-lg-4
             .card.card__payment
                 .cardTitle.text-center.text-uppercase THÀNH TIỀN
@@ -38,7 +50,7 @@ form(action="#")
                             .calSum
                                 .labelCal Tổng cộng #[span (3sản phẩm):]
                                 .price.sumPrice 1.510.000 đ  
-                                
+            
 
                                 
 

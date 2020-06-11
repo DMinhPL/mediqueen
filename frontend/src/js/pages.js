@@ -112,11 +112,30 @@
                 .focus();
         });
     }
+    function custom_ordering_number(){
+        const $decrease = $('.s__cart .card__order__content .customNum .decrease');
+        const $increase = $('.s__cart .card__order__content .customNum .increase');
+        $increase.on('click',function(){
+            const $num = $(this).parent().find('input[type="number"]');
+            const currentVal = parseInt($num.val());
+            if (!isNaN(currentVal)) 
+                $num.val(currentVal + 1);
+            
+        });
+        $decrease.on('click',function(){
+            const $num = $(this).parent().find('input[type="number"]');
+            const currentVal = parseInt($num.val());
+            if (!isNaN(currentVal) && currentVal > 0) 
+                $num.val(currentVal - 1);
+            
+        });
+    }
     $(function() {
         form_validation();
         slider();
         droplist_selectbox_handle();
         scrollToDetail();
         step_payment();
+        custom_ordering_number();
     });
 })(jQuery);

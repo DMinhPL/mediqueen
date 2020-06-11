@@ -34,19 +34,19 @@
     color: #000000;
 }
 .step-app > .step-steps > li > a:hover {
-    background-color: #ddd;
+    background-color: #dfdfdf;
 }
 .step-app > .step-steps > li.active a {
-    background-color: #dfdfdf;
-    color: #000000;
+    background-color: #0c4ca3;
+    color: #fff;
 }
 .step-app > .step-steps > li.error a {
     background-color: #e7505a;
     color: #fff;
 }
 .step-app > .step-steps > li.done a {
-    background-color: #0c4ca3;
-    color: #fff;
+    background-color: #dfdfdf;
+    color: #000000;
 }
 .step-app > .step-content {
     padding: 10px;

@@ -96,23 +96,57 @@
         });
     }
     function step_payment() {
+        const $title = $('h1.block__content__text--title');
+        $.scrollTop = function(){
+            setTimeout(() => {
+                $('html,body').animate({
+                    scrollTop: $title.position()
+                },1000);
+            }, 200);
+        };
+        $.fn.ui_process_form_valid = function(){
+            return this.each(function(){
+                const $this = $(this);
+                $this.validate();
+            });
+        };
+        $('.frmPayment').ui_process_form_valid();
+
         $('.s__cart .block__content .step-app .step-footer').css({'justify-content': 'flex-end'});
-        $('#cartProducts').steps({
+        const myStep = $('#cartProducts').steps({
             onChange: function(currentIndex, newIndex, stepDirection){
+                $.scrollTop();
                 //step 1
                 if (currentIndex === 0) {
+                $('button[data-direction="prev"]').removeClass('d-none');
+                    $title.text('GIỎ HÀNG');
                     $('.s__cart .block__content .step-app .step-footer').css({'justify-content': 'flex-end'});
                     if(stepDirection === 'forward') return true;
                 }
                 if (currentIndex === 1){
+                    $title.text('THANH TOÁN');
+                    $('button[data-direction="prev"]').removeClass('d-none');
                     $('.s__cart .block__content .step-app .step-footer').css({'justify-content': ''});
+                    if(stepDirection === 'forward') return $('.frmPayment').valid();
+                }
+                if (currentIndex === 2){
+                    $title.text('HOÀN THÀNH');
+                    $('button[data-direction="prev"]').addClass('d-none');
+                    $('.s__cart .block__content .step-app .step-footer').css({'justify-content': 'center'});
                     if(stepDirection === 'forward') return true;
                 }
             },
             onFinish: function() {
-                alert('Wizard Completed');
+                window.location.href = 'index.html';
             },
         });
+        const $goBuy = $('.s__cart .btn-custom.goBuy');
+        $goBuy.on('click',function(e){
+            e.preventDefault();
+            myStep.prev();
+            
+        });
+
 
         const $activePromo = $('.s__cart .card__payment  .btn-custom.activePromo');
         $activePromo.on('click', function(e) {
@@ -192,6 +226,17 @@
         };
 
     }
+    function choosePaymentMenthod(){
+        const $checkbox = $('.card__order__content .choosePayment label.has-radio');
+        const $blockPayment = $('.card__order__content .paymentMethod');
+        $checkbox.on('change',function(){
+            if($(this).hasClass('online'))
+                $blockPayment.removeClass('d-none'); 
+            else
+                $blockPayment.addClass('d-none'); 
+            
+        });
+    }
     $(function() {
         form_validation();
         slider();
@@ -200,5 +245,6 @@
         step_payment();
         custom_ordering_number();
         remove_item_cart();
+        choosePaymentMenthod();
     });
 })(jQuery);

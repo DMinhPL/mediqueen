@@ -407,6 +407,20 @@
                 outline: 0;
                 box-shadow: none;
                 height: 46px;
+                background: none;
+                position: relative;
+                box-shadow: none !important;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    width: 0;
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-top: 10px solid #d7d7d7;
+                }
             }
         }
     }
@@ -444,7 +458,7 @@
                     left: 6px;
                     width: 10px;
                     height: 10px;
-                    background: #c44860;
+                    background: #0c4ca3;
                     border-radius: 100%;
                     opacity: 1;
                     transform: rotate(0);

@@ -255,3 +255,41 @@ main.wrapper {
         }
     }
 }
+.paymentMethod {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 18px;
+    .methodItem {
+        font-size: 14px;
+        color: #948e90;
+        padding: 12px 40px;
+        position: relative;
+        border: 1px solid #d7d7d7;
+        display: inline-block;
+        cursor: pointer;
+        @include media-breakpoint-up(lg) {
+            width: 189px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            border-radius: 100%;
+        }
+        &.eco,
+        &.visa {
+            &:before {
+                background-color: #0c4ca3;
+            }
+        }
+        &.transfer {
+            &:before {
+                background-color: #007033;
+            }
+        }
+    }
+}

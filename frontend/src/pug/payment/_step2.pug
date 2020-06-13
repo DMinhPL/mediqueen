@@ -15,11 +15,13 @@ form(action="#").frmPayment
                                     .col-lg-6
                                         .form-line
                                             label(for="fname") Họ và tên #[span.required *]
-                                            input(type="text").form-border#fname
+                                            .has-input
+                                                input(type="text" name='txt_name' data-msg="Họ và tên là bắt buộc" required).form-border#fname
                                     .col-lg-6
                                         .form-line
                                             label(for="fphone") Số điện thoại #[span.required *]
-                                            input(type="text").form-border#fphone
+                                            .has-input
+                                                input(type="text" name='txt_phone' pattern="[-+]?[0-9]*[.,]?[0-9]+" data-msg="Số điện thoại là bắt buộc" required).form-border#fphone
                                 .row
                                     .col-lg-6
                                         .form-line
@@ -30,8 +32,9 @@ form(action="#").frmPayment
                                     .col-lg-6
                                         .form-line
                                             label(for="femail") Email #[span.required *]
-                                            input(type="email").form-border#femail
-                                p Địa chỉ giao hàng và thanh toán có giống nhau không?
+                                            .has-input
+                                                input(type="email" name='txt_email' data-msg="Email là bắt buộc" required).form-border#femail
+                                p.p-label Địa chỉ giao hàng và thanh toán có giống nhau không?
                                 .d-flex
                                     +f_radiobox('Có','deliveryAddress','d-inline round')
                                     +f_radiobox('Không','deliveryAddress','d-inline round')
@@ -51,13 +54,17 @@ form(action="#").frmPayment
                                 label.title
                                     span.order 3 
                                     | THANH TOÁN
-                                .form-line
+                                .form-line.choosePayment
                                     .d-block
-                                        +f_radiobox('Thanh toán khi nhận hàng','paymentMethod','d-inline round')
+                                        +f_radiobox_checked('Thanh toán khi nhận hàng','paymentMethod','d-inline round')
                                     .d-block
-                                        +f_radiobox('Thanh toán online','paymentMethod','d-inline round')
-            .group-btn(style='max-width:259px')
-                a(href="#").btn-custom.pink.bigger.radiusBtn.goBuy QUAY LẠI GIỎ HÀNG
+                                        +f_radiobox('Thanh toán online','paymentMethod','d-inline round online')
+                                        .paymentMethod.d-none
+                                            +paymentMethodItem('eco','Ví Eco')
+                                            +paymentMethodItem('transfer','Chuyển khoản')
+                                            +paymentMethodItem('visa','Thẻ Visa')
+            //- .group-btn(style='max-width:259px; margin-top:14px')
+            //-     button(data-direction='prev').btn-custom.pink.bigger.radiusBtn.goBuy QUAY LẠI GIỎ HÀNG
 
 
 

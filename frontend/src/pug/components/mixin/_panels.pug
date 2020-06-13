@@ -15,9 +15,11 @@ mixin banner_slider
 mixin title_section_home(title)
     .block__content__text.text-center
         h2.block__content__text--title.block__content__text--underLine.text-uppercase #[=title]
+            span
 mixin title_section(title)
     .block__content__text.text-center
         h1.block__content__text--title.block__content__text--underLine.text-uppercase #[=title]
+            span
 mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
     if !isReverse
         .productCard(class=_class)

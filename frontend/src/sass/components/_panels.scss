@@ -26,26 +26,36 @@
                 // @include media-breakpoint-up(md) {
                 //     margin-bottom: 100px;
                 // }
-                &:before {
-                    content: '';
-                    position: absolute;
-                    bottom: -24px;
-                    left: calc(50% - 100px);
-                    width: 200px;
-                    display: inline-block;
-                    height: 1px;
-                    border: 1px dashed #1646a8;
-                    z-index: 1;
-                }
-                &:after {
-                    content: '';
+                span {
                     position: absolute;
                     bottom: -40px;
                     left: calc(50% - 20px);
-                    background: #fff url(../images/ic-leaf-blue.svg) no-repeat center/27px auto;
+                    background: transparent url(../images/ic-leaf-blue.svg) no-repeat center/27px auto;
                     width: 40px;
                     height: 40px;
                     z-index: 2;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        bottom: 15px;
+                        left: 45px;
+                        width: 100px;
+                        display: inline-block;
+                        height: 1px;
+                        border: 1px dashed #1646a8;
+                        z-index: 1;
+                    }
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: 15px;
+                        right: 45px;
+                        width: 100px;
+                        display: inline-block;
+                        height: 1px;
+                        border: 1px dashed #1646a8;
+                        z-index: 1;
+                    }
                 }
             }
         }

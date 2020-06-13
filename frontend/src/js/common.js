@@ -7,7 +7,8 @@
         $('.select-ui').each(function() {
             const el = $(this);
             const selectUI = el.select2({
-                placeholder: el.data('placeholder')
+                placeholder: el.data('placeholder'),
+                minimumResultsForSearch: -1,
             });
     
             // Update UI Scroll - Open dropdown

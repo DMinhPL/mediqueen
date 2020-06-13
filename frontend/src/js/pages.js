@@ -96,7 +96,19 @@
         });
     }
     function step_payment() {
+        $('.s__cart .block__content .step-app .step-footer').css({'justify-content': 'flex-end'});
         $('#cartProducts').steps({
+            onChange: function(currentIndex, newIndex, stepDirection){
+                //step 1
+                if (currentIndex === 0) {
+                    $('.s__cart .block__content .step-app .step-footer').css({'justify-content': 'flex-end'});
+                    if(stepDirection === 'forward') return true;
+                }
+                if (currentIndex === 1){
+                    $('.s__cart .block__content .step-app .step-footer').css({'justify-content': ''});
+                    if(stepDirection === 'forward') return true;
+                }
+            },
             onFinish: function() {
                 alert('Wizard Completed');
             },
@@ -120,15 +132,65 @@
             const currentVal = parseInt($num.val());
             if (!isNaN(currentVal)) 
                 $num.val(currentVal + 1);
-            
         });
         $decrease.on('click',function(){
             const $num = $(this).parent().find('input[type="number"]');
             const currentVal = parseInt($num.val());
             if (!isNaN(currentVal) && currentVal > 0) 
                 $num.val(currentVal - 1);
-            
+                if ($(window).outerWidth() < 992)
+                    if($num.val() < 1){
+                        $(this).closest('table').addClass('d-none');
+                        cartEmptyState();
+                    }
+                    else {
+                        $(this).closest('table').removeClass('d-none');
+                        cartNoEmptyState();
+                    }
+                    
         });
+    }
+    const cartEmptyState = ()=>{
+        $('.card__order .empty').removeClass('d-none');
+        $('.card.card__payment').addClass('d-none');
+        $('.s__cart .step-app .step-footer').addClass('d-none');
+        $('.s__cart .step-app .step-steps').addClass('d-none');
+        $('.s__cart .step-content .row .col-lg-8').addClass('col-lg-12');
+    };
+    const cartNoEmptyState = ()=>{
+        $('.card__order .empty').addClass('d-none');
+        $('.card.card__payment').removeClass('d-none');
+        $('.s__cart .step-app .step-footer').removeClass('d-none');
+        $('.s__cart .step-app .step-steps').removeClass('d-none');
+        $('.s__cart .step-content .row .col-lg-8').removeClass('col-lg-12');
+    };
+    function remove_item_cart(){
+        const $deleteDesktop = $('.tableOrdering.mobile-hide .deleteRow');
+        $deleteDesktop.on('click',function(e){
+            e.preventDefault();
+            $.deleteRow(this,'.mobile-hide');
+        });
+        $.deleteRow = function(itself, _class){
+            $(itself).closest('tr').animate({opacity:0},200,function(){
+                $(this).remove();
+            });
+            setTimeout(() => {
+                $.countItem(`${_class}`);
+            }, 300);
+        };
+        $.countItem = function(_class){
+            const $item = $(`.tableOrdering${_class} tbody tr`);
+            const length = $item.length;
+            if (length  < 2) {
+                $(`.tableOrdering${_class}`).addClass('d-none');
+                cartEmptyState();
+            }
+            else {
+                $(`.tableOrdering${_class}`).removeClass('d-none');
+                cartNoEmptyState();
+            }
+        };
+
     }
     $(function() {
         form_validation();
@@ -137,5 +199,6 @@
         scrollToDetail();
         step_payment();
         custom_ordering_number();
+        remove_item_cart();
     });
 })(jQuery);

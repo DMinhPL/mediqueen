@@ -339,6 +339,11 @@
                 right: 10px;
             }
         }
+        .sub {
+            font-size: 14px;
+            color: #948e90;
+            max-width: 364px;
+        }
     }
     input {
         &.form-input {
@@ -388,6 +393,31 @@
             box-shadow: none;
             resize: none;
             transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+    }
+    .select2 {
+        &-container {
+            width: 100% !important;
+        }
+        &-selection {
+            &--single {
+                border-radius: 0;
+                color: #333333;
+                border: 1px solid #b8c9dd;
+                outline: 0;
+                box-shadow: none;
+                height: 46px;
+            }
+        }
+    }
+    .d-flex {
+        align-items: center;
+        label.has-radio {
+            margin-right: 14px;
+            width: auto;
+        }
+        label {
+            width: 50%;
         }
     }
 }

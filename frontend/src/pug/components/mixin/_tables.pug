@@ -154,41 +154,42 @@ mixin table_ordering(classCustom)
 				th.text-uppercase Tạm tính
 				th.text-uppercase XÓA
 		tbody
-			tr
-				td
-					.block
-						.block__content
-							.imgPanel
-								+img-bg('images/cart.png')
-							.block__content__text
-								.block__content__text--smaller.roboto-bold TRÀ TĂNG CÂN MEDIQUEEN
-								+estimate('100%')
-								ul
-									li
-										p.font-weight-bold Tình trạng: 
-										span Còn hàng
-									li
-										p.font-weight-bold Yêu cầu mua: 
-										span ít nhất 1 sản phẩm
-								a(href="#").viewDetail Chi tiết
-				td.tPrice
-					.discount 
-						span.price 520.000 đ &nbsp;
-						span | -10%
-					.tCurrent 500.000 đ
-				td
-					.customNum
-						.decrease.value-button( value='Decrease Value') -
-						input.number(type='number' value='0')
-						.increase.value-button(  value='Increase Value') +
+			each val in [2]
+				tr
+					td
+						.block
+							.block__content
+								.imgPanel.thumbItem
+									+img-bg('images/cart.png')
+								.block__content__text
+									.block__content__text--smaller.roboto-bold TRÀ TĂNG CÂN MEDIQUEEN
+									+estimate('100%')
+									ul
+										li
+											p.font-weight-bold Tình trạng: 
+											span Còn hàng
+										li
+											p.font-weight-bold Yêu cầu mua: 
+											span ít nhất 1 sản phẩm
+									a(href="#").viewDetail Chi tiết
+					td.tPrice
+						.discount 
+							span.price 520.000 đ &nbsp;
+							span | -10%
+						.tCurrent 500.000 đ
+					td
+						.customNum
+							.decrease.value-button( value='Decrease Value') -
+							input.number(type='number' value=val)
+							.increase.value-button(  value='Increase Value') +
 
-				td.tPrice
-					.discount 
-						span.price 520.000 đ
-					.tCurrent 500.000 đ
-				td
-					a(href="#").deleteRow
-						i.icon.ic-trash
+					td.tPrice
+						.discount 
+							span.price 520.000 đ
+						.tCurrent 500.000 đ
+					td
+						a(href="#").deleteRow
+							i.icon.ic-trash
 			tr
 				td(colspan="5")
 					a(href="#").btn-custom.pink.bigger.radiusBtn.goBuy TIẾP TỤC MUA HÀNG
@@ -197,7 +198,7 @@ mixin table_ordering_responsive(classCustom)
 		tbody
 			tr
 				td
-					.imgPanel
+					.imgPanel.thumbItem
 						+img-bg('images/cart.png','','thumbProd')
 				td
 					.block
@@ -210,5 +211,5 @@ mixin table_ordering_responsive(classCustom)
 								span.price 520.000 đ
 					.customNum
 						.decrease.value-button( value='Decrease Value') -
-						input.numberInput(type='number' value='0')
+						input.numberInput(type='number' value='1')
 						.increase.value-button( value='Increase Value') +

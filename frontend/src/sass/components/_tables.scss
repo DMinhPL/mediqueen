@@ -191,16 +191,6 @@
             td {
                 .block {
                     &__content {
-                        .imgPanel {
-                            padding: 18px 28px;
-                            border: 1px solid #ebebeb;
-                            margin-bottom: 24px;
-                            .img-bg {
-                                &:after {
-                                    padding-top: 186.52/176.16 * 100%;
-                                }
-                            }
-                        }
                         &__text {
                             margin-bottom: 20px;
                             ul {

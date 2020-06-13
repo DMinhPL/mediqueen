@@ -1,0 +1,132 @@
+form(action="#").frmPayment
+    .row
+        .col-lg-8
+            .card
+                .card__order
+                    .card__order__content
+                        .form-style
+                            .form-inner
+                                label.title
+                                    span.order 1 
+                                    | ĐỊA CHỈ GIAO HÀNG
+                                label.sub
+                                    p Vui lòng điền chính xác địa chỉ 
+                                .row
+                                    .col-lg-6
+                                        .form-line
+                                            label(for="fname") Họ và tên #[span.required *]
+                                            input(type="text").form-border#fname
+                                    .col-lg-6
+                                        .form-line
+                                            label(for="fphone") Số điện thoại #[span.required *]
+                                            input(type="text").form-border#fphone
+                                .row
+                                    .col-lg-6
+                                        .form-line
+                                            label.d-block Tỉnh Thành
+                                            select.select-ui(tabIndex='-1')
+                                                option(value="1") Hồ Chí Minh
+                                                option(value="2") Hà Nội
+                                    .col-lg-6
+                                        .form-line
+                                            label(for="femail") Email #[span.required *]
+                                            input(type="email").form-border#femail
+                                p Địa chỉ giao hàng và thanh toán có giống nhau không?
+                                .d-flex
+                                    +f_radiobox('Có','deliveryAddress','d-inline round')
+                                    +f_radiobox('Không','deliveryAddress','d-inline round')
+                            .form-inner
+                                label.title
+                                    span.order 2 
+                                    | CHÍNH SÁCH VẬN CHUYỂN
+                                .form-line
+                                    .d-flex
+                                        label Khu vực vận chuyển
+                                        select.select-ui(tabIndex='-1')
+                                            option(value="1") Hồ Chí Minh
+                                            option(value="2") Hà Nội
+                                    .sub Phí ship 3 khu vực ( HCM, Đà Nẳng, Hà Nội )miễn phí ship, 
+                                        | Các tỉnh thành khác phí ship 50k
+                            .form-inner
+                                label.title
+                                    span.order 3 
+                                    | THANH TOÁN
+                                .form-line
+                                    .d-block
+                                        +f_radiobox('Thanh toán khi nhận hàng','paymentMethod','d-inline round')
+                                    .d-block
+                                        +f_radiobox('Thanh toán online','paymentMethod','d-inline round')
+            .group-btn(style='max-width:259px')
+                a(href="#").btn-custom.pink.bigger.radiusBtn.goBuy QUAY LẠI GIỎ HÀNG
+
+
+
+
+        .col-lg-4
+            .card.card__payment
+                .cardTitle.text-center.text-uppercase TÓM TẮT ĐƠN HÀNG
+                .card__payment__content.form-style
+                    .card__payment__content--line
+                        .form-line
+                            label(for="promoCode").text-uppercase XIN NHẬP MÃ GIẢM GIÁ
+                            input(type="text").form-border.inputCode.disabled
+                        .form-line.m-0
+                            a(href="#").btn-custom.bigger.pink.text-uppercase.radiusBtn.activePromo NHẬP MÃ
+                    .card__payment__content--line
+                        .form-line.m-0
+                            label(for="promoCode").m-0.text-uppercase PHÍ VẬN CHUYỂN
+                            .subLabel Phí vận chuyển tùy theo khu vực số lượng hàng 
+                                | mà có thể thay đổi\
+                            .d-block
+                                +f_radiobox('Free Ship','delivery','d-inline round disabled')
+                            .d-block
+                                label.has-radio.d-inline.round
+                                    input(type="radio", name='delivery')
+                                    span Giao nhanh: &nbsp;
+                                span.fee 30.000 đ
+                    .card__payment__content--line
+                        .form-line.m-0
+                            label(for="promoCode").has-radio.m-0.text-uppercase SẢN PHẨM
+                                span.num 3
+                            .d-flex
+                                .imgPanel.thumbItem
+                                    +img-bg('images/cart.png','','thumbProd')
+                                .tPrice
+                                    .tCurrent 500.000 đ
+                                    .discount 
+                                        span.price 520.000 đ &nbsp;
+                                        span x1
+                            .block__content__text.m-0
+                                .block__content__text--smaller.roboto-bold TRÀ TĂNG CÂN MEDIQUEEN
+                                +estimate('100%')
+                                ul.list-style-none
+                                    li
+                                        p.font-weight-bold Tình trạng: 
+                                        span Còn hàng
+                                    li
+                                        p.font-weight-bold Yêu cầu mua: 
+                                        span ít nhất 1 sản phẩm
+                                a(href="#").viewDetail Chi tiết
+                    .card__payment__content--line
+                        .card__payment--calculation
+                            .cal
+                                .labelCal Thành tiền
+                                    .vat ( Bao gồm 10% VAT)
+                                .price.currentPrice 1.500.000 đ  
+                            .cal
+                                .labelCal Giảm giá:
+                                .price.fee 20.000 đ  
+                            .cal
+                                .labelCal Shipping:
+                                .price.fee 30.000 đ
+                            .cal
+                                .labelCal Điểm thành viên:
+                                .price.fee 30.000 đ
+                            .calSum
+                                .labelCal Tổng cộng #[span (3 sản phẩm):]
+                                .price.sumPrice 1.510.000 đ  
+            
+
+                                
+
+                                

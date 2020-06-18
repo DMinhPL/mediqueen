@@ -239,7 +239,7 @@ main.wrapper {
             top: 0;
             left: 0;
             overflow: hidden;
-            color: #a0ce4e;
+            color: yellow;
             white-space: nowrap;
         }
         .empty-stars::before,
@@ -248,10 +248,10 @@ main.wrapper {
             content: '\2605\2605\2605\2605\2605';
         }
         .empty-stars::before {
-            -webkit-text-stroke: 1px #a0ce4e;
+            -webkit-text-stroke: 1px yellow;
         }
         .full-stars::before {
-            -webkit-text-stroke: 1px #a0ce4e;
+            -webkit-text-stroke: 1px yellow;
         }
     }
 }

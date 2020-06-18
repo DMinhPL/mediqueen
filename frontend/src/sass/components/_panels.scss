@@ -8,6 +8,9 @@
                 @include media-breakpoint-up(lg) {
                     font-size: 30px;
                 }
+                @include media-breakpoint-down(sm) {
+                    font-size: 24px;
+                }
             }
             &--medium {
                 @include media-breakpoint-up(md) {

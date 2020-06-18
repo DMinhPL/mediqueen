@@ -98,6 +98,7 @@
             pagination: {
                 el: '.banner-home .swiper-pagination',
                 type: 'bullets',
+                clickable: true
             },
             navigation: {
                 nextEl: '.banner-home .swiper-button-next',

@@ -18,15 +18,15 @@ block content
                 .block__content
                     -
                         var contact =[
-                            {label:"Phone", text:'1900.0263'},
-                            {label:"Địa chỉ", text:'31 đường 3136, Phạm Thế Hiển, Phường 7, Quận 8, Tp.HCM'},
-                            {label:"Thời gian làm việc", text:'8:00 am to 21:00 pm'},
-                            {label:"Email", text:'ctymediqueen@gmail.com'},
+                            {label:"Phone", text:'1900.0263',icon:'ic-phone-green'},
+                            {label:"Địa chỉ", text:'31 đường 3136, Phạm Thế Hiển, Phường 7, Quận 8, Tp.HCM',icon:'ic-marker-green'},
+                            {label:"Thời gian làm việc", text:'8:00 am to 21:00 pm',icon:'ic-clock'},
+                            {label:"Email", text:'ctymediqueen@gmail.com',icon:'ic-mail-green'},
                         ]
                     .contactPanel
                         each val in contact
                             .contact__item.text-center
-                                i.icon.ic-phone-green
+                                i.icon(class=val.icon)
                                 .label.font-weight-bold #[=val.label]
                                 .text.font-weight-bold #[=val.text]
     section.s__contact--map.mg-section

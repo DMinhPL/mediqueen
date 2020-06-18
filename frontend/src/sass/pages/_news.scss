@@ -101,10 +101,30 @@
     .block {
         &__content {
             &__text {
-                h1 {
+                &--title {
+                    position: relative;
+                    padding-left: 45px;
+                    @include media-breakpoint-down(sm) {
+                        padding-left: 35px;
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 6px;
+                        left: 0;
+                        width: 32px;
+                        height: 32px;
+                        background: transparent url('../images/ic-news-blue.svg') no-repeat 0/32px auto;
+                        @include media-breakpoint-down(sm) {
+                            background-size: 24px;
+                            top: 0;
+                        }
+                    }
+                }
+                h2 {
                     margin-bottom: 60px;
                     @include media-breakpoint-down(sm) {
-                        margin-bottom: 25px;
+                        margin-bottom: 50px;
                     }
                 }
             }

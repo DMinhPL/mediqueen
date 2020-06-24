@@ -181,6 +181,7 @@
         }
         &.isTea {
             .inner-info {
+                background-color: #f9fff3;
                 @include media-breakpoint-up(xl) {
                     border-left: none !important;
                 }
@@ -188,6 +189,7 @@
         }
         &.isCoffee {
             .inner-info {
+                background-color: #fdf9ee;
                 @include media-breakpoint-up(xl) {
                     border-right: none !important;
                 }
@@ -202,7 +204,6 @@
         .inner-info {
             padding: 27px 30px;
             border: 4px solid #c6f29c;
-            background-color: rgba(#f4f7f8, 0.6);
             .info {
                 ul {
                     li {

@@ -3,7 +3,7 @@
         position: relative;
         &__text {
             &--title {
-                font-family: $font-utm;
+                font-family: $font-rm;
                 font-size: 26px;
                 @include media-breakpoint-up(lg) {
                     font-size: 30px;
@@ -202,6 +202,7 @@
         .inner-info {
             padding: 27px 30px;
             border: 4px solid #c6f29c;
+            background-color: rgba(#f4f7f8, 0.6);
             .info {
                 ul {
                     li {
@@ -386,7 +387,7 @@
             display: inline-block;
             text-align: center;
             color: #0045a2;
-            font-family: $font-utmb;
+            font-family: inherit;
         }
     }
     .content {
@@ -397,7 +398,7 @@
         .para {
             position: relative;
             color: #555555;
-            font-family: $font-rb;
+            font-weight: bold;
             @include media-breakpoint-down(sm) {
                 font-size: 14px;
             }
@@ -418,7 +419,7 @@
                 content: 'A';
                 font-size: 16px;
                 color: #5ba000;
-                font-family: $font-utmb;
+                font-family: inherit;
             }
         }
     }
@@ -641,7 +642,7 @@
         .tagOrange {
             font-size: 14px;
             color: #fff;
-            font-family: $font-rm;
+            font-weight: 600;
             padding: 5px 20px;
             position: absolute;
             top: 20px;
@@ -655,12 +656,12 @@
     .textPanel {
         .text {
             &__medium {
-                font-family: $font-rm;
+                font-weight: 600;
                 margin-bottom: 10px;
                 color: #212529;
             }
             &__bigger {
-                font-family: $font-rb;
+                font-weight: bold;
                 line-height: 1.5;
                 font-size: 18px;
                 color: #333333;

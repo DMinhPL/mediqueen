@@ -438,7 +438,7 @@
                         .block__content {
                             &__text {
                                 h4 {
-                                    font-family: $font-utmb;
+                                    font-family: inherit;
                                     margin-bottom: 30px;
                                     @include media-breakpoint-down(sm) {
                                         font-size: 20px;

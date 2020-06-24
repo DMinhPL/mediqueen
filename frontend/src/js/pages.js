@@ -115,7 +115,6 @@
         $('.s__cart .block__content .step-app .step-footer').css({'justify-content': 'flex-end'});
         const myStep = $('#cartProducts').steps({
             onChange: function(currentIndex, newIndex, stepDirection){
-                $.scrollTop();
                 //step 1
                 if (currentIndex === 0) {
                 $('button[data-direction="prev"]').removeClass('d-none');

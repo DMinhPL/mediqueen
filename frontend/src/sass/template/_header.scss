@@ -83,7 +83,7 @@ header.header-page.header {
                             span.phonenumber {
                                 font-size: 18px;
                                 color: #fff;
-                                font-family: $font-rb;
+                                font-weight: bold;
                                 margin-left: 17px;
                             }
                         }
@@ -197,7 +197,7 @@ header.header-page.header {
                 a.nav-item {
                     text-decoration: none;
                     font-size: 14px;
-                    // font-family: $font-utm;
+                    font-family: $font-rm;
                     color: #333333;
                     transition: 0.4s ease;
                     display: flex;

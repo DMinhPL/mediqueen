@@ -377,12 +377,14 @@
             left: -10px;
             &:after {
                 transform: rotate(90deg);
+                margin-right: 4px;
             }
         }
         .swiper-button-next {
             right: -10px;
             &:after {
                 transform: rotate(-90deg);
+                margin-left: 4px;
             }
         }
         .swiper-pagination {

@@ -243,9 +243,12 @@ $transition-collapse: height 0.35s ease !default;
 
 // stylelint-disable value-keyword-case
 $font-path: '../fonts/' !default;
-$font-family-sans-serif: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-sans-serif: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$font-family-sans-serif2: -apple-system, blinkmacsystemfont, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol' !default;
 $font-family-monospace: sfmono-regular, menlo, monaco, consolas, 'Liberation Mono', 'Courier New', monospace !default;
-$font-family-base: $font-family-sans-serif !default;
+$font-family-base: $font-family-sans-serif2 !default;
 // stylelint-enable value-keyword-case
 //Main Fonts
 $font-utm: 'UTM Avo', Arial;
@@ -400,7 +403,8 @@ $btn-border-radius: $border-radius !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 $btn-border-radius-sm: $border-radius-sm !default;
 
-$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !default;
+$btn-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out !default;
 
 // Forms
 
@@ -490,15 +494,27 @@ $ctr-ui-indicator-active-bg: lighten($component-active-bg, 35%) !default;
 $ctr-ui-indicator-active-box-shadow: none !default;
 
 $checkbox-ui-indicator-border-radius: $border-radius !default;
-$checkbox-ui-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$ctr-ui-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"), '#', '%23') !default;
+$checkbox-ui-indicator-icon-checked: str-replace(
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$ctr-ui-indicator-checked-color}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E"),
+    '#',
+    '%23'
+) !default;
 
 $checkbox-ui-indicator-indeterminate-bg: $component-active-bg !default;
 $checkbox-ui-indicator-indeterminate-color: $ctr-ui-indicator-checked-color !default;
-$checkbox-ui-indicator-icon-indeterminate: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$checkbox-ui-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"), '#', '%23') !default;
+$checkbox-ui-indicator-icon-indeterminate: str-replace(
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath stroke='#{$checkbox-ui-indicator-indeterminate-color}' d='M0 2h4'/%3E%3C/svg%3E"),
+    '#',
+    '%23'
+) !default;
 $checkbox-ui-indicator-indeterminate-box-shadow: none !default;
 
 $radio-ui-indicator-border-radius: 50% !default;
-$radio-ui-indicator-icon-checked: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$ctr-ui-indicator-checked-color}'/%3E%3C/svg%3E"), '#', '%23') !default;
+$radio-ui-indicator-icon-checked: str-replace(
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$ctr-ui-indicator-checked-color}'/%3E%3C/svg%3E"),
+    '#',
+    '%23'
+) !default;
 
 $custom-range-track-width: 100% !default;
 $custom-range-track-height: 0.5rem !default;
@@ -883,8 +899,16 @@ $carousel-caption-color: $white !default;
 
 $carousel-control-icon-width: 20px !default;
 
-$carousel-control-prev-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"), '#', '%23') !default;
-$carousel-control-next-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"), '#', '%23') !default;
+$carousel-control-prev-icon-bg: str-replace(
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"),
+    '#',
+    '%23'
+) !default;
+$carousel-control-next-icon-bg: str-replace(
+    url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#{$carousel-control-color}' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"),
+    '#',
+    '%23'
+) !default;
 
 $carousel-transition: transform 0.6s ease !default; // Define transform transition first if using multiple transitons (e.g., `transform 2s ease, opacity .5s ease-out`)
 

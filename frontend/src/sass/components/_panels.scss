@@ -33,7 +33,8 @@
                     position: absolute;
                     bottom: -40px;
                     left: calc(50% - 20px);
-                    background: transparent url(../images/ic-leaf-blue.svg) no-repeat center/27px auto;
+                    background: transparent url(../images/ic-leaf-blue.svg)
+                        no-repeat center/27px auto;
                     width: 40px;
                     height: 40px;
                     z-index: 2;
@@ -236,7 +237,8 @@
                     color: #d43200;
                     font-size: 36px;
                     padding-left: 30px;
-                    background: transparent url('../images/ic-coin.svg') no-repeat 5px/21px auto;
+                    background: transparent url('../images/ic-coin.svg')
+                        no-repeat 5px/21px auto;
                     @include break-max(1600px) {
                         font-size: 25px;
                     }
@@ -277,10 +279,12 @@
         height: 45px;
         border: 1px solid #5ba000;
         border-radius: 12px;
-        background: transparent url('../images/ic-bag-tea.png') no-repeat center/17px auto;
+        background: transparent url('../images/ic-bag-tea.png') no-repeat
+            center/17px auto;
         &.brown {
             border: 1px solid #652825;
-            background: transparent url('../images/ic-bag.svg') no-repeat center/17px auto;
+            background: transparent url('../images/ic-bag.svg') no-repeat
+                center/17px auto;
         }
     }
     .btn-custom {
@@ -297,10 +301,12 @@
         height: 45px;
         border: 1px solid #5ba000;
         border-radius: 12px;
-        background: transparent url('../images/ic-link.svg') no-repeat center/17px auto;
+        background: transparent url('../images/ic-link.svg') no-repeat
+            center/17px auto;
         &.brown {
             border: 1px solid #652825;
-            background: transparent url('../images/ic-link-brown.svg') no-repeat center/17px auto;
+            background: transparent url('../images/ic-link-brown.svg') no-repeat
+                center/17px auto;
         }
     }
 }
@@ -319,6 +325,9 @@
         color: #666666;
         transition: 0.4s ease;
         position: relative;
+        @include media-breakpoint-down(sm) {
+            font-size: 16px;
+        }
         &[aria-expanded='true'] {
             color: #333333;
             span.text {
@@ -326,8 +335,8 @@
                     content: '';
                     position: absolute;
                     bottom: 0;
-                    left: 0;
-                    right: 0;
+                    left: 40px;
+                    right: 25px;
                     background: #fb5c42;
                     height: 1px;
                 }
@@ -377,6 +386,8 @@
         span.text {
             display: inline-block;
             position: relative;
+            padding-right: 25px;
+            padding-left: 40px;
         }
         .symbol {
             font-size: 16px;
@@ -389,6 +400,9 @@
             text-align: center;
             color: #0045a2;
             font-family: inherit;
+            position: absolute;
+            top: 17px;
+            left: 0;
         }
     }
     .content {

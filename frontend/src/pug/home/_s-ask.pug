@@ -1,10 +1,13 @@
+-
+    var text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse velit nibh, laoreet sed enim in, pretium congue lacus.'
+
 .container
     .block
         +title_section_home('HỎI ĐÁP')
         .block__content
             +parentCollapse('usingFAQ','collapsePanel')
                 .line-collapse
-                    +collapsible('using1','usingFAQ','Where is my order?')
+                    +collapsible('using1','usingFAQ',text)
                 .line-collapse
                     +collapsible('using2','usingFAQ','Where is my order?')
                 .line-collapse    

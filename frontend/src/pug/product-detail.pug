@@ -45,21 +45,21 @@ block content
                                     li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
                                     li: .label  Tình trạng: &nbsp #[span Còn hàng]
                                     li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
-                                    li: .label.price  Giá:
-                                        span.old 600.000 đ
-                                        span.promo 500.000 đ
-                                    li: .label.num  Số lượng: 
-                                        input(type="number" min="0").form-border
-                                    li 
-                                        .label.promotion  Ưu đãi:
-                                            .selectPromo
-                                                -
-                                                    var typeList = [
-                                                        {name: "GIẢM THÊM 7% NHẬP MÃ BRANDFEVER",color:'#dbdbdb'},
-                                                        {name: "GIẢM THÊM 10% NHẬP MÃ BRANDFEVER",color:'#303030'},
-                                                        {name: "GIẢM THÊM 20% NHẬP MÃ BRANDFEVER",color:'#666666'}
-                                                    ]
-                                                +dropSelect("Chọn mã giảm giá",typeList)  
+                                    //- li: .label.price  Giá:
+                                    //-     span.old 600.000 đ
+                                    //-     span.promo 500.000 đ
+                                    //- li: .label.num  Số lượng: 
+                                    //-     input(type="number" min="0").form-border
+                                    //- li 
+                                    //-     .label.promotion  Ưu đãi:
+                                    //-         .selectPromo
+                                    //-             -
+                                    //-                 var typeList = [
+                                    //-                     {name: "GIẢM THÊM 7% NHẬP MÃ BRANDFEVER",color:'#dbdbdb'},
+                                    //-                     {name: "GIẢM THÊM 10% NHẬP MÃ BRANDFEVER",color:'#303030'},
+                                    //-                     {name: "GIẢM THÊM 20% NHẬP MÃ BRANDFEVER",color:'#666666'}
+                                    //-                 ]
+                                    //-             +dropSelect("Chọn mã giảm giá",typeList)  
                                 .btn-action-cart
                                     a(href="#").bag-btn
                                     a(href="#").btn-custom.orange.text-uppercase.moreDetail CHI TIẾT

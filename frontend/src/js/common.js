@@ -129,6 +129,6 @@
         ui();
         ui_scroll_fixNav();
         ui_toggle_sidebarMenu();
-        ui_dotdotdot();
+        // ui_dotdotdot();
     });
 })(jQuery);

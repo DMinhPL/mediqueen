@@ -38,14 +38,23 @@
                             h2.block__content__text--medium.block__content__text--underLine.text-uppercase 
                                 | Ý kiến khách hàng
                         .block__content__text.line-border
-                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                | nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                            .thumbSlider
+                                each val in [1,2,2,1,2,1,2]
+                                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                                        | nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
                     .sliderChange
                         .block__content__text(style='padding-top:0')
-                            .name Shirley Meyer  /  #[span Photographer]
+                            .avaName 
+                                each val in [1,2,3,4,5,6,7]
+                                    .name(class=val===1 ? '':'d-none' data-slider=val) Shirley Meyer #[=val]  /  #[span Photographer]
                             .avaGroup
-                                .swiper-container   
-                                    .swiper-wrapper
-                                        each val in [1,2,2,1,2,1,2]
-                                            +img-bg(`images/ava${val}.png`,'','avaImg swiper-slide','#')
-                                .swiper-pagination
+                                .slider
+                                    each val in [1,2,2,1,2,1,2]
+                                        .imgPanel
+                                            +img-bg(`images/ava${val}.png`,'','avaImg swiper-slide')
+                                        
+                                //- .swiper-container   
+                                //-     .swiper-wrapper
+                                //-         each val in [1,2,2,1,2,1,2]
+                                //-             +img-bg(`images/ava${val}.png`,'','avaImg swiper-slide','#')
+                                //- .swiper-pagination

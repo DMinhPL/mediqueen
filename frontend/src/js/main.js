@@ -140,40 +140,34 @@
         };
         _social();
         const _sliderChangeText = () =>{
-            let $item = null;
-            new Swiper('.slider-changeContent .swiper-container', {
-                slidesPerView:'auto',
-                spaceBetween:40,
-                pagination: {
-                    el: '.slider-changeContent .swiper-pagination',
-                    type: 'bullets',
-                    clickable: true,
-                },
-                on: {
-                    init: function () {
-                        $item = $('.slider-changeContent .avaGroup .img-bg');
-                        $item.activeItemIndex = $('.slider-changeContent .avaGroup .img-bg.choosing');
-                    },
-                  },
+            const $name = $('section.s__home--customers .sgrid__right .block__content__text .name');
+            const mySlider = $('.sliderChange .avaGroup .slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 4,
+                arrows:false,
+                slidesToScroll: 1,
+                centerPadding: '60px',
+                focusOnSelect: true,
+                asNavFor:'.content-changing .thumbSlider'
             });
-            // $('.slider-changeContent .owl-carousel').owlCarousel({
-            //     // stagePadding: 50,
-            //     loop:true,
-            //     margin:40,
-            //     dots:true,
-            //     nav:false,
-            //     lazyLoad: true,
-            //     items:4,
-            // });
-            const item = '.slider-changeContent .avaGroup .img-bg';
-            $(document.body).on('click',item,function(e){
-                e.preventDefault();
-                const $this = $(this);
-                if($this.index()=== $item.activeItemIndex) return;
-                $item.removeClass('choosing');
-                $this.addClass('choosing');
-                $item.activeItemIndex = $this.index();
+            $('.content-changing .thumbSlider').slick({
+                dots: false,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                arrows:false,
+                slidesToScroll: 1,
+                centerPadding: '60px',
+                asNavFor:'.sliderChange .avaGroup .slider'
             });
+            mySlider.on('afterChange', (e, slick, currentIndex) => {
+                $name.addClass('d-none');
+                $name
+                  .filter(`[data-slider="${currentIndex + 1}"]`)
+                  .removeClass('d-none');
+              });
         };
         _sliderChangeText();
     };

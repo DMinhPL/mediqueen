@@ -269,7 +269,7 @@
 .btn-action-cart {
     display: flex;
     justify-content: space-between;
-    max-width: 380px;
+    max-width: 240px;
     @include break-max(1919px) {
         margin-top: 15px;
     }

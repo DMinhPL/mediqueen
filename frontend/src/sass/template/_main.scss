@@ -332,7 +332,7 @@ section {
                     .block {
                         &__content {
                             &__text {
-                                max-width: 475px;
+                                max-width: 508px;
                                 margin: auto;
                                 position: relative;
                                 &.line-border {
@@ -384,52 +384,52 @@ section {
                                     @include media-breakpoint-up(md) {
                                         height: 109px;
                                     }
-                                    .owl-carousel {
-                                        height: 100%;
-                                        .owl-stage-outer {
-                                            height: 100%;
-                                        }
-                                        .owl-stage {
-                                            display: flex;
-                                            align-items: center;
-                                            height: 100%;
-                                            .owl-item {
-                                                height: 100%;
+                                    .imgPanel {
+                                        // margin-right: 15px;
+                                        // margin-left: 15px;
+                                        // max-width: 100px;
+                                        .img-bg {
+                                            border-radius: 100%;
+                                            border: 5px solid #cee3ff;
+                                            transition: 0.4s ease;
+                                            &.choosing {
+                                                width: 99px;
+                                                border: 5px solid #fff;
+                                                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
                                             }
-                                        }
-                                    }
-
-                                    .img-bg {
-                                        border-radius: 100%;
-                                        border: 5px solid #cee3ff;
-                                        transition: 0.4s ease;
-                                        &.choosing {
-                                            width: 99px;
-                                            border: 5px solid #fff;
-                                            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
-                                        }
-                                        img {
-                                            display: none !important;
+                                            img {
+                                                display: none !important;
+                                            }
                                         }
                                     }
                                 }
                             }
                             &.slider-changeContent {
                                 .sliderChange {
-                                    .swiper-container {
-                                        padding-bottom: 10px;
+                                    .avaName{
+                                        @include media-breakpoint-down(md){
+                                            margin-top: 10px;
+                                            margin-bottom: 12px;
+                                        }
                                     }
-                                    .swiper-pagination {
-                                        left: 0;
-                                        width: 100%;
-                                        @include media-breakpoint-up(md) {
-                                            margin-top: 20px;
-                                        }
-                                        @include media-breakpoint-down(sm) {
-                                            position: static;
-                                        }
-                                        .swiper-pagination-bullet {
-                                            margin: 0 5px;
+                                    .avaGroup {
+                                        .slider {
+                                            .slick-track{
+                                                display: flex;
+                                                align-items: center;
+                                            }
+                                            .imgPanel{
+                                                outline:0 !important;
+                                                .img-bg{
+                                                    transition: 0.2s ease;
+                                                }
+                                                &.slick-current{
+                                                    .img-bg{
+                                                        width: 100px;
+                                                        box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }

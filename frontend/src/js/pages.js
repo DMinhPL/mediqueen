@@ -7,16 +7,27 @@
         });
     }
     function slider() {
-        new Swiper('#thumbNews .swiper-container', {
-            slidesPerView: 1,
-            pagination: {
-                el: '#thumbNews .swiper-pagination',
-                type: 'bullets',
-            },
-            autoplay: true,
-            simulateTouch: false,
-            mouseDrag: false,
-            touchDrag: false,
+        $('#thumbNews .slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            arrows:false,
+            slidesToScroll: 1,
+            centerPadding: '60px',
+            focusOnSelect: true,
+            asNavFor:'#thumbNews .thumbSlider'
+        });
+        $('#thumbNews .thumbSlider').slick({
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            arrows:false,
+            slidesToScroll: 1,
+            centerPadding: '60px',
+            focusOnSelect: true,
+            asNavFor:'#thumbNews .slider'
         });
         // Product thumb slide
         const thumb = new Swiper('.s__products .thumbDetail .swiper-container', {

@@ -102,8 +102,10 @@
                 &--title {
                     position: relative;
                     padding-left: 45px;
+                    margin-bottom: 70px;
                     @include media-breakpoint-down(sm) {
                         padding-left: 35px;
+                        margin-bottom: 50px;
                     }
                     &:before {
                         content: '';
@@ -155,6 +157,11 @@
                 .textPanel {
                     flex: 0 0 66.66667%;
                     max-width: 66.66667%;
+                }
+            }
+            .slider{
+                .slick-dots{
+                    bottom: -50px;
                 }
             }
         }

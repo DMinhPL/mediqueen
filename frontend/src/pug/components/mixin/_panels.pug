@@ -180,10 +180,10 @@ mixin products_intro_panel2(name,urlImg,dataBenefit, isReverse,_class)
                                     span #[=dt.text]
                 .info
                     .btn-action-cart
-                        a(href="#").bag-btn.brown
-                        a(href="#").btn-custom.brown.text-uppercase CHI TIẾT
+                        a(href="#" class=_class==='isTea' ? '':'brown').bag-btn
+                        a(href="#" class=_class==='isTea' ? 'orange':'brown').btn-custom.text-uppercase CHI TIẾT
                         //- a(href="#").btn-custom.transparent-brown.text-uppercase mua ngay
-                        a(href="#").link-btn.brown
+                        a(href="#" class=_class==='isTea' ? '':'brown').link-btn
         .imgPanel
                 +img-bg(urlImg,'','productThumb')
 

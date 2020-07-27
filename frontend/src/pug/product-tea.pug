@@ -1,7 +1,7 @@
 extends layouts/_layout_default
 
 block setting
-    - title = "Product detail - MediQueen"
+    - title = "Product tea - MediQueen"
     - isProductDetail = true
     - 
         var data_breadcrumb = [
@@ -111,15 +111,15 @@ block content
                             p.sub.m-0 Quy cách: 1 liệu trình gồm 2 hộp x 15 gói x 2g 
             .block
                 - 
-                    var product2 = [
-                        {text:'Giảm mỡ thừa', icon:'ic-waist'},
-                        {text:'Giảm cholesterol ', icon:'ic-water'},
-                        {text:'Chống lão hóa', icon:'ic-shield'},
+                    var product1 = [
+                        {text:'Cải thiện hấp thụ', icon:'ic-stomach'},
+                        {text:'Giúp ăn ngon miệng', icon:'ic-spoon'},
+                        {text:'Tăng cường sức khỏe', icon:'ic-fitness'},
                         {text:'Đào thải độc tố', icon:'ic-virus'},
-                        {text:'Đốt cháy calo', icon:'ic-calo'},
-                        {text:'Giảm cân an toàn', icon:'ic-weight'},
+                        {text:'Ngủ ngon giấc', icon:'ic-sleeping'},
+                        {text:'Hỗ trợ tăng cân tối đa', icon:'ic-weight'},
                     ]
-                +products_intro_panel2('Cà phê giảm cân MediQueen','images/products/coffee.png',product2,true,'isCoffee')
+                +products_intro_panel2('Trà tăng cân MediQueen','images/product1.png',product1,true,'isTea')
             .block
                 .detailPanel
                     a.cardTitle(data-toggle="collapse" href="#collapseComment" role="button" aria-expanded="true" aria-controls="collapseComment")

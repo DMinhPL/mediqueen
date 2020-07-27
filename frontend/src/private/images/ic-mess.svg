@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
-  <image id="logotype" width="22" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAABHNCSVQICAgIfAhkiAAAAddJREFUOE+t1UuoT1EUx/HPn2Qk5JFHwqVIShlwKY/ExEgpJANGHmUmGWCkzMmEWzcMPJKYGNyrhKQM5D3yukrkLUPx17rto91xzv/6+9uj01m/9V1rr73W3o1ms6lmTcJGrMY8jEu6j3iCqziHt1X+jQrwBBzCNoyoi5r+f0cv9uN9ri2DV+A8Jg4BLJvfYQOuF4YcvBaX/iLLupiR/TpcCUEBno27GNVmpmX5NyzE0wLcnw6pQ+6gexzqmgB34/b/IGaM7gAfwe4hwLcwB+NrdG8wObMdDfA9LGgBvoNV6MINjMm0D9CDg6Wg9wP8CWNrwI+wDF+SfTH6EId0IAWKFpta8v8c4HAaXQF+hqUJOgUvk2YuBlIysYNZFb5fA/wcM0vG11iCONjDKfBKPE66qPU1zK/Z6UCAL2B9JviAvdiBRdn/CLYccVdEOXJbmX8xwFtwOrPElmfUZBLlKQK0aqStAR6JF6V26aSt47brKiZvE850Qst8Nwcrv4SOYVeH8OPYnl9C8T0cAR80/MM6gZ34UQYXrFeY1gY4umgPTuY+VS9IdMX0JPqJYTVBHuJUGuliMn9LW4EvY19602IQ4slqpD6OQYlMa1cV+Gyq9c02yvGH9Bco7JlBuRskbgAAAABJRU5ErkJggg=="/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" fill="#fff">
+<g>
+	<g>
+		<path d="M256,0C114.6,0,0,106.1,0,237c0,74.6,37.2,141.1,95.4,184.6V512l87.2-47.8c23.3,6.4,47.9,9.9,73.4,9.9
+			c141.4,0,256-106.1,256-237S397.4,0,256,0z M281.4,319.2l-65.2-69.5L89.1,319.2L229,170.7l66.8,69.5l125.6-69.5L281.4,319.2z"/>
+	</g>
+</g>
 </svg>

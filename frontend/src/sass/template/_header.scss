@@ -1,4 +1,28 @@
 /* Comment here */
+@mixin hoverIconMenu {
+    i.icon {
+        &.ic{
+            &-home{
+                background-image: url(../images/ic-home-blue.svg);
+            }
+            &-shop{
+                background-image: url(../images/ic-shop-blue.svg);
+            }
+            &-leaf{
+                background-image: url(../images/ic-leaf-blue.svg);
+            }
+            &-food{
+                background-image: url(../images/ic-food-blue.svg);
+            }
+            &-news{
+                background-image: url(../images/ic-news-blue.svg);
+            }
+            &-headset{
+                background-image: url(../images/ic-headset-blue.svg);
+            }
+        }
+    }
+}
 header.header-page.header {
     .wrap-sticky-header {
         @include media-breakpoint-up(lg) {
@@ -213,10 +237,12 @@ header.header-page.header {
                             &:before {
                                 transform: scale(1);
                             }
+                            @include hoverIconMenu;
                         }
                     }
                     &.active {
                         color: #0c4ca3;
+                        @include hoverIconMenu;
                         &:before {
                             transform: scale(1);
                         }
@@ -240,6 +266,7 @@ header.header-page.header {
                     }
                     i.icon {
                         margin-right: 15px;
+                        transition: 0.2s ease;
                     }
                 }
             }

@@ -1,0 +1,27 @@
+.block
+    .detailPanel
+        a.cardTitle(data-toggle="collapse" href="#collapseComment" role="button" aria-expanded="true" aria-controls="collapseComment")
+            span ĐÁNH GIÁ & NHẬN XÉT (5)
+        .collapse#collapseComment.show
+            .card.no-border
+                +comment_content
+                +comment_content
+            .form-style
+                form(action="#").form-validate
+                    .label.font-weight-bold Add Review
+                    .row
+                        .col-lg-6
+                            .form-line
+                                .has-input
+                                    input(type="text" name='name' placeholder='Họ & Tên' data-msg='Họ và tên là bắt buộc' required).form-border
+                        .col-lg-6
+                            .form-line
+                                .has-input
+                                    input(type="email" name='email' data-msg='Email là bắt buộc' placeholder='Email Address' required).form-border
+                    .label.font-weight-bold Your Rating:    
+                        +estimate('100%')
+                    .form-line
+                        .has-input
+                            textarea#comment.form-border(name="comment", rows="7", placeholder='Nội dung' data-msg='Nội dung là bắt buộc' required)
+                    .group-btn
+                        button.btn-custom.pink.text-uppercase SUBMIT

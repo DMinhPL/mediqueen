@@ -13,58 +13,8 @@ block content
             +breadcrumb(data_breadcrumb, "HOME")
     section.s__products.mg-section
         .container
-            .block.top
-                .row
-                    .col-lg-6
-                        .productItem
-                            .imgPanel
-                                .tagSale SALE
-                                .magnifyImg
-                                    .magItem(data-id='0')
-                                        +img-bg('/images/products/product.png','','thumbProd')
-                                    each val in [1,2,3,4]
-                                        .magItem.d-none(data-id=val)
-                                            +img-bg(`/images/products/product.png`,'','thumbProd')
-                                .tagPromo -20%
-                            .thumbDetail
-                                .swiper-container
-                                    .swiper-wrapper
-                                        each val,idx in [1,2,3,2,1]
-                                            +product_thumb_item(val,idx,'swiper-slide')
-                                .swiper-pagination
-                                .swiper-button-prev
-                                .swiper-button-next
-                    .col-lg-6
-                        .block__content 
-                            form(action="#").form-style
-                                .block__content__text.title
-                                    h1.block__content__text--title Trà tăng cân MediQueen
-                                    +estimate('100%')
-                                .block__content__text--smaller Trà thảo dược tăng cân MediQueen được sản xuất bởi cty MediQueen giúp cải thiện hấp thụ, đào thải độc tố, giúp ăn ngon miệng, ngủ ngon giấc và hỗ trợ tăng cân tối đa
-                                ul.list-style-none
-                                    li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
-                                    li: .label  Tình trạng: &nbsp #[span Còn hàng]
-                                    li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
-                                    //- li: .label.price  Giá:
-                                    //-     span.old 600.000 đ
-                                    //-     span.promo 500.000 đ
-                                    //- li: .label.num  Số lượng: 
-                                    //-     input(type="number" min="0").form-border
-                                    //- li 
-                                    //-     .label.promotion  Ưu đãi:
-                                    //-         .selectPromo
-                                    //-             -
-                                    //-                 var typeList = [
-                                    //-                     {name: "GIẢM THÊM 7% NHẬP MÃ BRANDFEVER",color:'#dbdbdb'},
-                                    //-                     {name: "GIẢM THÊM 10% NHẬP MÃ BRANDFEVER",color:'#303030'},
-                                    //-                     {name: "GIẢM THÊM 20% NHẬP MÃ BRANDFEVER",color:'#666666'}
-                                    //-                 ]
-                                    //-             +dropSelect("Chọn mã giảm giá",typeList)  
-                                .btn-action-cart
-                                    a(href="#").bag-btn.brown
-                                    a(href="#").btn-custom.brown.text-uppercase.moreDetail CHI TIẾT
-                                    //- a(href="#").btn-custom.transparent.text-uppercase mua ngay
-                                    a(href="#").link-btn.brown
+            +detail_product_panel('Cà phê giảm cân MediQueen','isCoffee')
+            
             .block
                 .detailPanel.top
                     a.cardTitle(role="button" aria-expanded="true" aria-controls="collapseExample")

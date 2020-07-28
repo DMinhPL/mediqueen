@@ -135,6 +135,7 @@ header.header-page.header {
                     width: 185px;
                 }
                 .cartPanel {
+                    visibility:hidden;
                     @include media-breakpoint-down(md) {
                         position: absolute;
                         top: 16px;

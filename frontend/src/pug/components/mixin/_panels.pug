@@ -42,7 +42,7 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
                     .info
                         .btn-action-cart
                             a(href="#").bag-btn
-                            a(href="#").btn-custom.orange.text-uppercase CHI TIẾT
+                            a(href="/product-tea.html").btn-custom.orange.text-uppercase CHI TIẾT
                             //- a(href="#").btn-custom.transparent.text-uppercase mua ngay
                             a(href="#").link-btn
     else
@@ -64,7 +64,7 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
                     .info
                         .btn-action-cart
                             a(href="#").bag-btn.brown
-                            a(href="#").btn-custom.brown.text-uppercase CHI TIẾT
+                            a(href="/product-coffee.html").btn-custom.brown.text-uppercase CHI TIẾT
                             //- a(href="#").btn-custom.transparent-brown.text-uppercase mua ngay
                             a(href="#").link-btn.brown
             .imgPanel
@@ -198,8 +198,97 @@ mixin comment_content
         .context
             .date 04 Mar 2018
             .name.font-weight-bold Nguyễn Văn A
+                span Ngày 2020-07-01 23:32:54
             +estimate('90%')
             p Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam.
 mixin paymentMethodItem(type,name)
     .methodItem(class=type) #[=name]
-
+mixin detail_product_panel(title, type)
+    .block.top
+        .row
+            .col-lg-6
+                .productItem
+                    .imgPanel
+                        .tagSale SALE
+                        .magnifyImg
+                            .slider
+                                each val in [1,2,3,4,5]
+                                    .magItem(data-id=val)
+                                        +img-bg(`/images/products/product.png`,'','thumbProd')
+                        .tagPromo -20%
+                    .thumbDetail
+                        .thumb
+                            each val,idx in [1,2,3,2,1]
+                                +product_thumb_item(val,idx,'swiper-slide')
+                        .nextHandle 
+                        .prevHandle 
+            .col-lg-6
+                .block__content 
+                    form(action="#").form-style
+                        .block__content__text.title
+                            h1.block__content__text--title #[=title]
+                            +estimate('100%')
+                        if type === 'isCoffee'
+                            .block__content__text--smaller Cà phê giảm cân MediQueen được sản xuất bởi cty MediQueen giúp cải thiện hấp thụ, đào thải độc tố, giúp ăn ngon miệng, ngủ ngon giấc và hỗ trợ tăng cân tối đa
+                            ul.list-style-none
+                                li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
+                                li: .label  Tình trạng: &nbsp #[span Còn hàng]
+                                li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
+                                //- li: .label.price  Giá:
+                                //-     span.old 600.000 đ
+                                //-     span.promo 500.000 đ
+                                //- li: .label.num  Số lượng: 
+                                //-     input(type="number" min="0").form-border
+                                //- li 
+                                //-     .label.promotion  Ưu đãi:
+                                //-         .selectPromo
+                                //-             -
+                                //-                 var typeList = [
+                                //-                     {name: "GIẢM THÊM 7% NHẬP MÃ BRANDFEVER",color:'#dbdbdb'},
+                                //-                     {name: "GIẢM THÊM 10% NHẬP MÃ BRANDFEVER",color:'#303030'},
+                                //-                     {name: "GIẢM THÊM 20% NHẬP MÃ BRANDFEVER",color:'#666666'}
+                                //-                 ]
+                                //-             +dropSelect("Chọn mã giảm giá",typeList)  
+                            +promotion_product
+                            .btn-action-cart
+                                a(href="#").bag-btn.brown
+                                a(href="#").btn-custom.brown.text-uppercase.moreDetail CHI TIẾT
+                                //- a(href="#").btn-custom.transparent.text-uppercase mua ngay
+                                a(href="#").link-btn.brown
+                        else
+                            .block__content__text--smaller Trà thảo dược tăng cân MediQueen được sản xuất bởi cty MediQueen giúp cải thiện hấp thụ, đào thải độc tố, giúp ăn ngon miệng, ngủ ngon giấc và hỗ trợ tăng cân tối đa
+                            ul.list-style-none
+                                li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
+                                li: .label  Tình trạng: &nbsp #[span Còn hàng]
+                                li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
+                                //- li: .label.price  Giá:
+                                //-     span.old 600.000 đ
+                                //-     span.promo 500.000 đ
+                                //- li: .label.num  Số lượng: 
+                                //-     input(type="number" min="0").form-border
+                                //- li 
+                                //-     .label.promotion  Ưu đãi:
+                                //-         .selectPromo
+                                //-             -
+                                //-                 var typeList = [
+                                //-                     {name: "GIẢM THÊM 7% NHẬP MÃ BRANDFEVER",color:'#dbdbdb'},
+                                //-                     {name: "GIẢM THÊM 10% NHẬP MÃ BRANDFEVER",color:'#303030'},
+                                //-                     {name: "GIẢM THÊM 20% NHẬP MÃ BRANDFEVER",color:'#666666'}
+                                //-                 ]
+                                //-             +dropSelect("Chọn mã giảm giá",typeList)  
+                            +promotion_product
+                            .btn-action-cart
+                                a(href="#").bag-btn
+                                a(href="#").btn-custom.orange.text-uppercase.moreDetail CHI TIẾT
+                                //- a(href="#").btn-custom.transparent.text-uppercase mua ngay
+                                a(href="#").link-btn
+mixin promotion_product
+    .promotion_wrapper
+        .promotion_header  Khuyến mãi
+        .promotion_info  
+            .pmGeneral
+                h4 Trả góp 0%: 
+                .pack-detail 
+                    ul.el-promotion-pack
+                        li: a(href="#") Trả góp lãi suất 0% với Home Credit. Trả trước 30%, kỳ hạn 6 tháng (Áp dụng cùng các khuyến mại khác)
+                        li: a(href="#") Trả góp lãi suất 0% với Home Credit. Trả trước 30%, kỳ hạn 6 tháng (Áp dụng cùng các khuyến mại khác)

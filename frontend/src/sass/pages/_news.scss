@@ -41,6 +41,10 @@
                         font-size: 24px;
                         color: #363636;
                         font-weight: bold;
+                        margin-top: 40px;
+                        @include media-breakpoint-down(xl) {
+                            margin-top: 25px;
+                        }
                     }
                     .textpress {
                         font-size: 18px;
@@ -147,6 +151,10 @@
                 .imgPanel {
                     flex: 0 0 33.33333%;
                     max-width: 33.33333%;
+                    @include media-breakpoint-down(md){
+                        flex: 0 0 41.66666667%;
+                        max-width: 41.66666667%;
+                    }
                     .img-bg {
                         max-width: 270px;
                         &:after {
@@ -157,6 +165,14 @@
                 .textPanel {
                     flex: 0 0 66.66667%;
                     max-width: 66.66667%;
+                    padding-top: 0;
+                    @include media-breakpoint-up(lg){
+                        padding-left: 10px;
+                    }
+                    @include media-breakpoint-down(md){
+                        flex: 0 0 58.33333333%;
+                        max-width: 58.33333333%;
+                    }
                 }
             }
             .slider{

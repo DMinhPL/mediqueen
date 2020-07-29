@@ -79,14 +79,14 @@ mixin productCard_side(title,urlImg,_class)
                     .nameInfo.roboto-bold #[=title]
                     .priceInfo.roboto-bold 500.000đ
                 .info
-                    .btn-action
+                    .btn-action-cart
                         if _class === 'isTea'
                             a(href="#").bag-btn
-                            a(href="#").btn-custom.transparent.text-uppercase mua ngay
+                            a(href="/product-tea.html").btn-custom.transparent.text-uppercase mua ngay
                             a(href="#").link-btn
                         else
                             a(href="#").bag-btn.brown
-                            a(href="#").btn-custom.transparent-brown.text-uppercase mua ngay
+                            a(href="/product-coffee.html").btn-custom.transparent-brown.text-uppercase mua ngay
                             a(href="#").link-btn.brown
             
 mixin thumb_item(title,urlImg,isFlex,_class)

@@ -33,8 +33,7 @@
                     position: absolute;
                     bottom: -40px;
                     left: calc(50% - 20px);
-                    background: transparent url(../images/ic-leaf-blue.svg)
-                        no-repeat center/27px auto;
+                    background: transparent url(../images/ic-leaf-blue.svg) no-repeat center/27px auto;
                     width: 40px;
                     height: 40px;
                     z-index: 2;
@@ -237,8 +236,7 @@
                     color: #d43200;
                     font-size: 36px;
                     padding-left: 30px;
-                    background: transparent url('../images/ic-coin.svg')
-                        no-repeat 5px/21px auto;
+                    background: transparent url('../images/ic-coin.svg') no-repeat 5px/21px auto;
                     @include break-max(1600px) {
                         font-size: 25px;
                     }
@@ -279,12 +277,10 @@
         height: 45px;
         border: 1px solid #5ba000;
         border-radius: 12px;
-        background: transparent url('../images/ic-bag-tea.svg') no-repeat
-            center/17px auto;
+        background: transparent url('../images/ic-bag-tea.svg') no-repeat center/17px auto;
         &.brown {
             border: 1px solid #652825;
-            background: transparent url('../images/ic-bag.svg') no-repeat
-                center/17px auto;
+            background: transparent url('../images/ic-bag.svg') no-repeat center/17px auto;
         }
     }
     .btn-custom {
@@ -301,12 +297,10 @@
         height: 45px;
         border: 1px solid #5ba000;
         border-radius: 12px;
-        background: transparent url('../images/ic-link.svg') no-repeat
-            center/17px auto;
+        background: transparent url('../images/ic-link.svg') no-repeat center/17px auto;
         &.brown {
             border: 1px solid #652825;
-            background: transparent url('../images/ic-link-brown.svg') no-repeat
-                center/17px auto;
+            background: transparent url('../images/ic-link-brown.svg') no-repeat center/17px auto;
         }
     }
 }
@@ -654,6 +648,11 @@
     .imgPanel {
         position: relative;
         overflow: hidden;
+        transition: 0.4s ease;
+        &.lazyLoad {
+            visibility: hidden;
+            opacity: 0;
+        }
         .tagOrange {
             font-size: 14px;
             color: #fff;

@@ -120,7 +120,7 @@ mixin thumb_item_flex(title,urlImg)
                         .text__smaller Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
                             | At vero eos et.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.
                         a(href="news-detail.html").readMore Read more
-        .imgPanel
+        .imgPanel.lazyLoad
             .thumbSlider
                 each val in [1,2,3]
                     .item
@@ -162,7 +162,7 @@ mixin grid_news
         +thumb_news('Mollitia et ut adipisci quos nisi',`/images/news/news${val}.png`,true,'no-effect isGuide')
 mixin product_thumb_item(order,target,_class)
     .prodThumb_item(class=_class data-target=target)
-        +img-bg(`/images/products/prod${order}.png`,'','thumbDetailItem')
+        +img-bg(`/images/products/prod${order}.jpg`,'','thumbDetailItem')
 mixin products_intro_panel2(name,urlImg,dataBenefit, isReverse,_class)
     .productCard.isReverse(class=_class)
         .infoPanel
@@ -212,9 +212,14 @@ mixin detail_product_panel(title, type)
                         .tagSale SALE
                         .magnifyImg
                             .slider
-                                each val in [1,2,3,4,5]
+                                each val in [1,2,3,1,3]
                                     .magItem(data-id=val)
-                                        +img-bg(`/images/products/product.png`,'','thumbProd')
+                                        .item.lazyLoad
+                                            img(src=`/images/products/prod${val}.jpg`, alt="thumbProd")
+                                            //- +img-bg(`/images/products/prod${val}.jpg`,'','thumbProd')
+                                //- .magItem(data-id=val)
+                                //-     .item.lazyLoad
+                                //-         img(src="/images/products/product.png", alt="")
                         .tagPromo -20%
                     .thumbDetail
                         .thumb
@@ -230,13 +235,14 @@ mixin detail_product_panel(title, type)
                             +estimate('100%')
                         if type === 'isCoffee'
                             .block__content__text--smaller Cà phê giảm cân MediQueen được sản xuất bởi cty MediQueen giúp cải thiện hấp thụ, đào thải độc tố, giúp ăn ngon miệng, ngủ ngon giấc và hỗ trợ tăng cân tối đa
-                            ul.list-style-none
-                                li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
-                                li: .label  Tình trạng: &nbsp #[span Còn hàng]
-                                li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
-                                //- li: .label.price  Giá:
-                                //-     span.old 600.000 đ
-                                //-     span.promo 500.000 đ
+                            .list-style-none
+                                ul
+                                    li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
+                                    //- li: .label  Tình trạng: &nbsp #[span Còn hàng]
+                                    //- li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
+                                    li: .label.price  Giá:
+                                        span.old: del 600.000 đ
+                                        span.promo 500.000 đ
                                 //- li: .label.num  Số lượng: 
                                 //-     input(type="number" min="0").form-border
                                 //- li 
@@ -249,6 +255,16 @@ mixin detail_product_panel(title, type)
                                 //-                     {name: "GIẢM THÊM 20% NHẬP MÃ BRANDFEVER",color:'#666666'}
                                 //-                 ]
                                 //-             +dropSelect("Chọn mã giảm giá",typeList)  
+                            .list-info
+                                ul
+                                    li: span Giảm cân nhanh chóng bằng cách đốt mỡ, giảm sự thèm ăn.
+                                    li: span Hương vị tuyệt vời giống net cafe rất dễ uống
+                                    li: span Dễ sử dụng, và đảm bảo 100% đạt hiệu quả sau 1 liệu trình.
+                                    li: span Dùng 1 liệu trình nếu không giảm cân sẽ hoàn trả lại 100% tiền mua hàng.
+                                    li: span Sản phẩm làm từ 100% các thành phần tự nhiên đảm bảo giảm cân an toàn.
+                                    li: span Hàng chính hãng do công ty sản xuất và có giấy tờ an toàn thực phẩm
+                                    li: span Đảm bảo dùng xong sản phẩm ngừng sử dụng thì sẽ không bị tăng cân trở lại.
+                                    li: span Khi dùng sản phẩm không cần phải ăn kiêng vẫn có thể giảm cân dễ dàng
                             +promotion_product
                             .btn-action-cart
                                 a(href="#").bag-btn.brown
@@ -257,25 +273,24 @@ mixin detail_product_panel(title, type)
                                 a(href="#").link-btn.brown
                         else
                             .block__content__text--smaller Trà thảo dược tăng cân MediQueen được sản xuất bởi cty MediQueen giúp cải thiện hấp thụ, đào thải độc tố, giúp ăn ngon miệng, ngủ ngon giấc và hỗ trợ tăng cân tối đa
-                            ul.list-style-none
-                                li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
-                                li: .label  Tình trạng: &nbsp #[span Còn hàng]
-                                li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
-                                //- li: .label.price  Giá:
-                                //-     span.old 600.000 đ
-                                //-     span.promo 500.000 đ
-                                //- li: .label.num  Số lượng: 
-                                //-     input(type="number" min="0").form-border
-                                //- li 
-                                //-     .label.promotion  Ưu đãi:
-                                //-         .selectPromo
-                                //-             -
-                                //-                 var typeList = [
-                                //-                     {name: "GIẢM THÊM 7% NHẬP MÃ BRANDFEVER",color:'#dbdbdb'},
-                                //-                     {name: "GIẢM THÊM 10% NHẬP MÃ BRANDFEVER",color:'#303030'},
-                                //-                     {name: "GIẢM THÊM 20% NHẬP MÃ BRANDFEVER",color:'#666666'}
-                                //-                 ]
-                                //-             +dropSelect("Chọn mã giảm giá",typeList)  
+                            .list-style-none
+                                ul
+                                    li: .label Thương hiệu: &nbsp #[span MEDIQUEEN TEA]
+                                    //- li: .label  Tình trạng: &nbsp #[span Còn hàng]
+                                    //- li: .label  Yêu cầu mua: &nbsp #[span ít nhất 1 sản phẩm]
+                                    li: .label.price  Giá:
+                                        span.old: del 600.000 đ
+                                        span.promo 500.000 đ
+                            .list-info
+                                ul
+                                    li: span Giảm cân nhanh chóng bằng cách đốt mỡ, giảm sự thèm ăn.
+                                    li: span Hương vị tuyệt vời giống net cafe rất dễ uống
+                                    li: span Dễ sử dụng, và đảm bảo 100% đạt hiệu quả sau 1 liệu trình.
+                                    li: span Dùng 1 liệu trình nếu không giảm cân sẽ hoàn trả lại 100% tiền mua hàng.
+                                    li: span Sản phẩm làm từ 100% các thành phần tự nhiên đảm bảo giảm cân an toàn.
+                                    li: span Hàng chính hãng do công ty sản xuất và có giấy tờ an toàn thực phẩm
+                                    li: span Đảm bảo dùng xong sản phẩm ngừng sử dụng thì sẽ không bị tăng cân trở lại.
+                                    li: span Khi dùng sản phẩm không cần phải ăn kiêng vẫn có thể giảm cân dễ dàng
                             +promotion_product
                             .btn-action-cart
                                 a(href="#").bag-btn

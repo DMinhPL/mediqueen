@@ -31,7 +31,7 @@
         });
         // Product thumb slide
         $('.productItem .magnifyImg .slider').slick({
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 500,
             slidesToShow: 1,
@@ -47,7 +47,6 @@
             slidesToShow: 3,
             arrows: true,
             slidesToScroll: 1,
-            centerPadding: '60px',
             focusOnSelect: true,
             asNavFor: '.productItem .magnifyImg .slider',
             nextArrow: '.nextHandle',

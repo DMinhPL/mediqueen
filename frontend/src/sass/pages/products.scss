@@ -1,17 +1,28 @@
 .s__products {
     .block {
         &.top {
-            .row {
-                position: relative;
-                border: 1px solid #f0f1f0;
-                &:before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: 50%;
-                    bottom: 0;
-                    width: 1px;
-                    background: #f0f1f0;
+            // .row {
+            //     position: relative;
+            //     border: 1px solid #f0f1f0;
+            //     &:before {
+            //         content: '';
+            //         position: absolute;
+            //         top: 0;
+            //         left: 50%;
+            //         bottom: 0;
+            //         width: 1px;
+            //         background: #f0f1f0;
+            //     }
+            // }
+            .block__content {
+                padding-top: 0;
+            }
+            .productItem {
+                .magnifyImg {
+                    .slider {
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
                 }
             }
         }
@@ -153,6 +164,16 @@
             @include media-breakpoint-down(sm) {
                 margin: 25px 0;
             }
+            &.isTea {
+                .infoPanel {
+                    .inner-info {
+                        @include media-breakpoint-up(lg) {
+                            border-left: 4px solid #c6f29c;
+                            border-right: none;
+                        }
+                    }
+                }
+            }
             .imgPanel {
                 @include media-breakpoint-up(xl) {
                     flex: 0 0 50%;
@@ -171,7 +192,6 @@
                     max-width: 50%;
                 }
                 .inner-info {
-                    border: 4px solid #c6f29c !important;
                     padding: 18px 30px;
                     .info {
                         .priceInfo {
@@ -181,7 +201,7 @@
                             font-size: 20px;
                         }
                         p {
-                            font-size: 11px;
+                            font-size: 12px;
                             &.label {
                                 font-size: 15px;
                             }
@@ -254,7 +274,7 @@
                 p {
                     font-size: 20px;
                     &.sub {
-                        font-size: 16px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -319,7 +339,7 @@
             }
             p {
                 color: #666666;
-                font-size: 16px;
+                font-size: 16px !important;
             }
         }
     }
@@ -356,7 +376,7 @@
         .tagPromo {
             position: absolute;
             top: 0px;
-            right: -15px;
+            right: 0;
             width: 84px;
             height: 84px;
             display: flex;
@@ -413,14 +433,14 @@
     .thumbDetail {
         position: relative;
         max-width: 330px;
-        // margin: auto;
+        margin: auto;
         padding: 24px;
-        bottom: 115px;
-        left: 50%;
-        transform: translateX(-50%);
-        @include media-breakpoint-down(sm) {
-            bottom: 0;
-        }
+        // bottom: 115px;
+        // left: 50%;
+        // transform: translateX(-50%);
+        // @include media-breakpoint-down(sm) {
+        //     bottom: 0;
+        // }
         .prodThumb_item {
             max-width: 74px;
             // padding: 22px 13px 16px;

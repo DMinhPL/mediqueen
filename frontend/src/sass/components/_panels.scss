@@ -183,7 +183,7 @@
             .inner-info {
                 background-color: #f9fff3;
                 @include media-breakpoint-up(xl) {
-                    border-left: none !important;
+                    border-left: none;
                 }
             }
         }
@@ -665,6 +665,7 @@
         }
         .img-bg {
             transition: 0.4s ease;
+            outline: 0;
         }
     }
     .textPanel {

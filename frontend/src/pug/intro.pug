@@ -20,7 +20,7 @@ block content
                     .row
                         .col-xl-6.offset-xl-6
                             .imgPanel
-                                +img-bg('/images/intro.png','','introImg')
+                                +img-bgLazy('/images/intro.png','','introImg')
                             .textPanel
                                 .textPanel__item
                                     .iconFloat.interface
@@ -71,10 +71,10 @@ block content
         .sgrid
             .sgrid__left
                 .imgPanel
-                    +img-bg('/images/tea.png')
+                    +img-bgLazy('/images/tea.png')
             .sgrid__left
                 .imgPanel
-                    +img-bg('/images/cafe.png')
+                    +img-bgLazy('/images/cafe.png')
     section.s__intro--why.mg-section(style='margin-top:0')
         .container
             .block
@@ -82,7 +82,7 @@ block content
             .block__content
                 .block__content__image
                     .logo
-                        +img-bg('/images/logo-intro.png')
+                        +img-bgLazy('/images/logo-intro.png')
                     .floatingPanel
                         .floating.left.top  
                             i.icon.ic-why1
@@ -99,4 +99,4 @@ block content
                                 | xuất từ đầu vào nguyên liệu tới đầu ra 
                                 | sản phẩm. 
             .thumbFloating
-                +img-bg('/images/why.png')
+                +img-bgLazy('/images/why.png')

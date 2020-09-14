@@ -11,7 +11,7 @@
                 //-     .swiper-wrapper
                 //-         each val in [1,2,3]
                 //-             .swiper-slide
-                //-                 +img-bg('/images/phone.png','','phoneImg')
+                //-                 +img-bgLazy('/images/phone.png','','phoneImg')
                 //-     .swiper-button-prev
                 //-     .swiper-button-next
                 .dm-width
@@ -20,13 +20,13 @@
                             .screen
                                 .owl-carousel
                                     .slider__item.slider__item--1
-                                        +img-bg('/images/mess.png','','messImg')
+                                        +img-bgLazy('/images/mess.png','','messImg')
                                     .slider__item.slider__item--2
-                                        +img-bg('/images/mess.png','','messImg')
+                                        +img-bgLazy('/images/mess.png','','messImg')
                                     .slider__item.slider__item--3
-                                        +img-bg('/images/mess.png','','messImg')
+                                        +img-bgLazy('/images/mess.png','','messImg')
                                     .slider__item.slider__item--4
-                                        +img-bg('/images/mess.png','','messImg')
+                                        +img-bgLazy('/images/mess.png','','messImg')
                         .handleSlide
                             a(href="#").customNextBtn
                             a(href="#").customPrevBtn
@@ -57,10 +57,10 @@
                                 .slider
                                     each val in [1,2,2,1,2,1,2]
                                         .imgPanel
-                                            +img-bg(`images/ava${val}.png`,'','avaImg swiper-slide')
+                                            +img-bgLazy(`images/ava${val}.png`,'','avaImg swiper-slide')
                                         
                                 //- .swiper-container   
                                 //-     .swiper-wrapper
                                 //-         each val in [1,2,2,1,2,1,2]
-                                //-             +img-bg(`images/ava${val}.png`,'','avaImg swiper-slide','#')
+                                //-             +img-bgLazy(`images/ava${val}.png`,'','avaImg swiper-slide','#')
                                 //- .swiper-pagination

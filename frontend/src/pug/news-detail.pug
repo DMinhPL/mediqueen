@@ -31,7 +31,7 @@ block content
                                             input(type="text" placeholder='Search').form-border
                                             i.icon.ic-search
                             .thumbSide
-                                +img-bg('/images/news/contact.png','','imgThumbsideNews','tel:+12345678990')
+                                +img-bgLazy('/images/news/contact.png','','imgThumbsideNews','tel:+12345678990')
                             .thumbSide
                                 +productCard_side('Trà tăng cân MediQueen','images/news/prod1.png','isTea')
                                 +productCard_side('Cà phê giảm cân MediQueen','images/news/prod2.png','isCoffee')
@@ -51,7 +51,7 @@ block content
                                 .row.row-10
                                     each val in [1,2]
                                         .col-lg-6.col-md-6
-                                            +img-bg(`/images/news/detail${val}.png`,'','imgNewsDetail')
+                                            +img-bgLazy(`/images/news/detail${val}.png`,'','imgNewsDetail')
                                 h2 Cosmetic ingredients
                                 p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at #[span.emphasis Hampden-Sydney College in Virginia], looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the #[span.emphasis RENAISSANCE]. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
                                 ul.list-link
@@ -62,13 +62,13 @@ block content
                                 p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in #[span.emphasis Virginia], looked up one of the more obscure Latin words,
                                 .row
                                     .col-12
-                                        +img-bg(`/images/news/detail3.png`,'','imgNewsDetail_rectangle')
+                                        +img-bgLazy(`/images/news/detail3.png`,'','imgNewsDetail_rectangle')
                                         .desc-img White-salt-in-bowl-with-cosmetics-products-and-hairbrush-on-white-background
                                 p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at #[span.emphasis Hampden-Sydney College in Virginia], looked up one of the more obscure Latin words. Lorem Ipsum is simply dummy text of the.
                                 .row
                                     .col-lg-6
                                         .imgPanel
-                                            +img-bg('/images/news/detail3.png','','imgNewsDetail_stand')
+                                            +img-bgLazy('/images/news/detail3.png','','imgNewsDetail_stand')
                                             .desc-img White-salt-in-bowl-with-cosmetics-products
                                     .col-lg-6
                                         p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney #[span.emphasis College in Virginia], looked up one of the more obscure Latin words.

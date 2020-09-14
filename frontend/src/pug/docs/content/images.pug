@@ -103,18 +103,18 @@ block content
     h2#image-thumbnails Image Background
     .bd-example.bd-example-images
         .img-thumbnail.pull-left.mr-5(style="width: 200px")
-            +img-bg('https://www.3forcom.com/assets/images/dalat-hasfarm.png', 'making it resemble a photograph taken with an old instant camera', 'class-name')
+            +img-bgLazy('https://www.3forcom.com/assets/images/dalat-hasfarm.png', 'making it resemble a photograph taken with an old instant camera', 'class-name')
         
         .img-thumbnail.pull-left(style="width: 200px")
-            +img-bg('https://www.3forcom.com/assets/images/dalat-hasfarm.png', 'making it resemble a photograph taken with an old instant camera', 'class-name', 'http://3forcom.com')
+            +img-bgLazy('https://www.3forcom.com/assets/images/dalat-hasfarm.png', 'making it resemble a photograph taken with an old instant camera', 'class-name', 'http://3forcom.com')
 
     figure.highlight
         pre
             code.js.
-                +img-bg('src', 'alt', 'class')
+                +img-bgLazy('src', 'alt', 'class')
 
                 With link
-                +img-bg('src', 'alt', 'class', 'link')
+                +img-bgLazy('src', 'alt', 'class', 'link')
 
     h2#picture Picture
     p

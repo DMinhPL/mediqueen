@@ -4,7 +4,8 @@ mixin banner_slider
             .swiper-wrapper
                 each val in [3,2,3]
                     .imgPanel.swiper-slide(style='max-width:1170px')
-                        .img-bg(style=`background-image:url("images/banner${val}.png")`)
+                        .img-bg.lazy(data-src=`images/banner${val}.png`)
+                            img(src=`images/banner${val}.png`, alt="banner")
             .swiper-pagination
             .swiper-button-prev
             .swiper-button-next
@@ -24,7 +25,7 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
     if !isReverse
         .productCard(class=_class)
             .imgPanel
-                +img-bg('images/product1.png','','productThumb')
+                +img-bgLazy('images/product1.png','','productThumb')
             .infoPanel
                 .inner-info
                     .info
@@ -68,11 +69,11 @@ mixin products_intro_panel(name,urlImg,dataBenefit, isReverse,_class)
                             //- a(href="#").btn-custom.transparent-brown.text-uppercase mua ngay
                             a(href="#").link-btn.brown
             .imgPanel
-                    +img-bg(urlImg,'','productThumb')
+                    +img-bgLazy(urlImg,'','productThumb')
 mixin productCard_side(title,urlImg,_class)
     .productCard.sideCard(class=_class)
         .imgPanel
-            +img-bg(urlImg,'','productThumb')
+            +img-bgLazy(urlImg,'','productThumb')
         .infoPanel
             .inner-info
                 .info
@@ -98,9 +99,9 @@ mixin thumb_item(title,urlImg,isFlex,_class)
                 .tagDate
                     span.d-block 28
                     span.d-block Nov
-                +img-bg(urlImg,'','bigThumbImg','#')
+                +img-bgLazy(urlImg,'','bigThumbImg','#')
             else
-                +img-bg(urlImg,'','thumbImg','#')
+                +img-bgLazy(urlImg,'','thumbImg','#')
         .textPanel
             a(href="#").text.text__bigger #[=title]
             if !isFlex
@@ -127,13 +128,13 @@ mixin thumb_item_flex(title,urlImg)
                         .tagDate
                             span.d-block 28
                             span.d-block Nov
-                        +img-bg(urlImg,'','bigThumbImg','news-detail.html')
+                        +img-bgLazy(urlImg,'','bigThumbImg','news-detail.html')
 mixin thumb_news(title,urlImg,isFlex,_class)
     unless _class 
         - var _class = ''
     .itemProduct(class=isFlex ? `isFlex ${_class}` : _class)
         .imgPanel
-            +img-bg(urlImg,'','thumbImg','news-detail.html')
+            +img-bgLazy(urlImg,'','thumbImg','news-detail.html')
         .textPanel
             a(href="news-detail.html").text.text__bigger #[=title]
             .tagCalendar 05-05-2020
@@ -149,7 +150,7 @@ mixin grid_gallery_content(data)
 mixin interact_panel
     .interactPanel
         .inter-item
-            +img-bg('/images/logo-intro.png','','logoImg')
+            +img-bgLazy('/images/logo-intro.png','','logoImg')
         .inter-item
             a(href="#"): i.icon.ic-messenger
         .inter-item
@@ -162,7 +163,7 @@ mixin grid_news
         +thumb_news('Mollitia et ut adipisci quos nisi',`/images/news/news${val}.png`,true,'no-effect isGuide')
 mixin product_thumb_item(order,target,_class)
     .prodThumb_item(class=_class data-target=target)
-        +img-bg(`/images/products/prod${order}.jpg`,'','thumbDetailItem')
+        +img-bgLazy(`/images/products/prod${order}.jpg`,'','thumbDetailItem')
 mixin products_intro_panel2(name,urlImg,dataBenefit, isReverse,_class)
     .productCard.isReverse(class=_class)
         .infoPanel
@@ -186,7 +187,7 @@ mixin products_intro_panel2(name,urlImg,dataBenefit, isReverse,_class)
                         //- a(href="#").btn-custom.transparent-brown.text-uppercase mua ngay
                         a(href="#" class=_class==='isTea' ? '':'brown').link-btn
         .imgPanel
-                +img-bg(urlImg,'','productThumb')
+                +img-bgLazy(urlImg,'','productThumb')
 
 mixin estimate(percent)
     .estimate-star
@@ -216,7 +217,7 @@ mixin detail_product_panel(title, type)
                                     .magItem(data-id=val)
                                         .item.lazyLoad
                                             //- img(src=`/images/products/prod${val}.jpg`, alt="thumbProd")
-                                            +img-bg(`/images/products/prod${val}.jpg`,'','thumbProd')
+                                            +img-bgLazy(`/images/products/prod${val}.jpg`,'','thumbProd')
                                 //- .magItem(data-id=val)
                                 //-     .item.lazyLoad
                                 //-         img(src="/images/products/product.png", alt="")

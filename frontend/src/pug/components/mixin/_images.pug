@@ -66,6 +66,20 @@ mixin img-bg(_src,_alt,_class, _href)
 		a.img-bg(href=_href style=`background-image: url(${_src})`, title=_alt class=_class)
 			+img(_src, _alt)
 
+mixin img-bgLazy(_src,_alt,_class, _href)
+	unless _alt
+		- var _alt = ''
+	unless _class
+		- var _class = ''
+	else
+		- _class= ' ' + _class
+
+	unless _href
+		.img-bg.lazy(data-src=`${_src}`, class=_class)
+			+img(_src, _alt)
+	else
+		a.img-bg.lazy(href=_href data-src=`${_src}`, title=_alt class=_class)
+			+img(_src, _alt)
 
 //- Picture mixins
 //- @mixin +picture(head, img, imgdesc, cls)

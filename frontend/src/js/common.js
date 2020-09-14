@@ -125,6 +125,8 @@
         });
     }
     function lazy_load() {
+        // LAZY image
+        $('.lazy').Lazy({ effect: 'fadeIn', effectTime: 500 });
         setTimeout(() => {
             $('.productItem .imgPanel .magItem .item').removeClass('lazyLoad');
             $('.itemProduct.reverseFlex .imgPanel').removeClass('lazyLoad');

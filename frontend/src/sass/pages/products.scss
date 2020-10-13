@@ -555,3 +555,22 @@
         }
     }
 }
+.e-commerce {
+    border: #e11b1e dashed 1px;
+    border-radius: 4px;
+    padding: 10px;
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+        .img-bg {
+            &:after {
+                padding-top: 32%;
+            }
+        }
+    }
+}
